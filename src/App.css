@@ -34,9 +34,9 @@ body {
   min-height: 100vh;
 }
 
-.container {
+/* .container {
   position: relative;
-}
+} */
 
 .container .card {
   position: relative;
@@ -943,8 +943,10 @@ textarea {
 }
 
 form {
-  padding: 25.5px;
-  margin: 0 0;
+
+  margin: 0 250px;
+  position: absolute;
+
 }
 
 h1 {
@@ -1110,10 +1112,10 @@ textarea {
 
 #contactBox {
   display: flex;
-  padding-bottom: 60px;
+  flex-direction: row;
+  position: relative;
+  right: 400px;
 
-  align-items: center;
-  justify-content: space-evenly;
 }
 
 /* 
@@ -2353,12 +2355,21 @@ new try for portfolio cards */
 
 #lab_social_icon_footer {
   background-color: #807979;
-  padding: 17px 0;
+  padding: 20px 20px;
   justify-content: space-between;
   display: flex;
   align-items: center;
   flex-direction: row;
   padding-left: 40px;
+  
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(219, 213, 213);
+  color: white;
+  text-align: center;
+  height: 50px;
+
 }
 
 #lab_social_icon_footer a {
@@ -2542,7 +2553,6 @@ body {
   font-size: 50px;
   content: "\f41b";
   animation: b 2.4s linear infinite;
-
 }
 #loaderHome #boxHome:nth-child(2)::before {
   font-size: 45px;
@@ -2554,7 +2564,6 @@ body {
   font-size: 40px;
   content: "\f3e2 ";
   animation: d 1.8s linear infinite;
-
 }
 
 #loaderHome.amit::before,
@@ -2710,7 +2719,7 @@ the brain loader */
 @keyframes slidein {
   0% {
     margin-left: -800px;
-    margin-bottom:100px;
+    margin-bottom: 100px;
   }
   20% {
     margin-left: -600px;
@@ -2744,12 +2753,7 @@ the brain loader */
   }
 }
 
-
-
 /* msg validation notification css */
-
-
-
 
 /*================================================== = Bootstrap 3 Media Queries = ==================================================*/
 /*========== Mobile First Method ==========*/
@@ -2767,202 +2771,210 @@ the brain loader */
 /*===================================================== = Bootstrap 2.3.2 Media Queries = =====================================================*/
 /* default styles here for older browsers. I tend to go for a 600px - 960px width max but using percentages */
 @media only screen and (min-width: 960px) {
-	/* styles for browsers larger than 960px;
+  /* styles for browsers larger than 960px;
 	 */
 }
- @media only screen and (min-width: 1440px) {
-	/* styles for browsers larger than 1440px;
+@media only screen and (min-width: 1440px) {
+  /* styles for browsers larger than 1440px;
 	 */
 }
- @media only screen and (min-width: 2000px) {
-	/* for sumo sized (mac) screens */
+@media only screen and (min-width: 2000px) {
+  /* for sumo sized (mac) screens */
 }
- @media only screen and (max-device-width: 480px) {
-	/* styles for mobile browsers smaller than 480px;
+@media only screen and (max-device-width: 480px) {
+  /* styles for mobile browsers smaller than 480px;
 	 (iPhone) */
 }
- @media only screen and (device-width: 768px) {
-	/* default iPad screens */
+@media only screen and (device-width: 768px) {
+  /* default iPad screens */
 }
 /* different techniques for iPad screening */
- @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
-	/* For portrait layouts only */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* For portrait layouts only */
 }
- @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
-	/* For landscape layouts only */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* For landscape layouts only */
 }
 /*******Nuevos mensajes de error******/
- .new-message-box {
-	 margin: 15px 0;
-	 padding-left: 20px;
-	 margin-bottom: 25px !important;
+.new-message-box {
+  margin: 15px 0;
+  padding-left: 20px;
+  margin-bottom: 25px !important;
 }
- .new-message-box p {
-	 font-size: 1.15em;
-	 font-weight: 600;
+.new-message-box p {
+  font-size: 1.15em;
+  font-weight: 600;
 }
- .info-tab {
-	 width: 40px;
-	 height: 40px;
-	 display: inline-block;
-	 position: relative;
-	 top: 8px;
+.info-tab {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: relative;
+  top: 8px;
 }
- .info-tab {
-	 float: left;
-	 margin-left: -23px;
+.info-tab {
+  float: left;
+  margin-left: -23px;
 }
- .info-tab i::before {
-	 width: 24px;
-	 height: 24px;
-	 box-shadow: inset 12px 0 13px rgba(0, 0, 0, 0.5);
+.info-tab i::before {
+  width: 24px;
+  height: 24px;
+  box-shadow: inset 12px 0 13px rgba(0, 0, 0, 0.5);
 }
- .info-tab i::after {
-	 width: 0;
-	 height: 0;
-	 border: 12px solid transparent;
-	 border-bottom-color: #fff;
-	 border-left-color: #fff;
-	 bottom: -18px;
+.info-tab i::after {
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-bottom-color: #fff;
+  border-left-color: #fff;
+  bottom: -18px;
 }
- .info-tab i::before, .info-tab i::after {
-	 content: "";
-	 display: inline-block;
-	 position: absolute;
-	 left: 0;
-	 bottom: -17px;
-	 transform: rotateX(60deg);
+.info-tab i::before,
+.info-tab i::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: -17px;
+  transform: rotateX(60deg);
 }
- .note-box, .warning-box, .tip-box-success, .tip-box-danger, .tip-box-warning, .tip-box-info, .tip-box-alert {
-	 padding: 12px 8px 3px 26px;
+.note-box,
+.warning-box,
+.tip-box-success,
+.tip-box-danger,
+.tip-box-warning,
+.tip-box-info,
+.tip-box-alert {
+  padding: 12px 8px 3px 26px;
 }
 /***Success****/
- .new-message-box-success {
-	 background: #eee;
-	 padding: 3px;
-	 margin: 10px 0;
+.new-message-box-success {
+  background: #eee;
+  padding: 3px;
+  margin: 10px 0;
 }
- .tip-icon-success {
-	 background: #8bc34a;
+.tip-icon-success {
+  background: #8bc34a;
 }
- .tip-box-success {
-	 color: #33691e;
-	 background: #dcedc8;
+.tip-box-success {
+  color: #33691e;
+  background: #dcedc8;
 }
- .tip-icon-success::before {
-	 font-size: 25px;
-	 content: "\f00c";
-	 top: 8px;
-	 left: 11px;
-	 font-family: FontAwesome;
-	 position: absolute;
-	 color: white;
+.tip-icon-success::before {
+  font-size: 25px;
+  content: "\f00c";
+  top: 8px;
+  left: 11px;
+  font-family: FontAwesome;
+  position: absolute;
+  color: white;
 }
- .tip-icon-success i::before {
-	 background: #8bc34a;
+.tip-icon-success i::before {
+  background: #8bc34a;
 }
 /*******Danger*******/
- .new-message-box-danger {
-	 background: #eee;
-	 padding: 3px;
-	 margin: 10px 0;
+.new-message-box-danger {
+  background: #eee;
+  padding: 3px;
+  margin: 10px 0;
 }
- .tip-icon-danger {
-	 background: #f44336;
+.tip-icon-danger {
+  background: #f44336;
 }
- .tip-box-danger {
-	 color: #b71c1c;
-	 background: #ffccbc;
+.tip-box-danger {
+  color: #b71c1c;
+  background: #ffccbc;
 }
- .tip-icon-danger::before {
-	 font-size: 25px;
-	 content: "\f00d";
-	 top: 8px;
-	 left: 11px;
-	 font-family: FontAwesome;
-	 position: absolute;
-	 color: white;
+.tip-icon-danger::before {
+  font-size: 25px;
+  content: "\f00d";
+  top: 8px;
+  left: 11px;
+  font-family: FontAwesome;
+  position: absolute;
+  color: white;
 }
- .tip-icon-danger i::before {
-	 background: #f44336;
+.tip-icon-danger i::before {
+  background: #f44336;
 }
 /*******warning*******/
- .new-message-box-warning {
-	 background: #eee;
-	 padding: 3px;
-	 margin: 10px 0;
+.new-message-box-warning {
+  background: #eee;
+  padding: 3px;
+  margin: 10px 0;
 }
- .tip-icon-warning {
-	 background: #ffeb3b;
+.tip-icon-warning {
+  background: #ffeb3b;
 }
- .tip-box-warning {
-	 color: #212121;
-	 background: #fff9c4;
+.tip-box-warning {
+  color: #212121;
+  background: #fff9c4;
 }
- .tip-icon-warning::before {
-	 font-size: 25px;
-	 content: "\f071";
-	 top: 8px;
-	 left: 11px;
-	 font-family: FontAwesome;
-	 position: absolute;
-	 color: #212121;
+.tip-icon-warning::before {
+  font-size: 25px;
+  content: "\f071";
+  top: 8px;
+  left: 11px;
+  font-family: FontAwesome;
+  position: absolute;
+  color: #212121;
 }
- .tip-icon-warning i::before {
-	 background: #ffeb3b;
-}
-/*******info*******/
- .new-message-box-info {
-	 background: #eee;
-	 padding: 3px;
-	 margin: 10px 0;
-}
- .tip-box-info {
-	 color: #01579b;
-	 background: #b3e5fc;
-}
- .tip-icon-info {
-	 background: #03a9f4;
-}
- .tip-icon-info::before {
-	 font-size: 25px;
-	 content: "\f129";
-	 top: 8px;
-	 left: 11px;
-	 font-family: FontAwesome;
-	 position: absolute;
-	 color: white;
-}
- .tip-icon-info i::before {
-	 background: #03a9f4;
+.tip-icon-warning i::before {
+  background: #ffeb3b;
 }
 /*******info*******/
- .new-message-box-alert {
-	 background: #ff6f00;
-	 padding: 3px;
-	 margin: 10px 0;
+.new-message-box-info {
+  background: #eee;
+  padding: 3px;
+  margin: 10px 0;
 }
- .tip-box-alert {
-	 color: #212121;
-	 background: #fff8e1;
+.tip-box-info {
+  color: #01579b;
+  background: #b3e5fc;
 }
- .tip-icon-alert {
-	 background: #ff6f00;
+.tip-icon-info {
+  background: #03a9f4;
 }
- .tip-icon-alert::before {
-	 font-size: 25px;
-	 content: "\f06a";
-	 top: 8px;
-	 left: 11px;
-	 font-family: FontAwesome;
-	 position: absolute;
-	 color: white;
+.tip-icon-info::before {
+  font-size: 25px;
+  content: "\f129";
+  top: 8px;
+  left: 11px;
+  font-family: FontAwesome;
+  position: absolute;
+  color: white;
 }
- .tip-icon-alert i::before {
-	 background: #ff6f00;
+.tip-icon-info i::before {
+  background: #03a9f4;
+}
+/*******info*******/
+.new-message-box-alert {
+  background: #ff6f00;
+  padding: 3px;
+  margin: 10px 0;
+}
+.tip-box-alert {
+  color: #212121;
+  background: #fff8e1;
+}
+.tip-icon-alert {
+  background: #ff6f00;
+}
+.tip-icon-alert::before {
+  font-size: 25px;
+  content: "\f06a";
+  top: 8px;
+  left: 11px;
+  font-family: FontAwesome;
+  position: absolute;
+  color: white;
+}
+.tip-icon-alert i::before {
+  background: #ff6f00;
 }
 /*************************/
- body {
-	 background-color: #fff;
+body {
+  background-color: #fff;
 }
- 
+
+/* new contact area */

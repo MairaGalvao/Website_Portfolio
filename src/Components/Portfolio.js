@@ -28,7 +28,7 @@ export function Portfolio() {
             marginBottom: "45px",
             paddingLeft: "50px",
             position: "absolute",
-            fontFamily: "Poppins, sans-serif"
+            fontFamily: "Poppins, sans-serif",
           }}
         >
           Portfolio
@@ -43,12 +43,11 @@ export function Portfolio() {
       >
         <g transform="translate(-18.298844,-77.973964)">
           <path
-             style={{ fill: "rgb(232 194 225)" }}
+            style={{ fill: "rgb(232 194 225)" }}
             d="M 31.615583,86.351641 H 192.16499 v 26.901969 c 0,0 -32.03411,-14.237983 -59.62682,-12.72484 -22.34188,1.2252 -54.779359,9.72634 -54.779359,9.72634 0,0 -22.029534,3.62882 -34.471238,-1.00000 -12.441702,-5.51871 -11.67199,-22.013589 -11.67199,-22.013589 z"
           />
 
           <path
-         
             style={{ fill: "rgb(205 232 229)" }}
             d="M 18.441597,78.106256 H 198.58126 v 39.288614 c 0,0 -43.10672,-27.825245 -73.47599,-19.687823 -30.369264,8.137423 -46.832208,12.548653 -46.832208,12.548653 0,0 -32.775418,8.05972 -46.735258,0 C 17.577964,102.19598 18.441597,78.106256 18.441597,78.106256 Z"
           />
@@ -102,7 +101,7 @@ export function Portfolio() {
               extraTech={""}
               idContainer={"project2"}
               idCard={"cardProj2"}
-              title={"I Flash Geek"}
+              title={"I Flash Geek "}
               description={"Flashcards on computer languages."}
               technologies1={" fab fa-js-square "}
               technologies2={"fab fa-css3-alt"}
@@ -142,6 +141,7 @@ export function Portfolio() {
               linkGitHub={
                 "https://github.com/MairaGalvao/International_Health_Care_Analysis"
               }
+              
               IDE={"Environment: Studio Visual Code"}
             />
 

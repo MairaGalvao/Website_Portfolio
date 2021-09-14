@@ -59,7 +59,7 @@ export function Articles() {
         style={{
           display: "flex",
           justifyContent: "space-between",
-          padding: "50px",
+          padding: "100px",
         }}
       >
         <ArticlesComponent
@@ -81,6 +81,8 @@ export function Articles() {
           title={"Coming soon"}
           description={"Working on it"}
         />
+
+  
       </Box>
     </>
   );

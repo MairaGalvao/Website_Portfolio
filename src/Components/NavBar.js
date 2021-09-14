@@ -135,7 +135,7 @@ export default function NavBar() {
 
               <Link
                 style={{ cursor: "pointer", color: "black" }}
-                to="divider"
+                to="contactMain"
                 spy={true}
                 smooth={true}
                 onClick={() => {

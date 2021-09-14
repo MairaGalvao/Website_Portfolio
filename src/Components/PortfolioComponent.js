@@ -31,6 +31,8 @@ export function PortfolioComponent({
 
   return (
     <>
+
+    
       <Box id={idContainer} style={{ flex: " 1 0 50%" }}>
         <Box data-aos="fade-down" data-aos-duration="2000">
           <Box

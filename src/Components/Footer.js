@@ -4,12 +4,13 @@ import { Box } from "@material-ui/core";
 export function Footer() {
   return (
     <>
-      <section id="lab_social_icon_footer">
+    <Box >
+      <section id="lab_social_icon_footer" >
         <link
           href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
           rel="stylesheet"
         />
-        <Box className="container">
+        <Box className="container" style={{paddingLeft:'50px'}}>
           <Box className="text-center center-block">
             <a href="https://www.linkedin.com/in/maira-galvao">
               <i id="social-fb" className="fab fa-linkedin fa-3x social"></i>
@@ -25,10 +26,11 @@ export function Footer() {
             </a>
           </Box>
         </Box>
-        <p style={{ color: "white", paddingRight: "150px", fontFamily: "Poppins sans-serif", fontSize:'20px'}}>
+        <p style={{ color: "black", paddingRight: "150px", fontFamily: "Poppins sans-serif", fontSize:'22px'}}>
           ©2021 Maíra Galvão
         </p>
       </section>
+      </Box>
     </>
   );
 }
