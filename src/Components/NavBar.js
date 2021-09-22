@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 import React, { useState } from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
 import { Button } from "@material-ui/core";
+import "../css/navBar.css";
 
 export default function NavBar() {
   const [visible, setVisible] = useState(false);
@@ -30,7 +31,7 @@ export default function NavBar() {
   let history = useHistory();
   return (
     <>
-      <Box id="navBar" style={{ position: "absolute", top: 0, left: 0 }}>
+      <Box id="navBar">
         <Button
           id="btnBackToTop"
           style={{
@@ -42,18 +43,7 @@ export default function NavBar() {
             style={{ display: visible ? "inline" : "none" }}
           />
         </Button>
-        <Box
-          className="w3-bar w3-white w3-wide w3-padding w3-card"
-          style={{
-            zIndex: 999,
-            top: 0,
-            backgroundColor: "#fff",
-            width: "100%",
-
-            position: "fixed",
-            paddingTop: "5px",
-          }}
-        >
+        <Box id="navBox" className="w3-bar w3-white w3-wide w3-padding w3-card">
           <Box style={{ display: "flex" }}>
             <Box className="nameNavBox" style={{ display: " contents" }}>
               <Typography
@@ -62,23 +52,13 @@ export default function NavBar() {
               >
                 Maíra
               </Typography>
-              <Typography
-                style={{ fontSize: "20px", paddingLeft: "5px" }}
-                className="w3-bar-item"
-              >
+              <Typography className="w3-bar-item">
                 <b> Galvão </b>
               </Typography>
             </Box>
             <Box
               className="w2-bar w3-white w3-wide w3-padding w3-card"
-              style={{
-                display: "flex",
-                width: "100%",
-                justifyContent: "space-between",
-                marginLeft: "750px",
-                marginRight: "10px",
-                fontSize: "20px",
-              }}
+              id="itemsNav"
             >
               <Link
                 style={{

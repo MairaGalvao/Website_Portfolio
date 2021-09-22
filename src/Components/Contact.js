@@ -5,6 +5,7 @@ import { send } from "emailjs-com";
 import { init } from "emailjs-com";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import "../css/contact.css";
 
 init("user_gqMmkiihxMb3zWbl0pRBo");
 
