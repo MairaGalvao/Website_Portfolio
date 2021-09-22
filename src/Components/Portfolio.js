@@ -71,16 +71,16 @@ export function Portfolio() {
           >
             <PortfolioComponent
               picProject={realBillPic}
-              extraTxt={"Extra tech    "}
+              extraTxt={"Extra tech"}
               extraArrow={"fas fa-arrow-right"}
               extraTech={"https://img.icons8.com/color/48/000000/redux.png"}
               idContainer={"project1"}
               idCard={"cardProj1"}
               title={"The Real Bill"}
               description={"Living Index App - Purchasing Power"}
-              technologies1={"    fab fa-react"}
-              technologies2={" fab fa-js-square "}
-              technologies3={" fab fa-node "}
+              technologies1={"fab fa-react"}
+              technologies2={"fab fa-js-square"}
+              technologies3={"fab fa-node"}
               technologies4={"fas fa-database"}
               Technology1String={"React"}
               Technology2String={"Javascript"}
@@ -141,7 +141,6 @@ export function Portfolio() {
               linkGitHub={
                 "https://github.com/MairaGalvao/International_Health_Care_Analysis"
               }
-              
               IDE={"Environment: Studio Visual Code"}
             />
 

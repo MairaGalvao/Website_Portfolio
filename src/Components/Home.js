@@ -2,6 +2,7 @@ import Box from "@material-ui/core/Box";
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import "../css/home.css";
 
 export function Home() {
   useEffect(() => {
@@ -74,19 +75,8 @@ export function Home() {
   return (
     <>
       <Box id="home" data-aos="fade-in"></Box>
-      <Box
-        id="phraseCoverBox"
-        style={{
-          paddingTop: "200px",
-          position: "absolute",
-          top: "0px",
-          left: "0px",
-          width: "100%",
-          textAlign: "center",
-          color: "white",
-        }}
-      >
-        <h4 className="wordCarousel" data-aos="fade-in" style={{}}>
+      <Box id="phraseCoverBox">
+        <h4 className="wordCarousel" data-aos="fade-in">
           <Box className="divAbout">
             <ul className="flip">
               <li className="listWords">Hello!</li>
@@ -110,7 +100,7 @@ export function Home() {
             display: "flex",
             justifyContent: "flex-start",
           }}
-          className="experienceWithLoop"
+          class="experienceWithLoop"
         >
           <span style={{ marginRight: "11px" }}>Experienced with</span>
           <a

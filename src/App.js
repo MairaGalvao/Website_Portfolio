@@ -6,7 +6,7 @@ import NavBar from "./Components/NavBar";
 import { About } from "./Components/About";
 import { Articles } from "./Components/Articles";
 import { Portfolio } from "./Components/Portfolio";
-import "./App.css";
+import "./css/App.css";
 import { useHistory as history } from "react-router-dom";
 import { Home } from "./Components/Home";
 import { LoadingAnimation } from "./LoadingAnimation";

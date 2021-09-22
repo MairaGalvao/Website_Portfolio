@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Box } from "@material-ui/core";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import "../css/projANDart.css";
 
 export function PortfolioComponent({
   title,
@@ -31,9 +32,7 @@ export function PortfolioComponent({
 
   return (
     <>
-
-    
-      <Box id={idContainer} style={{ flex: " 1 0 50%" }}>
+      <Box id={idContainer} class="mainBox">
         <Box data-aos="fade-down" data-aos-duration="2000">
           <Box
             className="cardPortfolio"
@@ -43,15 +42,14 @@ export function PortfolioComponent({
           >
             <img src={picProject} alt={title} className="card__image" />
 
-            <p className="card__name"  style={{     fontFamily: "Poppins, sans-serif"}} >{title}</p>
-
-            <Box
-              className="grid-child-posts"
-              style={{ textAlign: " center", paddingTop: '10px', paddingBottom: "5px", fontSize: '17px',
-              fontFamily: "Fira Sans Condensed, sans-serif"}}
+            <p
+              className="card__name"
+              style={{ fontFamily: "Poppins, sans-serif" }}
             >
-              {description}
-            </Box>
+              {title}
+            </p>
+
+            <Box className="grid-child-posts">{description}</Box>
 
             <ul className="social-icons-portfolio">
               <li className="tooltip">
@@ -87,7 +85,7 @@ export function PortfolioComponent({
               {linkGitHub && (
                 <Box className="btnPortfolio draw-border">
                   {" "}
-                  <a id="gitHubBtnCard"  href={linkGitHub} >
+                  <a id="gitHubBtnCard" href={linkGitHub}>
                     GitHub
                   </a>
                 </Box>
@@ -102,15 +100,12 @@ export function PortfolioComponent({
               )}
             </Box>
 
-            <Box className="grid-child-followers" >
+            <Box className="grid-child-followers">
               {extraTxt}
               <a>
                 <i className={extraArrow}> </i>
 
-                <img
-                  style={{ width: "30px", paddingBottom: "0" }}
-                  src={extraTech}
-                />
+                <img class="extraTechImg" src={extraTech} />
               </a>
             </Box>
           </Box>
