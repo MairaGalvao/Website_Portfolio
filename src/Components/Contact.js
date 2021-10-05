@@ -51,7 +51,12 @@ export function Contact() {
   }, [Aos]);
   return (
     <>
-      <Box id="contactMain" data-aos="fade-down" data-aos-duration="2000">
+      <Box
+        style={{ paddingTop: "180px" }}
+        id="contactMain"
+        data-aos="fade-down"
+        data-aos-duration="2000"
+      >
         <Box style={{ paddingBottom: "100px" }}>
           <form action="#" method="post" id="contact_form" onSubmit={onSubmit}>
             <div class="field" tabindex="1">
@@ -114,22 +119,33 @@ export function Contact() {
             </div>
             <div
               class="social-media"
-              style={{ fontSize: "20px", letterSpacing: "2px" }}
+              style={{
+                fontSize: "20px",
+                letterSpacing: "2px",
+                paddingLeft: "10px",
+              }}
             >
-              <span>
-                Get In Touch<i class="fas fa-long-arrow-alt-right"></i>
+              <span style={{ paddingLeft: "10px" }}>
+                Get In Touch
+                <i
+                  style={{ paddingLeft: "10px" }}
+                  class="fas fa-long-arrow-alt-right"
+                ></i>
               </span>
               <a
+                style={{ paddingLeft: "7px" }}
+                class="fab fa-github"
+                href="https://github.com/MairaGalvao"
+              ></a>
+              <a
+                style={{ paddingLeft: "7px" }}
                 class="fa fa-linkedin"
                 href="https://www.linkedin.com/in/maira-galvao"
                 target="blank_"
               ></a>
+
               <a
-                class="fa fa-github"
-                href="https://github.com/MairaGalvao_"
-                target="blank_"
-              ></a>
-              <a
+                style={{ paddingLeft: "7px" }}
                 class="fa fa-medium"
                 href="https://mairagalvao.medium.com/"
                 target="blank_"

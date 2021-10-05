@@ -3,7 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import "../css/projANDart.css";
 
-export function ArticlesComponent({
+export function DummyArticles({
   linkMedium,
   title,
   description,

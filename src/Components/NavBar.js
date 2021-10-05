@@ -47,12 +47,24 @@ export default function NavBar() {
           <Box style={{ display: "flex" }}>
             <Box className="nameNavBox" style={{ display: " contents" }}>
               <Typography
-                style={{ fontSize: "20px", marginLeft: "15px" }}
+                style={{
+                  fontSize: "20px",
+                  marginLeft: "15px",
+                  paddingTop: "7px",
+                  fontWeight: "700px",
+                }}
                 className="w3-bar-item"
               >
                 Maíra
               </Typography>
-              <Typography className="w3-bar-item">
+              <Typography
+                className="w3-bar-item"
+                style={{
+                  fontSize: "20px",
+
+                  paddingTop: "7px",
+                }}
+              >
                 <b> Galvão </b>
               </Typography>
             </Box>
@@ -79,7 +91,7 @@ export default function NavBar() {
 
               <Link
                 style={{ cursor: "pointer", color: "black" }}
-                to="wrapperAbout"
+                to="boxContainer"
                 spy={true}
                 smooth={true}
                 onClick={() => {
