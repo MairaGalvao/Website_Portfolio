@@ -107,7 +107,7 @@ export function Home() {
             href=""
             className="experienceWithTypewrite"
             data-period="2000"
-            data-type='[ "CSS3", "React", "Javascript", "Python", "SQL", "HTML5", "Redux", "Node.JS", "MongoDB", "RESTful API", "GIT", "Pycharm", "visual studio"]'
+            data-type='[ "CSS3", "React", "Javascript", "Python", "SQL", "HTML5", "Redux", "Node.JS", "MongoDB", "RESTful API", "GIT", "Pycharm", "visual studio", "GitHub", "Django"]'
           >
             <span className="experienceWithLoop"></span>
           </a>
