@@ -76,7 +76,6 @@ function seeAllBtn (){
       Aos.init({});
     }
   }, [Aos]);
-
   return (
     <>
       <Box

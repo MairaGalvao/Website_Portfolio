@@ -4,7 +4,6 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import "../css/projANDart.css";
 
-
 export function DummyPortfolio({
   title,
   description,

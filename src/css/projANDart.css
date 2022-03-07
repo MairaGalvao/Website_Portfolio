@@ -158,11 +158,11 @@ figure svg {
   width: 350px;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
+
 
 /* .cardPortfolio {
   background-color: #222831;
-
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
   border-radius: 5px;
   display: flex;
   flex-direction: column;

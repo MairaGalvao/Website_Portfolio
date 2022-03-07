@@ -7,7 +7,6 @@ import { FaArrowCircleUp } from "react-icons/fa";
 import { Button } from "@material-ui/core";
 import "../css/navBar.css";
 
-
 export default function NavBar() {
   const [visible, setVisible] = useState(false);
 
