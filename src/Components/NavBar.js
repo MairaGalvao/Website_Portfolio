@@ -1,5 +1,4 @@
 import { Box } from "@material-ui/core";
-import Typography from "@material-ui/core/Typography";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-scroll";
 import React, { useState } from "react";

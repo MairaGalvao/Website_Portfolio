@@ -120,7 +120,7 @@ export function Contact() {
               <input type="submit" value="Send Message" id="form_button" style={{backgroundColor:'black',
             color:'white'
             }} />
-              {/* <button type="reset">Send Me Message</button> */}
+
             </div>
             <div
               class="social-media"
@@ -156,7 +156,6 @@ export function Contact() {
           />
         </Box>
 
-        {/* <a class="me" href="https://codepen.io/uzcho_/pens/popular/?grid_type=list" target="_blank" style="color:#000"></a> */}
       </Box>
     </>
   );

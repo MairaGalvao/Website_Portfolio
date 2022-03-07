@@ -9,7 +9,6 @@ import { SmartPortfolio } from "./Components/SmartPortfolio";
 import "./css/App.css";
 import { useHistory as history } from "react-router-dom";
 import { Home } from "./Components/Home";
-import { LoadingAnimation } from "./LoadingAnimation";
 import myTest from './Components/myTest'
 
 function App() {
@@ -33,7 +32,7 @@ function App() {
       <Router history={history}>
         {/* {isLoading && <LoadingAnimation />} */}
 
-        {!isLoading && (
+
           <>
             <NavBar />
             <Home />
@@ -44,7 +43,7 @@ function App() {
             <Footer />
    
           </>
-        )}
+        
         <Switch>
         <Route path={"/"} component={myTest} />
 

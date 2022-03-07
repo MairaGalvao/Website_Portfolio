@@ -2,11 +2,6 @@ import React, { useEffect, useState} from "react";
 import { Box } from "@material-ui/core";
 import { DummyPortfolio } from "./DummyPortfolio";
 import Typography from "@material-ui/core/Typography";
-import realBillPic from "../images/realBillPic.jpg";
-import flashGeekPic from "../images/flashGeekPic.jpg";
-import healthPic from "../images/healthPic.jpg";
-import dataAnalPic from "../images/dataAnalPic.jpg";
-import web from "../images/web.jpg"
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Select from 'react-select';
@@ -14,27 +9,20 @@ import makeAnimated from 'react-select/animated';
 import { techOptions } from '../techOptions';
 import Button from '@mui/material/Button';
 
-
 const animatedComponents = makeAnimated();
 
 export function SmartPortfolio() {
   const [selectedTechProject, setSelectedTechProject] = useState(false);
-  const [techsArray, setTechsArray] = useState([]);
-
   const [isReactPicked, setIsReactPicked] = useState(false);
   const [isPythonPicked, setIsPythonPicked] = useState(false);
   const [isNodePicked, setIsNodePicked] = useState(false);
   const [isJSPicked, setIsJSPicked] = useState(false);
-  
   const [isAllPicked, setIsAllPicked] = useState(false);
   const [isEmpty, setIsEmpty] = useState(true)
-  
 
 function seeAllBtn (){
   setIsAllPicked(true)
 }
-
-
 
  const handleChange = e => {
     const myArr = e.map((item, i) => {
@@ -64,8 +52,6 @@ function seeAllBtn (){
 
     else if (selectedTechProject == false){
       setIsEmpty(false)
-      
-
     }
 
   return item[i]
@@ -90,7 +76,6 @@ function seeAllBtn (){
             fontFamily: "monospace",
             color: "white",
             display: "flex",
-
             paddingLeft: "50px",
             position: "absolute",
             fontFamily: "Poppins, sans-serif",
