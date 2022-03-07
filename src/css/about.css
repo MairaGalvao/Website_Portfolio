@@ -1,0 +1,67 @@
+.borderAbout {
+  height: 369px;
+  width: 290px;
+  background: transparent;
+  border-radius: 10px;
+  transition: border 1s;
+  position: relative;
+}
+.borderAbout:hover {
+  border: 1px solid #fff;
+}
+.cardAbout {
+  height: 395px;
+  width: 320px;
+  background: #808080;
+  border-radius: 10px;
+  transition: background 0.9s;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 90px 63px -60px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.card0 {
+  background: url(../images/mairaPic.jpg) center center no-repeat;
+  background-size: 400px;
+}
+.card0:hover {
+  background: url(../images/mairaPic.jpg) left center no-repeat;
+  background-size: 450px;
+}
+.card0:hover .myName {
+  opacity: 1;
+}
+.card0:hover .fab {
+  opacity: 1;
+}
+
+.card0:hover .iconsSkillsAbout {
+  opacity: 1;
+}
+
+.myName {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+  font-size: 25px;
+  margin: 10px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.iconsSkillsAbout {
+  position: absolute;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+  fill: #fff;
+  font-size: 30px;
+  margin: 230px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+img {
+  max-width: 100%;
+}
