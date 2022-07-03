@@ -148,3 +148,16 @@
     margin-top: -270px;
   }
 }
+
+
+
+@media screen and (max-width: 768px) {
+  #home {
+
+    background-position: center center;
+    background-attachment: unset;
+    min-height:120vh
+   
+  }
+
+}
