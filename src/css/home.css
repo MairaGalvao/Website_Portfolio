@@ -159,5 +159,14 @@
     min-height:120vh
    
   }
+  .listWords{
+    font-size: 25px;
+    padding-top:20px
+  }
+  
+  .homePhraseExperience{
+    font-size: 20px;
+    padding-top:300px
+  }
 
 }
