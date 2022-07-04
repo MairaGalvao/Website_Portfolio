@@ -8,6 +8,7 @@ import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import { techOptions } from "../techOptions";
 import Button from "@mui/material/Button";
+import "../css/projANDart.css";
 
 const animatedComponents = makeAnimated();
 

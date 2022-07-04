@@ -918,7 +918,7 @@ body {
   height: 100%;
   width: 100%;
   top: 50%;
-  display: flex;
+
   justify-content: center;
 }
 
@@ -1208,14 +1208,17 @@ body {
   }
   #about-box{
     display: grid;
-    grid-template-columns: repeat(1, 4fr);
+    grid-template-columns: auto;
     gap: 10px;
+    width:     fit-content(4000px)
+
+
   }
   #mainAbout{
-    height: 200px;
+
     display: grid;
     padding-top: 80px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     margin-left: 100px;
   }
 }

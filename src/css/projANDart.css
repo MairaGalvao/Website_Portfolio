@@ -271,13 +271,7 @@ figure svg {
 
 
 
-.selectTechBox{
-  width: 30%;
-   display: block;
- 
 
-
-}
 
 
 
@@ -452,7 +446,22 @@ ul .booking-card:hover .informations-container .more-information {
  }
 }
 
+@media screen and (max-width: 768px) {
+  .selectTechBox {
 
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: flex-end;
+
+  }
+  #mainBoxProjects{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+    width:     fit-content(4000px)
+  }
+
+}
 
 
 

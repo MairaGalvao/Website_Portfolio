@@ -22,7 +22,7 @@ export function About() {
 					data-aos-easing="linear"
 					data-aos-duration="2500"
 				>
-					<Box className="cardAbout card0">
+					<Box className="cardAbout card0" id="maira-pic-animation">
 						<Box className="borderAbout">
 							<h2 className="myName">Maíra Galvão</h2>
 							<Box className="iconsSkillsAbout">
@@ -47,77 +47,86 @@ export function About() {
 						<h1>Reliable, Determinated and proactive</h1>
 						<h1>Powered by motivation!</h1>
 					</Box>
-					<Box id="mainAbout">
-						<Box className="row1-container" id="about-box">
-							<Box
-								className="box box-down cyan"
-								data-aos="flip-left"
-								data-aos-easing="ease-out-cubic"
-								data-aos-duration="1000"
-							>
-								<h2>Hard-worker</h2>
-								<p>
-									Working hard is a quality that people know about me. I always
-									achieve what I set out to do.{" "}
-								</p>
-								<img
-									src="https://assets.codepen.io/2301174/icon-supervisor.svg"
-									alt="Hard-worker"
-								/>
-							</Box>
 
-							<Box
-								className="box red"
-								data-aos="flip-left"
-								data-aos-easing="ease-out-cubic"
-								data-aos-duration="2500"
-							>
-								<h2>Team Player</h2>
-								<p>
-									People matter to me, and I enjoy helping my co-workers and
-									working in a team.{" "}
-								</p>
-								<img
-									src="https://assets.codepen.io/2301174/icon-team-builder.svg"
-									alt="Team Player"
-								/>
-							</Box>
-
-							<Box
-								className="box box-down cyan"
-								data-aos="flip-left"
-								data-aos-easing="ease-out-cubic"
-								data-aos-duration="4000"
-							>
-								<h2>Comunicative</h2>
-								<p>
-									Communicating in another language is a big plus. I speak
-									Portuguese, English, and Hebrew.{" "}
-								</p>
-								<img
-									src="https://assets.codepen.io/2301174/icon-calculator.svg"
-									alt="Comunicative"
-								/>
-							</Box>
+					<Box
+						className="row1-container"
+						id="about-box"
+						sx={{ width: "100%" }}
+						style={{
+							textAlign: "center",
+							padding: "20px 0",
+							fontSize: "30px",
+						}}
+					>
+						<Box
+							item
+							className="box box-down cyan"
+							data-aos="flip-left"
+							data-aos-easing="ease-out-cubic"
+							data-aos-duration="1000"
+						>
+							<h2>Hard-worker</h2>
+							<p>
+								Working hard is a quality that people know about me. I always
+								achieve what I set out to do.{" "}
+							</p>
+							<img
+								src="https://assets.codepen.io/2301174/icon-supervisor.svg"
+								alt="Hard-worker"
+							/>
 						</Box>
+
+						<Box
+							className="box red"
+							data-aos="flip-left"
+							data-aos-easing="ease-out-cubic"
+							data-aos-duration="2500"
+						>
+							<h2>Team Player</h2>
+							<p>
+								People matter to me, and I enjoy helping my co-workers and
+								working in a team.{" "}
+							</p>
+							<img
+								src="https://assets.codepen.io/2301174/icon-team-builder.svg"
+								alt="Team Player"
+							/>
+						</Box>
+
+						<Box
+							className="box box-down cyan"
+							data-aos="flip-left"
+							data-aos-easing="ease-out-cubic"
+							data-aos-duration="4000"
+						>
+							<h2>Comunicative</h2>
+							<p>
+								Communicating in another language is a big plus. I speak
+								Portuguese, English, and Hebrew.{" "}
+							</p>
+							<img
+								src="https://assets.codepen.io/2301174/icon-calculator.svg"
+								alt="Comunicative"
+							/>
+						</Box>
+
 						<Box
 							className="row2-container"
 							data-aos="flip-left"
 							data-aos-easing="ease-out-cubic"
 							data-aos-duration="5500"
-						>
-							<Box className="box orange">
-								<h2>Creative</h2>
-								<p>
-									{" "}
-									Creativity is essential, and I enjoy seeing new ideas come to
-									life.
-								</p>
-								<img
-									src="https://assets.codepen.io/2301174/icon-karma.svg"
-									alt="Creative"
-								/>
-							</Box>
+						></Box>
+						<Box className="box orange">
+							<h2>Creative</h2>
+							<p>
+								{" "}
+								Creativity is essential, and I enjoy seeing new ideas come to
+								life.
+							</p>
+							<img
+								src="https://assets.codepen.io/2301174/icon-karma.svg"
+								alt="Creative"
+							/>
 						</Box>
 					</Box>
 				</Box>
