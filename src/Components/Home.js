@@ -74,7 +74,10 @@ export function Home() {
 
 	return (
 		<>
-			<Box id="home" data-aos="fade-in"></Box>
+			<div id="home" data-aos="fade-in">
+				{" "}
+			</div>
+
 			<Box id="phraseCoverBox">
 				<h4 className="wordCarousel" data-aos="fade-in">
 					<Box className="divAbout">

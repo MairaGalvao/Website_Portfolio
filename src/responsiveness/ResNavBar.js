@@ -12,7 +12,6 @@ export default function ResNavBar() {
 						<span></span>
 						<span></span>
 						<span></span>
-						<span></span>
 
 						<ul id="menu">
 							<a href="">
@@ -27,6 +26,9 @@ export default function ResNavBar() {
 							</a>
 							<a href="#articles">
 								<li>Articles</li>
+							</a>
+							<a href="#contact">
+								<li>Contact</li>
 							</a>
 						</ul>
 					</div>

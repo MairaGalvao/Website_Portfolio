@@ -60,24 +60,16 @@ export function SmartPortfolio() {
 	return (
 		<>
 			<Box
-				className="portfolio"
+				className="header"
+				data-aos="fade-down"
+				data-aos-duration="2000"
+				style={{ padding: "15px" }}
 				id="portfolio"
-				data-aos="fade-right"
-				style={{ paddingTop: "180px" }}
 			>
-				<Typography
-					style={{
-						fontSize: "100px",
-						fontWeight: "bold",
-						fontFamily: "monospace",
-						color: "white",
-						display: "flex",
-						paddingLeft: "50px",
-						position: "absolute",
-						fontFamily: "Poppins, sans-serif",
-					}}
-				></Typography>
+				<h1>Persistence, Determination, Willpower</h1>
+				<h1>A hands-on approach!</h1>
 			</Box>
+
 			<Box className="selectTechBox">
 				<Box
 					style={{
@@ -97,12 +89,8 @@ export function SmartPortfolio() {
 					/>
 				</Box>
 			</Box>
-			<Box id="projectPhraseMainBox">
-				<Box className="header" data-aos="fade-down" data-aos-duration="2000">
-					<h1>Persistence, Determination, Willpower</h1>
-					<h1>A hands-on approach!</h1>
-				</Box>
 
+			<Box id="projectPhraseMainBox">
 				<Box>
 					<Box
 						id="mainBoxProjects"

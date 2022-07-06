@@ -1,6 +1,5 @@
 #home {
   background-image: url(../images/coverPic.jpg);
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -152,11 +151,27 @@
 
 
 @media screen and (max-width: 768px) {
+  .homePhraseExperience{
+    display:none
+  }
+  .divAbout{
+    display: none;
+  }
+ 
   #home {
-    background-image: url(../images/roadMobile.jpg);
-    background-position: center center;
-    background-attachment: unset;
-    min-height:120vh
+    /* background-image: url(../images/roadMobile.jpg); */
+    background-image: url(../images/trekkingPicMobile.jpg);
+  /* The image used */
+
+  /* Full height */
+    /* Full height */
+    height: 50%; 
+
+    /* Center and scale the image nicely */
+
+    background-size: cover;
+    overflow: hidden;
+  
    
   }
   .listWords{

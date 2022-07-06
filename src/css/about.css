@@ -70,4 +70,10 @@ img {
   #maira-pic-animation {
     display: none;
   }
+  .title {
+    font-size: 25px;
+  }
+  .sub-title {
+    font-size: 20px;
+  }
 }

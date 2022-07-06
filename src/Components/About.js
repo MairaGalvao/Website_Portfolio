@@ -17,7 +17,6 @@ export function About() {
 			<Box id="about" style={{ display: "flex", paddingTop: "80px" }}>
 				<Box
 					className="profileBox"
-					style={{ paddingLeft: "50px", paddingTop: "50px" }}
 					data-aos="fade-down"
 					data-aos-easing="linear"
 					data-aos-duration="2500"
@@ -44,8 +43,9 @@ export function About() {
 				</Box>
 				<Box>
 					<Box className="header" data-aos="fade-down">
-						<h1>Reliable, Determinated and proactive</h1>
-						<h1>Powered by motivation!</h1>
+						<h1 className="title">Reliable, Determinated and Proactive</h1>
+
+						<h1 className="sub-title">Powered by motivation!</h1>
 					</Box>
 
 					<Box

@@ -451,7 +451,7 @@ ul .booking-card:hover .informations-container .more-information {
 
     display: flex;
     /* flex-direction: row; */
-    justify-content: flex-end;
+    flex-direction: column;
 
   }
   #mainBoxProjects{
