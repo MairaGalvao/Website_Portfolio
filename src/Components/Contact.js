@@ -65,7 +65,7 @@ export function Contact() {
 				<Box>
 					<Box style={{ display: "flex" }} id="formBox">
 						<form
-							style={{ display: "flex", left: "100px" }}
+							style={{ display: "flex", left: "100px", position: "relative" }}
 							action="#"
 							method="post"
 							id="contact_form"

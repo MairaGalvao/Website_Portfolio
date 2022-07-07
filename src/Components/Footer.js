@@ -5,7 +5,7 @@ import "../css/footer.css";
 export function Footer() {
 	return (
 		<>
-			<Box id="mainFooter">
+			{/* <Box id="mainFooter" >
 				<section id="lab_social_icon_footer">
 					<link
 						href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
@@ -38,7 +38,36 @@ export function Footer() {
 						©2021 Maíra Galvão
 					</p>
 				</section>
-			</Box>
+			</Box> */}
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 col-xs-12">
+						<ul class="social-icons">
+							<li>
+								<a class="facebook" href="#">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</li>
+							<li>
+								<a class="twitter" href="#">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</li>
+							<li>
+								<a class="dribbble" href="#">
+									<i class="fa fa-dribbble"></i>
+								</a>
+							</li>
+							<li>
+								<a class="linkedin" href="#">
+									<i class="fa fa-linkedin"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</>
 	);
 }
