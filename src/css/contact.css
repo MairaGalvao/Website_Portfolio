@@ -3,6 +3,7 @@ form {
   position: absolute;
   flex-direction: column;   
    display: flex;
+
  
 
 }
@@ -64,6 +65,22 @@ textarea:focus {
 #form_button:hover {
   background: #474544;
   color: #f2f3eb;
+}
+
+
+@media screen and (max-width: 768px) {
+  .picContact {
+    display: none;
+  }
+  .headerContact{
+    display: flex;
+    justify-content: flex-end;
+  }
+  #contact_form{
+    left:50px
+  }
+
+
 }
 
 

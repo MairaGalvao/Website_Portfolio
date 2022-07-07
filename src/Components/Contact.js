@@ -58,13 +58,14 @@ export function Contact() {
 					className="headerContact"
 					data-aos="fade-down"
 					data-aos-duration="2000"
+					style={{ display: "flex", justifyContent: "space-around" }}
 				>
 					<h1 style={{ fontWeight: "bold" }}>Drop me a message!</h1>
 				</Box>
 				<Box>
 					<Box style={{ display: "flex" }} id="formBox">
 						<form
-							style={{ display: "flex" }}
+							style={{ display: "flex", left: "100px" }}
 							action="#"
 							method="post"
 							id="contact_form"
@@ -149,11 +150,7 @@ export function Contact() {
 					</Box>
 				</Box>
 				<Box className="picContact">
-					<img
-						id="picContact"
-						style={{ width: "600px", height: "500px", float: "right" }}
-						src={contactPic}
-					/>
+					<img id="picContact" style={{ float: "right" }} src={contactPic} />
 				</Box>
 			</Box>
 		</>
