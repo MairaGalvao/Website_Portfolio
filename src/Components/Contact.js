@@ -54,12 +54,7 @@ export function Contact() {
 				data-aos="fade-down"
 				data-aos-duration="2000"
 			>
-				<Box
-					style={{ paddingBottom: "150px" }}
-					className="header"
-					data-aos="fade-down"
-					data-aos-duration="2000"
-				>
+				<Box className="header" data-aos="fade-down" data-aos-duration="2000">
 					<h1 style={{ fontWeight: "bold" }}>Drop me a message!</h1>
 				</Box>
 				<Box>

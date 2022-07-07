@@ -94,12 +94,12 @@ export function SmartPortfolio() {
 				<Box>
 					<Box
 						id="mainBoxProjects"
-						style={{
-							display: "grid",
-							gridTemplateColumns: "1fr 1fr 1fr 1fr",
-							gridGap: "40px",
-							margin: "0px 50px",
-						}}
+						// style={{
+						// 	display: "grid",
+						// 	gridTemplateColumns: "1fr 1fr 1fr 1fr",
+						// 	gridGap: "40px",
+						// 	margin: "0px 50px",
+						// }}
 					>
 						{(isReactPicked ||
 							isNodePicked ||

@@ -40,13 +40,7 @@ export function SmartArticles() {
 				<h1>People are the power!</h1>
 			</Box>
 
-			<Box
-				style={{
-					display: "flex",
-					justifyContent: "space-between",
-					padding: "100px",
-				}}
-			>
+			<Box id="articlesMainBox">
 				<DummyArticles
 					title={"Data Analysis"}
 					titleTip={"A data analysis on a steak Database"}
