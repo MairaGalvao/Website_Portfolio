@@ -470,6 +470,11 @@ ul .booking-card:hover .informations-container .more-information {
 
 }
 
+#articlesBox {
+      display: grid;
+      grid-row-gap: 100px;
+
+}
 
 
 

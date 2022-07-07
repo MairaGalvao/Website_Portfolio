@@ -1,6 +1,9 @@
 form {
-  margin: 0 250px;
+
   position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 input[type="text"],
@@ -61,3 +64,5 @@ textarea:focus {
   background: #474544;
   color: #f2f3eb;
 }
+
+

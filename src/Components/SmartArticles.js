@@ -1,11 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Box } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { DummyArticles } from "./DummyArticles";
 import Typography from "@material-ui/core/Typography";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import "../css/projANDart.css";
 
 export function SmartArticles() {
+	const [isAllPicked, setIsAllPicked] = useState(false);
+
+	function seeAllBtn() {
+		setIsAllPicked(true);
+	}
+
 	useEffect(() => {
 		if (Aos) {
 			Aos.init({});
@@ -15,10 +23,10 @@ export function SmartArticles() {
 		<>
 			<Box
 				className="articles"
+				style={{ padding: "15px" }}
 				id="articles"
 				data-aos="fade-right"
 				data
-				style={{ paddingTop: "180px" }}
 			>
 				<Typography
 					style={{
@@ -40,22 +48,46 @@ export function SmartArticles() {
 				<h1>People are the power!</h1>
 			</Box>
 
-			<Box id="articlesMainBox">
-				<DummyArticles
-					title={"Data Analysis"}
-					titleTip={"A data analysis on a steak Database"}
-					image={"https://miro.medium.com/max/525/1*gM-I1mhLZS7WN3bs_ZDk_g.png"}
-					linkMedium={"https://mairagalvao.medium.com"}
-					description={"Read"}
-				/>
+			<Box
+				id="articlesMainBox"
+				style={{
+					display: "flex",
+					flexDirection: "row",
+					justifyContent: "space-around",
+				}}
+			>
+				<Box id="articlesBox">
+					<DummyArticles
+						title={"Data Analysis"}
+						titleTip={"A data analysis on a steak Database"}
+						image={
+							"https://miro.medium.com/max/525/1*gM-I1mhLZS7WN3bs_ZDk_g.png"
+						}
+						linkMedium={"https://mairagalvao.medium.com"}
+						description={"Read"}
+					/>
 
-				<DummyArticles
-					title={"Web Scraping"}
-					description={"Coming soon"}
-					linkMedium={""}
-				/>
+					{isAllPicked && (
+						<DummyArticles
+							title={"Web Scraping"}
+							description={"Coming soon"}
+							linkMedium={""}
+						/>
+					)}
+					{isAllPicked && (
+						<DummyArticles title={"Coming soon"} description={"Coming soon"} />
+					)}
 
-				<DummyArticles title={"Coming soon"} description={"Coming soon"} />
+					<Button
+						variant="contained"
+						class="seeAllBtn"
+						onClick={seeAllBtn}
+						style={{ fontSize: "22px", cursor: "pointer" }}
+					>
+						{" "}
+						See all{" "}
+					</Button>
+				</Box>
 			</Box>
 		</>
 	);

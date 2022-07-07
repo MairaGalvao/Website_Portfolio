@@ -49,109 +49,107 @@ export function Contact() {
 	return (
 		<>
 			<Box
-				style={{ paddingTop: "100px" }}
+				style={{ paddingTop: "10px" }}
 				id="contact"
 				data-aos="fade-down"
 				data-aos-duration="2000"
 			>
-				<Box className="header" data-aos="fade-down" data-aos-duration="2000">
+				<Box
+					className="headerContact"
+					data-aos="fade-down"
+					data-aos-duration="2000"
+				>
 					<h1 style={{ fontWeight: "bold" }}>Drop me a message!</h1>
 				</Box>
 				<Box>
-					<form action="#" method="post" id="contact_form" onSubmit={onSubmit}>
-						<div class="field" tabIndex="1">
-							<label for="username" htmlFor="name">
-								<i class="fa fa-user" style={{ paddingRight: "10px" }}></i>Your
-								Name
-							</label>
-							<input
-								type="text"
-								placeholder="Name"
-								name="from_name"
-								id="name_input"
-								style={{ fontFamily: "Fira Sans Condensed, sans-serif" }}
-								required
-								value={toSend.from_name}
-								onChange={handleChange}
-								type="text"
-								placeholder="e.g. Maíra Galvão"
-								required
-							/>
-						</div>
-						<div class="field" tabIndex="1">
-							<label for="email">
-								<i class="fa fa-envelope" style={{ paddingRight: "10px" }}></i>
-								Your Email
-							</label>
-							<input
-								id="email_input"
-								name="reply_to"
-								placeholder="Your email"
-								required
-								value={toSend.reply_to}
-								onChange={handleChange}
-								type="text"
-								placeholder="email@domain.com"
-								required
-							/>
-						</div>
-						<div class="field" tabIndex="3">
-							<label for="message" htmlFor="message">
-								<i class="fa fa-edit" style={{ paddingRight: "10px" }}></i>
-								Your Message
-							</label>
-							<textarea
-								name="message"
-								type="text"
-								placeholder="Your message"
-								id="message_input"
-								cols="20"
-								rows="1"
-								required
-								value={toSend.message}
-								onChange={handleChange}
-								name="message"
-								placeholder="type here"
-								required
-							></textarea>
-						</div>
-						<div onClick={deliveryMsg}>
-							<input
-								type="submit"
-								value="Send Message"
-								id="form_button"
-								style={{ backgroundColor: "black", color: "white" }}
-							/>
-						</div>
-						<div
-							class="social-media"
-							style={{
-								fontSize: "20px",
-								letterSpacing: "2px",
-								paddingLeft: "10px",
-							}}
-						></div>
-					</form>
+					<Box style={{ display: "flex" }} id="formBox">
+						<form
+							style={{ display: "flex" }}
+							action="#"
+							method="post"
+							id="contact_form"
+							onSubmit={onSubmit}
+						>
+							<div class="field" tabIndex="1">
+								<label for="username" htmlFor="name">
+									<i class="fa fa-user" style={{ paddingRight: "10px" }}></i>
+									Your Name
+								</label>
+								<input
+									type="text"
+									placeholder="Name"
+									name="from_name"
+									id="name_input"
+									style={{ fontFamily: "Fira Sans Condensed, sans-serif" }}
+									required
+									value={toSend.from_name}
+									onChange={handleChange}
+									type="text"
+									placeholder="e.g. Maíra Galvão"
+									required
+								/>
+							</div>
+							<div class="field" tabIndex="1">
+								<label for="email">
+									<i
+										class="fa fa-envelope"
+										style={{ paddingRight: "10px" }}
+									></i>
+									Your Email
+								</label>
+								<input
+									id="email_input"
+									name="reply_to"
+									placeholder="Your email"
+									required
+									value={toSend.reply_to}
+									onChange={handleChange}
+									type="text"
+									placeholder="email@domain.com"
+									required
+								/>
+							</div>
+							<div class="field" tabIndex="3">
+								<label for="message" htmlFor="message">
+									<i class="fa fa-edit" style={{ paddingRight: "10px" }}></i>
+									Your Message
+								</label>
+								<textarea
+									name="message"
+									type="text"
+									placeholder="Your message"
+									id="message_input"
+									cols="20"
+									rows="1"
+									required
+									value={toSend.message}
+									onChange={handleChange}
+									name="message"
+									placeholder="type here"
+									required
+								></textarea>
+							</div>
+							<div onClick={deliveryMsg}>
+								<input
+									type="submit"
+									value="Send Message"
+									id="form_button"
+									style={{ backgroundColor: "black", color: "white" }}
+								/>
+							</div>
+							<div
+								class="social-media"
+								style={{
+									fontSize: "20px",
+									letterSpacing: "2px",
+									paddingLeft: "10px",
+								}}
+							></div>
+						</form>
+					</Box>
 				</Box>
-
-				<Box
-					style={{
-						paddingRight: "200px",
-						display: "flex",
-						justifyContent: "flex-end",
-						flexDirection: "row",
-						alignItems: "center",
-					}}
-				>
-					<img
-						style={{
-							width: "50%",
-
-							height: "50%",
-							paddingLeft: "10px",
-						}}
-						src={contactPic}
-					/>
+				<Box className="picContact">
+					<img src={contactPic} />
 				</Box>
 			</Box>
 		</>
