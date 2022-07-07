@@ -149,7 +149,11 @@ export function Contact() {
 					</Box>
 				</Box>
 				<Box className="picContact">
-					<img src={contactPic} />
+					<img
+						id="picContact"
+						style={{ width: "600px", height: "500px", float: "right" }}
+						src={contactPic}
+					/>
 				</Box>
 			</Box>
 		</>
