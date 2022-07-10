@@ -453,6 +453,11 @@ ul .booking-card:hover .informations-container .more-information {
 
 }
 
+#mainBoxProjects{
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 @media screen and (max-width: 768px) {
   .selectTechBox {
 

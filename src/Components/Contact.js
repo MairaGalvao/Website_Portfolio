@@ -147,10 +147,14 @@ export function Contact() {
 								}}
 							></div>
 						</form>
+						<Box className="picContact">
+							<img
+								id="picContact"
+								style={{ float: "right" }}
+								src={contactPic}
+							/>
+						</Box>
 					</Box>
-				</Box>
-				<Box className="picContact">
-					<img id="picContact" style={{ float: "right" }} src={contactPic} />
 				</Box>
 			</Box>
 		</>
