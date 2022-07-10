@@ -26,41 +26,35 @@ export function Footer() {
 								></i>
 							</a>
 						</Box>
-					</Box>
-					<p
-						style={{
-							color: "black",
-							paddingRight: "150px",
-							fontFamily: "Poppins sans-serif",
-							fontSize: "22px",
-						}}
-					>
-						©2021 Maíra Galvão
-					</p>
-				</section>
-			</Box> */}
+				 */}
 
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 col-sm-6 col-xs-12">
 						<ul class="social-icons">
 							<li>
-								<a class="facebook" href="#">
-									<i class="fa fa-facebook"></i>
+								<a href="mailto:mairagalvao01@gmail.com">
+									<i
+										id="social-gp"
+										className="fa fa-google-plus-square fa-1x social"
+									></i>
 								</a>
 							</li>
 							<li>
-								<a class="twitter" href="#">
-									<i class="fa fa-twitter"></i>
+								<a class="medium" href="https://mairagalvao.medium.com/">
+									<i class="fa fa-medium"></i>
 								</a>
 							</li>
 							<li>
-								<a class="dribbble" href="#">
-									<i class="fa fa-dribbble"></i>
+								<a class="github" href="https://github.com/MairaGalvao">
+									<i class="fa fa-github"></i>
 								</a>
 							</li>
 							<li>
-								<a class="linkedin" href="#">
+								<a
+									class="linkedin"
+									href="https://www.linkedin.com/in/maira-galvao"
+								>
 									<i class="fa fa-linkedin"></i>
 								</a>
 							</li>
