@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "../css/home.css";
+import { saveAs } from "file-saver";
 
 export function Home() {
 	useEffect(() => {
@@ -72,12 +73,37 @@ export function Home() {
 		document.body.appendChild(css);
 	}, []);
 
+	const saveFile = () => {
+		saveAs(
+			"https://drive.google.com/file/d/1Tn53WQzmyXjh42sUz5AfaM805_Q7FLGG/view?usp=sharing.pdf",
+			"example.pdf"
+		);
+	};
+
 	return (
 		<>
 			<div id="home" data-aos="fade-in">
 				{" "}
 			</div>
 
+			{/* <div class="w3-center w3-light-grey w3-padding-16 w3-hide-large w3-hide-medium">
+				<div class="w3-bar w3-light-grey">
+					<a href="#" class="w3-bar-item w3-button">
+						Home
+					</a>
+					<a href="#portfolio" class="w3-bar-item w3-button">
+						Portfolio
+					</a>
+					<a href="#contact" class="w3-bar-item w3-button">
+						Contact
+					</a>
+				</div>
+			</div> */}
+			<div className="downloadMain">
+				<button onClick={saveFile} class="btn">
+					<i style={{ color: "white" }} class="fa fa-download"></i> Resume
+				</button>
+			</div>
 			<Box id="phraseCoverBox">
 				<h4 className="wordCarousel" data-aos="fade-in">
 					<Box className="divAbout">

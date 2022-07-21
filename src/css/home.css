@@ -149,6 +149,17 @@
 }
 
 
+.btn{
+  display: block;
+  
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;}
+  
+
 
 @media screen and (max-width: 768px) {
   .homePhraseExperience{
@@ -160,18 +171,10 @@
  
   #home {
     /* background-image: url(../images/roadMobile.jpg); */
-    background-image: url(../images/trekkingPicMobile.jpg);
-  /* The image used */
-
-  /* Full height */
-    /* Full height */
-    height: 50%; 
-
-    /* Center and scale the image nicely */
-
-    background-size: cover;
-    overflow: hidden;
-  
+    background-image: url(../images/roadMobile.jpg);
+    background-position:center;
+    width:550px;
+    height:200px;
    
   }
   .listWords{
@@ -184,4 +187,10 @@
     padding-top:300px
   }
 
-}
+  .homeMobile{
+    display: block;
+    background-color: aqua;
+    position:absolute;
+    z-index:1;
+  
+  }}
