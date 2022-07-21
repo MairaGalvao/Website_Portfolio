@@ -1,14 +1,12 @@
-import { Box } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-scroll";
 import React, { useState } from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
-import { Button } from "@material-ui/core";
+import * as Mui from "@material-ui/core";
 import "../css/navBar.css";
 
 export default function NavBar() {
 	const [visible, setVisible] = useState(false);
-
 	const toggleVisible = () => {
 		const scrolled = document.documentElement.scrollTop;
 		if (scrolled > 300) {
@@ -17,7 +15,6 @@ export default function NavBar() {
 			setVisible(false);
 		}
 	};
-
 	const scrollToTop = () => {
 		history.push("/");
 		window.scrollTo({
@@ -26,99 +23,88 @@ export default function NavBar() {
 		});
 	};
 	window.addEventListener("scroll", toggleVisible);
-
 	let history = useHistory();
+
 	return (
 		<>
-			<Box id="navBar">
-				<Button
-					id="btnBackToTop"
-					style={{
-						color: "#3c5e68",
-					}}
-				>
-					<FaArrowCircleUp
-						onClick={scrollToTop}
-						style={{ display: visible ? "inline" : "none" }}
-					/>
-				</Button>
+			<Mui.Button
+				id="btnBackToTop"
+				style={{
+					color: "#3c5e68",
+				}}
+			>
+				<FaArrowCircleUp
+					onClick={scrollToTop}
+					style={{ display: visible ? "inline" : "none" }}
+				/>
+			</Mui.Button>
 
-				<Box
-					id="navBox"
-					className="w3-bar w3-white w3-wide w3-padding w3-card"
-					st
-				>
-					<Box id="navMenu">
-						<Box className="nameNavBox">
-							<div class="logo">Maíra Galvão</div>
-						</Box>
-						<Box
-							className="w2-bar w3-white w3-wide w3-padding w3-card"
-							id="itemsNav"
+			<Mui.Box className="navContainer" id="navBar">
+				<Mui.Box className="navMenu">
+					<Mui.Box className="logo">Maíra Galvão</Mui.Box>
+
+					<Mui.Box className="itemsNav">
+						<Link
+							to="home"
+							spy={true}
+							smooth={true}
+							onClick={() => {
+								history.push("/");
+							}}
 						>
-							<Link
-								className="itemsBtn"
-								to="home"
-								spy={true}
-								smooth={true}
-								onClick={() => {
-									history.push("/");
-								}}
-							>
-								Home
-							</Link>
+							Home
+						</Link>
 
-							<Link
-								className="itemsBtn"
-								to="about"
-								spy={true}
-								smooth={true}
-								onClick={() => {
-									history.push("/about");
-								}}
-							>
-								About
-							</Link>
+						<Link
+							className="itemsBtn"
+							to="about"
+							spy={true}
+							smooth={true}
+							onClick={() => {
+								history.push("/about");
+							}}
+						>
+							About
+						</Link>
 
-							<Link
-								className="itemsBtn"
-								to="portfolio"
-								spy={true}
-								smooth={true}
-								onClick={() => {
-									history.push("/portfolio");
-								}}
-							>
-								Portfolio
-							</Link>
+						<Link
+							className="itemsBtn"
+							to="portfolio"
+							spy={true}
+							smooth={true}
+							onClick={() => {
+								history.push("/portfolio");
+							}}
+						>
+							Portfolio
+						</Link>
 
-							<Link
-								className="itemsBtn"
-								to="articles"
-								spy={true}
-								smooth={true}
-								onClick={() => {
-									history.push("/articles");
-								}}
-							>
-								Articles
-							</Link>
+						<Link
+							className="itemsBtn"
+							to="articles"
+							spy={true}
+							smooth={true}
+							onClick={() => {
+								history.push("/articles");
+							}}
+						>
+							Articles
+						</Link>
 
-							<Link
-								className="itemsBtn"
-								to="contact"
-								spy={true}
-								smooth={true}
-								onClick={() => {
-									history.push("/contact");
-								}}
-							>
-								Contact
-							</Link>
-						</Box>
-					</Box>
-				</Box>
-			</Box>
+						<Link
+							className="itemsBtn"
+							to="contact"
+							spy={true}
+							smooth={true}
+							onClick={() => {
+								history.push("/contact");
+							}}
+						>
+							Contact
+						</Link>
+					</Mui.Box>
+				</Mui.Box>
+			</Mui.Box>
 		</>
 	);
 }
