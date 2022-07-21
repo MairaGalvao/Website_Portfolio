@@ -1,9 +1,10 @@
-import Box from "@material-ui/core/Box";
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "../css/home.css";
 import { saveAs } from "file-saver";
+import * as Mui from "@material-ui/core";
+import { Link } from "react-scroll";
 
 export function Home() {
 	useEffect(() => {
@@ -65,7 +66,6 @@ export function Home() {
 				new TxtType(elements[i], JSON.parse(toRotate), period);
 			}
 		}
-		// INJECT CSS
 		var css = document.createElement("style");
 		css.type = "text/css";
 		css.innerHTML =
@@ -82,67 +82,57 @@ export function Home() {
 
 	return (
 		<>
-			<div id="home" data-aos="fade-in">
+			<Mui.Box id="home" data-aos="fade-in">
 				{" "}
-			</div>
-
-			{/* <div class="w3-center w3-light-grey w3-padding-16 w3-hide-large w3-hide-medium">
-				<div class="w3-bar w3-light-grey">
-					<a href="#" class="w3-bar-item w3-button">
-						Home
-					</a>
-					<a href="#portfolio" class="w3-bar-item w3-button">
-						Portfolio
-					</a>
-					<a href="#contact" class="w3-bar-item w3-button">
-						Contact
-					</a>
-				</div>
-			</div> */}
-			<div className="downloadMain">
-				<button onClick={saveFile} class="btn">
-					<i style={{ color: "white" }} class="fa fa-download"></i> Resume
-				</button>
-			</div>
-			<Box id="phraseCoverBox">
-				<h4 className="wordCarousel" data-aos="fade-in">
-					<Box className="divAbout">
-						<ul
+			</Mui.Box>
+			<Mui.Button onClick={saveFile} id="btnDownload" class="fa fa-download">
+				Resume
+			</Mui.Button>{" "}
+			<Mui.Box id="phraseCoverBox">
+				<Mui.Typography className="wordCarousel" data-aos="fade-in">
+					<Mui.Box className="divAbout">
+						<Mui.ListItem
 							className="flip"
 							style={{
 								display: "flex",
 								flexWrap: "wrap",
 								listStyle: "none",
-								padding: "0",
+								paddingTop: "80px",
 								justifyContent: "center",
 							}}
 						>
-							<li className="listWords">Hello!</li>
-						</ul>
-					</Box>
-					<Box className="divAbout">
-						<ul
+							<Mui.ListItem className="listWords">Hello!</Mui.ListItem>
+						</Mui.ListItem>
+					</Mui.Box>
+					<Mui.Box className="divAbout">
+						<Mui.ListItem
 							className="flip3"
 							style={{
 								display: "flex",
 								flexWrap: "wrap",
 								listStyle: "none",
-								padding: "0",
+								paddingLeft: "400px",
 								flexDirection: "column",
 							}}
 						>
-							<li className="listWords">My name is Maíra! </li>
-							<li className="listWords">I am a Full Stack Developer.</li>
-							<li className="listWords">Nice to e-meet you! 👋</li>
-						</ul>
-					</Box>
-				</h4>
-				<div className="homePhraseExperience">
-					<h1
+							<Mui.ListItem className="listWords">
+								My name is Maíra!{" "}
+							</Mui.ListItem>
+							<Mui.ListItem className="listWords">
+								I am a Full Stack Developer.
+							</Mui.ListItem>
+							<Mui.ListItem className="listWords">
+								Nice to e-meet you! 👋
+							</Mui.ListItem>
+						</Mui.ListItem>
+					</Mui.Box>
+				</Mui.Typography>
+				<Mui.Box className="homePhraseExperience">
+					<Mui.Typography
 						style={{
 							height: "45px",
 							letterSpacing: "1px",
-							marginTop: "320px",
+							marginTop: "200px",
 							left: "0",
 							display: "flex",
 							justifyContent: "flex-start",
@@ -152,17 +142,17 @@ export function Home() {
 						class="experienceWithLoop"
 					>
 						<span style={{ marginRight: "11px" }}>Experienced with</span>
-						<a
+						<Link
 							href=""
 							className="experienceWithTypewrite"
 							data-period="2000"
 							data-type='[ "CSS3", "React", "Javascript", "Python", "SQL", "HTML5", "Redux", "Node.JS", "MongoDB", "RESTful API", "GIT", "Pycharm", "visual studio", "GitHub", "Django"]'
 						>
 							<span className="experienceWithLoop"></span>
-						</a>
-					</h1>
-				</div>
-			</Box>
+						</Link>
+					</Mui.Typography>
+				</Mui.Box>
+			</Mui.Box>
 		</>
 	);
 }
