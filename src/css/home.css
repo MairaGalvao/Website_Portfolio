@@ -1,9 +1,18 @@
 #home {
+  /* background-image: url(../images/roadMobile.jpg); */
   background-image: url(../images/coverPic.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
+  /* background-image: url('https://images.unsplash.com/photo-1588483977150-9c2127ab7bcc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'); */
+/* background-image: url('https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'); */
+  position: cover ;
+  background-repeat: cover no-repeat;
   background-size: cover;
   min-height: 100vh;
+  background-position-y: 100vh;
+  width:100%;
+
+
+
+
 }
 
 #phraseCoverBox {
@@ -13,7 +22,7 @@
   left: 0px;
   width: 100%;
   text-align: center;
-  color: white;
+  color: rgb(80, 80, 80);
 }
 
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Oswald);
@@ -45,12 +54,14 @@
   display: flex;
 }
 
+
+
 .listWords {
   font-size: 32px;
   left: 0;
   font-family: "Work Sans", sans-serif;
   font-weight: 850;
-  padding-left: 0px;
+  padding-left: 100px;
   padding-right: 5px;
   margin: 0px 0px 0px 0px;
   justify-content: space-evenly;
@@ -148,9 +159,7 @@
   }
 }
 
-#btnDownload{
-  cursor: pointer;
-}
+
 
 
 
@@ -187,3 +196,8 @@
     z-index:1;
   
   }}
+
+
+  /* new title home css */
+
+

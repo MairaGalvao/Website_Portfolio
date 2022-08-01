@@ -9,7 +9,7 @@ import { SmartPortfolio } from "./Components/SmartPortfolio";
 import "./css/App.css";
 import { useHistory as history } from "react-router-dom";
 import { Home } from "./Components/Home";
-import myTest from "./Components/myTest";
+
 import ResNavBar from "../src/responsiveness/ResNavBar";
 
 function App() {

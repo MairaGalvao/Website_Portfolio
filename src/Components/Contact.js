@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import contactPic from "../images/contactPic.jpg";
+import contactPic from "../images/contactPicLightBackground.jpg";
 import { Box } from "@material-ui/core";
 import { send } from "emailjs-com";
 import { init } from "emailjs-com";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "../css/contact.css";
+import { saveAs } from "file-saver";
 
 init("user_gqMmkiihxMb3zWbl0pRBo");
 
@@ -37,6 +38,12 @@ export function Contact() {
 			"Your message has been delivered to Maíra Galvão! You will hear from her as soon. I appreciate your contact. Have a great day"
 		);
 	};
+	const saveFile = () => {
+		saveAs(
+			"https://drive.google.com/file/d/1Tn53WQzmyXjh42sUz5AfaM805_Q7FLGG/view?usp=sharing.pdf",
+			"example.pdf"
+		);
+	};
 
 	const handleChange = (e) => {
 		setToSend({ ...toSend, [e.target.name]: e.target.value });
@@ -48,114 +55,51 @@ export function Contact() {
 	}, [Aos]);
 	return (
 		<>
-			<Box
-				style={{ paddingTop: "10px" }}
-				id="contact"
-				data-aos="fade-down"
-				data-aos-duration="2000"
-			>
-				<Box
-					className="headerContact"
-					data-aos="fade-down"
-					data-aos-duration="2000"
-					style={{ display: "flex", justifyContent: "space-around" }}
-				>
-					<h1 style={{ fontWeight: "bold" }}>Drop me a message!</h1>
-				</Box>
-				<Box>
-					<Box style={{ display: "flex" }} id="formBox">
-						<form
-							style={{ display: "flex", left: "100px", position: "relative" }}
-							action="#"
-							method="post"
-							id="contact_form"
-							onSubmit={onSubmit}
-						>
-							<div class="field" tabIndex="1">
-								<label for="username" htmlFor="name">
-									<i class="fa fa-user" style={{ paddingRight: "10px" }}></i>
-									Your Name
-								</label>
-								<input
-									type="text"
-									placeholder="Name"
-									name="from_name"
-									id="name_input"
-									style={{ fontFamily: "Fira Sans Condensed, sans-serif" }}
-									required
-									value={toSend.from_name}
-									onChange={handleChange}
-									type="text"
-									placeholder="e.g. Maíra Galvão"
-									required
-								/>
-							</div>
-							<div class="field" tabIndex="1">
-								<label for="email">
-									<i
-										class="fa fa-envelope"
-										style={{ paddingRight: "10px" }}
-									></i>
-									Your Email
-								</label>
-								<input
-									id="email_input"
-									name="reply_to"
-									placeholder="Your email"
-									required
-									value={toSend.reply_to}
-									onChange={handleChange}
-									type="text"
-									placeholder="email@domain.com"
-									required
-								/>
-							</div>
-							<div class="field" tabIndex="3">
-								<label for="message" htmlFor="message">
-									<i class="fa fa-edit" style={{ paddingRight: "10px" }}></i>
-									Your Message
-								</label>
-								<textarea
-									name="message"
-									type="text"
-									placeholder="Your message"
-									id="message_input"
-									cols="20"
-									rows="1"
-									required
-									value={toSend.message}
-									onChange={handleChange}
-									name="message"
-									placeholder="type here"
-									required
-								></textarea>
-							</div>
-							<div onClick={deliveryMsg}>
-								<input
-									type="submit"
-									value="Send Message"
-									id="form_button"
-									style={{ backgroundColor: "black", color: "white" }}
-								/>
-							</div>
-							<div
-								class="social-media"
-								style={{
-									fontSize: "20px",
-									letterSpacing: "2px",
-									paddingLeft: "10px",
-								}}
-							></div>
-						</form>
-						<Box className="picContact">
-							<img
-								id="picContact"
-								style={{ float: "right" }}
-								src={contactPic}
-							/>
-						</Box>
-					</Box>
-				</Box>
+			<section class="contact">
+				<div class="form-box">
+					<h2 style={{ paddingBottom: "10px" }}>Keep in touch</h2>
+					<form action="">
+						<div class="form-item">
+							<label for="name">Your name:</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="form-item">
+							<label for="email">Your email:</label>
+							<input type="email" name="email" id="email" />
+						</div>
+						<div class="form-item">
+							<label for="message">Your message:</label>
+							<textarea
+								name="message"
+								id="message"
+								cols="30"
+								rows="7"
+							></textarea>
+						</div>
+						<div class="form-item">
+							<input type="submit" value="Submit" id="submit" />
+							<button
+								onClick={saveFile}
+								id="btnDownload"
+								class="fa fa-download"
+							>
+								Resume
+							</button>{" "}
+						</div>
+					</form>
+				</div>
+			</section>
+			<Box className="picContact">
+				<img
+					id="picContact"
+					style={{
+						float: "right",
+						paddingTop: "100px",
+						paddingRight: "150px",
+						paddingBottom: "150px",
+					}}
+					src={contactPic}
+				/>
 			</Box>
 		</>
 	);

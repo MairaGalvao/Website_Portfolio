@@ -6,14 +6,10 @@ import Typography from "@material-ui/core/Typography";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "../css/projANDart.css";
+import projectPic from "../images/projectPic.jpg";
+import hackathon from "../images/hackathon.jpg";
 
 export function SmartArticles() {
-	const [isAllPicked, setIsAllPicked] = useState(false);
-
-	function seeAllBtn() {
-		setIsAllPicked(true);
-	}
-
 	useEffect(() => {
 		if (Aos) {
 			Aos.init({});
@@ -23,7 +19,7 @@ export function SmartArticles() {
 		<>
 			<Box
 				className="articles"
-				style={{ padding: "15px" }}
+				style={{ padding: "10px" }}
 				id="articles"
 				data-aos="fade-right"
 				data
@@ -36,7 +32,8 @@ export function SmartArticles() {
 						color: "white",
 						display: "flex",
 						marginBottom: "45px",
-						paddingLeft: "50px",
+						paddingLeft: "40px",
+						paddingRight: "40px",
 
 						fontFamily: "Poppins, sans-serif",
 					}}
@@ -46,6 +43,7 @@ export function SmartArticles() {
 			<Box className="header" data-aos="fade-down" data-aos-duration="2000">
 				<h1>Adaptable, Skillfull and Multilingual</h1>
 				<h1>People are the power!</h1>
+				<p>Here are a few side projects I've worked on recently.</p>
 			</Box>
 
 			<Box
@@ -54,39 +52,53 @@ export function SmartArticles() {
 					display: "flex",
 					flexDirection: "row",
 					justifyContent: "space-around",
+					paddingTop: "100px",
+					padding: "10px",
 				}}
 			>
 				<Box id="articlesBox">
 					<DummyArticles
+						topic={"Article"}
 						title={"Data Analysis"}
-						titleTip={"A data analysis on a steak Database"}
+						titleTip={"Exploratory data analysis on a Steak Risk dataset "}
 						image={
 							"https://miro.medium.com/max/525/1*gM-I1mhLZS7WN3bs_ZDk_g.png"
 						}
 						linkMedium={"https://mairagalvao.medium.com"}
 						description={"Read"}
+						date={"Dec 2020"}
+						location={"Online"}
+						projectPic={projectPic}
 					/>
 
-					{isAllPicked && (
-						<DummyArticles
-							title={"Web Scraping"}
-							description={"Coming soon"}
-							linkMedium={""}
-						/>
-					)}
-					{isAllPicked && (
-						<DummyArticles title={"Coming soon"} description={"Coming soon"} />
-					)}
-
-					<Button
-						variant="contained"
-						class="seeAllBtn"
-						onClick={seeAllBtn}
-						style={{ fontSize: "22px", cursor: "pointer" }}
-					>
-						{" "}
-						See all{" "}
-					</Button>
+					<DummyArticles
+						topic={"Volunteer"}
+						title={"Anyway | Full Stack Developer"}
+						titleTip={
+							"An interactive map and information on Traffic accidents in israel."
+						}
+						image={""}
+						linkMedium={"https://www.hasadna.org.il/"}
+						description={"Read"}
+						date={"July 2022"}
+						location={"Tel Aviv, Israel"}
+						ps={"** work in progress"}
+						projectPic={projectPic}
+					/>
+					<DummyArticles
+						topic={"Hackathon"}
+						title={"HackZurich"}
+						titleTip={
+							"HackZurich is the largest and most prestigious hackathon in Europe."
+						}
+						image={hackathon}
+						linkMedium={"https://hackzurich.com/"}
+						description={"About"}
+						date={"September 2022"}
+						location={"Zürich, Switzerland"}
+						ps={"** work in progress"}
+						projectPic={projectPic}
+					/>
 				</Box>
 			</Box>
 		</>

@@ -4,7 +4,7 @@ import "../css/navBar.css";
 export default function ResNavBar() {
 	return (
 		<>
-			<div className="navbarResponsive">
+			{/* <div className="navbarResponsive">
 				<nav role="navigation">
 					<div id="menuToggle">
 						<input type="checkbox" />
@@ -33,7 +33,7 @@ export default function ResNavBar() {
 						</ul>
 					</div>
 				</nav>
-			</div>
+			</div> */}
 		</>
 	);
 }

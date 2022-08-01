@@ -45,7 +45,7 @@ body {
 a {
   text-decoration: none;
 }
-
+/* 
 .card {
   z-index: 0;
   position: relative;
@@ -61,7 +61,7 @@ a {
   -moz-transition: all 0.7s ease-in-out;
   -o-transition: all 0.7s ease-in-out;
   -ms-transition: all 0.7s ease-in-out;
-}
+} */
 
 .card ul {
   list-style: none;
@@ -621,10 +621,7 @@ h1:last-of-type {
   }
 }
 
-.header {
-  text-align: center;
-  line-height: 0.8;
-}
+
 
 .header p {
   margin: 0 auto;

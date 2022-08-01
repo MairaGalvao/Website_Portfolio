@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "../css/about.css";
+import { saveAs } from "file-saver";
+import * as Mui from "@material-ui/core";
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 export function About() {
@@ -12,125 +12,38 @@ export function About() {
 			Aos.init({});
 		}
 	}, [Aos]);
+
+	const saveFile = () => {
+		saveAs(
+			"https://drive.google.com/file/d/1Tn53WQzmyXjh42sUz5AfaM805_Q7FLGG/view?usp=sharing.pdf",
+			"example.pdf"
+		);
+	};
 	return (
 		<>
-			<Box id="about" style={{ display: "flex", paddingTop: "80px" }}>
-				<Box
-					className="profileBox"
-					data-aos="fade-down"
-					data-aos-easing="linear"
-					data-aos-duration="2500"
-				>
-					<Box className="cardAbout card0" id="maira-pic-animation">
-						<Box className="borderAbout">
-							<h2 className="myName">Maíra Galvão</h2>
-							<Box className="iconsSkillsAbout">
-								<a
-									href="https://www.linkedin.com/in/maira-galvao"
-									style={{ fill: "#fff", color: "#fff" }}
-								>
-									<i className="fa fa-linkedin" aria-hidden="true"></i>
-								</a>
-								<a
-									href="https://github.com/MairaGalvao/"
-									style={{ fill: "#fff", color: "#fff" }}
-								>
-									<i className="fa fa-github" aria-hidden="true"></i>
-								</a>
-							</Box>
-						</Box>
-					</Box>
-				</Box>
-				<Box>
-					<Box className="header" data-aos="fade-down">
-						<h1 className="title">Reliable, Determinated and Proactive</h1>
-
-						<h1 className="sub-title">Powered by motivation!</h1>
-					</Box>
-
-					<Box
-						className="row1-container"
-						id="about-box"
-						sx={{ width: "100%" }}
-						style={{
-							textAlign: "center",
-							padding: "20px 0",
-							fontSize: "30px",
-						}}
-					>
-						<Box
-							item
-							className="box box-down cyan"
-							data-aos="flip-left"
-							data-aos-easing="ease-out-cubic"
-							data-aos-duration="1000"
-						>
-							<h2>Hard-worker</h2>
-							<p>
-								Working hard is a quality that people know about me. I always
-								achieve what I set out to do.{" "}
-							</p>
-							<img
-								src="https://assets.codepen.io/2301174/icon-supervisor.svg"
-								alt="Hard-worker"
-							/>
-						</Box>
-
-						<Box
-							className="box red"
-							data-aos="flip-left"
-							data-aos-easing="ease-out-cubic"
-							data-aos-duration="2500"
-						>
-							<h2>Team Player</h2>
-							<p>
-								People matter to me, and I enjoy helping my co-workers and
-								working in a team.{" "}
-							</p>
-							<img
-								src="https://assets.codepen.io/2301174/icon-team-builder.svg"
-								alt="Team Player"
-							/>
-						</Box>
-
-						<Box
-							className="box box-down cyan"
-							data-aos="flip-left"
-							data-aos-easing="ease-out-cubic"
-							data-aos-duration="4000"
-						>
-							<h2>Comunicative</h2>
-							<p>
-								Communicating in another language is a big plus. I speak
-								Portuguese, English, and Hebrew.{" "}
-							</p>
-							<img
-								src="https://assets.codepen.io/2301174/icon-calculator.svg"
-								alt="Comunicative"
-							/>
-						</Box>
-
-						<Box
-							className="row2-container"
-							data-aos="flip-left"
-							data-aos-easing="ease-out-cubic"
-							data-aos-duration="5500"
-						></Box>
-						<Box className="box orange">
-							<h2>Creative</h2>
-							<p>
-								{" "}
-								Creativity is essential, and I enjoy seeing new ideas come to
-								life.
-							</p>
-							<img
-								src="https://assets.codepen.io/2301174/icon-karma.svg"
-								alt="Creative"
-							/>
-						</Box>
-					</Box>
-				</Box>
-			</Box>
+			<Mui.Box
+				className="profileBox"
+				data-aos="fade-down"
+				data-aos-easing="linear"
+				data-aos-duration="2500"
+				id="about"
+			>
+				{/* picture in about session  */}
+				{/* <Mui.Box className="cardAbout card0" id="maira-pic-animation">
+					<Mui.Box className="borderAbout">
+						<h2 className="myName">Maíra Galvão</h2>
+						<Mui.Box className="iconsSkillsAbout">
+							<Mui.Button
+								onClick={saveFile}
+								id="btnDownload"
+								class="fa fa-download"
+							>
+								Resume
+							</Mui.Button>{" "}
+						</Mui.Box>
+					</Mui.Box>
+				</Mui.Box> */}
+			</Mui.Box>
 		</>
 	);
 }

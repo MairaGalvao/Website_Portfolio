@@ -5,88 +5,83 @@ import "aos/dist/aos.css";
 import "../css/projANDart.css";
 
 export function DummyPortfolio({
-  title,
-  description,
+	title,
+	description,
 
-  linkGitHub,
-  linkDemo,
-  idContainer,
+	linkGitHub,
+	linkDemo,
+	idContainer,
 
-  idCard,
-  descriptionApp,
-  linkPicture,
-  linkArticle
+	idCard,
+	descriptionApp,
+	linkPicture,
+	linkArticle,
 }) {
-  useEffect(() => {
-    if (Aos) {
-      Aos.init({});
-    }
-  }, [Aos]);
+	useEffect(() => {
+		if (Aos) {
+			Aos.init({});
+		}
+	}, [Aos]);
 
-  return (
-    <>
-    <Box id={idContainer} class="mainBox">
-        <Box data-aos="fade-down" data-aos-duration="2000">
-          <Box
-            className="cardPortfolio"
-            id={idCard}
-            data-aos="fade-down"
-            data-aos-duration="2000" 
-           > 
-<ul>
+	return (
+		<>
+			<Box id={idContainer} class="mainBox">
+				<Box data-aos="fade-down" data-aos-duration="2000">
+					<Box
+						className="cardPortfolio"
+						id={idCard}
+						data-aos="fade-down"
+						data-aos-duration="2000"
+					>
+						<ul>
+							<li
+								class="booking-card"
+								style={{
+									backgroundImage: linkPicture,
+									height: "500px",
+								}}
+							>
+								<div class="book-container">
+									<div class="content">
+										{linkDemo && (
+											<a href={linkDemo} class="btn" target="_blank">
+												Demo
+											</a>
+										)}
 
-<li class="booking-card" style={{ backgroundImage: linkPicture,
+										{linkArticle && (
+											<a href={linkArticle} class="btn">
+												Article
+											</a>
+										)}
+									</div>
+								</div>
 
-}}> 
-    <div class="book-container">
-      <div class="content">
-      {linkDemo &&  <a href={linkDemo} class="btn">Demo
-        
+								<div class="informations-container">
+									<h2 class="title"> {title}</h2>
+									<p class="sub-title">{description}</p>
 
-        </a>}
+									<div class="more-information">
+										<div class="info-and-date-container"></div>
 
-        {linkArticle &&  <a href={linkArticle} class="btn">Article
-        
+										<p class="disclaimer">{descriptionApp}</p>
 
-        </a>}
-        
-          
-        
-
-      </div>
-    </div>
-
-    
-    <div class="informations-container">
-      <h2 class="title"> {title}</h2>
-      <p class="sub-title">{description}</p>
-      
-      
-    
-
-      <div class="more-information">
-        <div class="info-and-date-container">
-    
-        </div>
-
-        <p class="disclaimer" >{descriptionApp}</p>
-
-
-
-    {linkGitHub && <a   class="fab fa-github" style={{fontWeight:'bold'}} href={linkGitHub}>{"< Code >"}</a>}
-
-    
-
-
-
-        </div>
-    </div>
-  </li>
-</ul>
-</Box>
-          </Box>
-        </Box>
-      
-    </>
-  );
+										{linkGitHub && (
+											<a
+												class="fab fa-github"
+												style={{ fontWeight: "bold" }}
+												href={linkGitHub}
+											>
+												{"< Code >"}
+											</a>
+										)}
+									</div>
+								</div>
+							</li>
+						</ul>
+					</Box>
+				</Box>
+			</Box>
+		</>
+	);
 }

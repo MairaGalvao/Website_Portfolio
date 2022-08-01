@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "../css/home.css";
-import { saveAs } from "file-saver";
 import * as Mui from "@material-ui/core";
 import { Link } from "react-scroll";
 
@@ -73,37 +72,18 @@ export function Home() {
 		document.body.appendChild(css);
 	}, []);
 
-	const saveFile = () => {
-		saveAs(
-			"https://drive.google.com/file/d/1Tn53WQzmyXjh42sUz5AfaM805_Q7FLGG/view?usp=sharing.pdf",
-			"example.pdf"
-		);
-	};
-
 	return (
 		<>
 			<Mui.Box id="home" data-aos="fade-in">
 				{" "}
 			</Mui.Box>
-			<Mui.Button onClick={saveFile} id="btnDownload" class="fa fa-download">
+			{/* <Mui.Button onClick={saveFile} id="btnDownload" class="fa fa-download">
 				Resume
-			</Mui.Button>{" "}
-			<Mui.Box id="phraseCoverBox">
+			</Mui.Button>{" "} */}
+
+			{/* <Mui.Box id="phraseCoverBox">
 				<Mui.Typography className="wordCarousel" data-aos="fade-in">
-					<Mui.Box className="divAbout">
-						<Mui.ListItem
-							className="flip"
-							style={{
-								display: "flex",
-								flexWrap: "wrap",
-								listStyle: "none",
-								paddingTop: "80px",
-								justifyContent: "center",
-							}}
-						>
-							<Mui.ListItem className="listWords">Hello!</Mui.ListItem>
-						</Mui.ListItem>
-					</Mui.Box>
+					<Mui.Box className="divAbout"></Mui.Box>
 					<Mui.Box className="divAbout">
 						<Mui.ListItem
 							className="flip3"
@@ -136,7 +116,7 @@ export function Home() {
 							left: "0",
 							display: "flex",
 							justifyContent: "flex-start",
-							paddingTop: "100px",
+							paddingTop: "150px",
 							paddingLeft: "50px",
 						}}
 						class="experienceWithLoop"
@@ -146,13 +126,13 @@ export function Home() {
 							href=""
 							className="experienceWithTypewrite"
 							data-period="2000"
-							data-type='[ "CSS3", "React", "Javascript", "Python", "SQL", "HTML5", "Redux", "Node.JS", "MongoDB", "RESTful API", "GIT", "Pycharm", "visual studio", "GitHub", "Django"]'
+							data-type='[ "CSS3", "React", "Javascript", "Python", "SQL", "HTML5", "Redux", "Node.JS", "MongoDB", "Puppeteer", "Material UI"]'
 						>
 							<span className="experienceWithLoop"></span>
 						</Link>
 					</Mui.Typography>
 				</Mui.Box>
-			</Mui.Box>
+			</Mui.Box> */}
 		</>
 	);
 }
