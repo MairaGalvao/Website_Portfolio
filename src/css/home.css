@@ -7,197 +7,140 @@
   background-repeat: cover no-repeat;
   background-size: cover;
   min-height: 100vh;
-  background-position-y: 100vh;
-  width:100%;
-
-
-
+  /* background-position-y: 100vh; */
+  /* width:100%; */
 
 }
 
-#phraseCoverBox {
-  padding-top: 200px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  text-align: center;
-  color: rgb(80, 80, 80);
-}
 
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Oswald);
-.wordCarousel {
-  align-items: stretch;
-  flex-direction: column;
-  margin-top: 130px;
-  margin-left: 200px;
-  font-size: 36px;
-  font-weight: 700;
-  font-family: "Work Sans", sans-serif;
-  display: flex;
+@media screen and (width: 412px) {
 
-  position: absolute;
-  top: 0px;
-  right: 14px;
-  width: 100%;
-}
-.wordCarousel .divAbout {
-  overflow: hidden;
-
-  height: 100px;
-  padding-top: 10px;
-  margin-top: -10px;
-}
-.wordCarousel .divAbout .listWords {
-  height: 45px;
-  margin-bottom: 45px;
-  display: flex;
-}
-
-
-
-.listWords {
-  font-size: 32px;
-  left: 0;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 850;
-  padding-left: 100px;
-  padding-right: 5px;
-  margin: 0px 0px 0px 0px;
-  justify-content: space-evenly;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.flip2 {
-  animation: flip2 13s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
-}
-.flip3 {
-  animation: flip3 11s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
-  padding: 0px 0px 0px 0px;
-}
-.flip4 {
-  animation: flip4 11s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
-}
-@keyframes flip2 {
-  0% {
-    margin-top: -180px;
-  }
-  5% {
-    margin-top: -90px;
-  }
-  50% {
-    margin-top: -90px;
-  }
-  55% {
-    margin-top: 0px;
-  }
-  99.99% {
-    margin-top: 0px;
-  }
-  100% {
-    margin-top: -270px;
-  }
-}
-@keyframes flip3 {
-  0% {
-    margin-top: -270px;
-  }
-  5% {
-    margin-top: -180px;
-  }
-  33% {
-    margin-top: -180px;
-  }
-  38% {
-    margin-top: -90px;
-  }
-  66% {
-    margin-top: -90px;
-  }
-  71% {
-    margin-top: 0px;
-  }
-  99.99% {
-    margin-top: 0px;
-  }
-  100% {
-    margin-top: -270px;
-  }
-}
-@keyframes flip4 {
-  0% {
-    margin-top: -360px;
-  }
-  5% {
-    margin-top: -270px;
-  }
-  25% {
-    margin-top: -270px;
-  }
-  30% {
-    margin-top: -180px;
-  }
-  50% {
-    margin-top: -180px;
-  }
-  55% {
-    margin-top: -90px;
-  }
-  75% {
-    margin-top: -90px;
-  }
-  80% {
-    margin-top: 0px;
-  }
-  99.99% {
-    margin-top: 0px;
-  }
-  100% {
-    margin-top: -270px;
-  }
-}
-
-
-
-
-
-@media screen and (max-width: 768px) {
-  .homePhraseExperience{
-    display:none
-  }
-  .divAbout{
-    display: none;
-  }
  
-  #home {
-    /* background-image: url(../images/roadMobile.jpg); */
-    background-image: url(../images/roadMobile.jpg);
-    background-position:center;
-    width:550px;
-    height:200px;
-   
-  }
-  .listWords{
-    font-size: 25px;
-    padding-top:20px
-  }
-  
-  .homePhraseExperience{
-    font-size: 20px;
-    padding-top:300px
-  }
 
-  .homeMobile{
-    display: block;
-    background-color: aqua;
-    position:absolute;
-    z-index:1;
+
+
   
-  }}
+
+}
 
 
   /* new title home css */
 
 
+
+
+
+ 
+  details {
+    margin: 40px;
+    
+  }
+  summary {
+    writing-mode: vertical-lr;
+    text-align: center;
+    padding: 12px 10px;
+    width: 23px;
+    height: 17px;
+    background-color: var(--primColor);
+    border: 2px solid var(--secoColor);
+    border-radius: var(--cornerRad);
+    color: var(--secoColor);
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    transition: transform 200ms ease-in-out 0s;
+  }
+  summary::before,
+  summary::after {
+    position: static;
+    top: 0;
+    left: 0;
+  }
+  summary::before {
+    content: "";
+  }
+  summary::after {
+    content: "III";
+    letter-spacing: -1px;
+  }
+  summary:hover {
+    transform: scale(1.1);
+  }
+  summary::marker {
+    font-size: 0;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  details[open] .menu {
+    animation-name: menuAnim;
+  }
+  details[open] summary::before {
+    content: "X";
+  }
+  details[open] summary::after {
+    content: "";
+  }
+  .menu {
+    height: 0;
+    width: fit-content;
+    border-radius: var(--cornerRad);
+    background-color: var(--primColor);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    animation: closeMenu 300ms ease-in-out forwards;
+  
+
+  }
+
+
+  .menu a {
+    padding: 12px 24px;
+    margin: 0 16px;
+    color: var(--secoColor);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    text-align: center;
+    transition: filter 200ms linear 0s;
+  }
+  .menu a:nth-of-type(1) {
+    padding-top: 24px;
+  }
+  .menu a:nth-last-of-type(1) {
+    border-bottom: none;
+  }
+  .menu a:hover {
+    filter: brightness(200%);
+  }
+  details::before {
+    content: "← Click This Button";
+    color: var(--secoColor);
+    position: absolute;
+    margin-left: 80px;
+    padding: 10px 10px;
+    opacity: 0.4;
+  }
+  details[open]::before {
+    animation: fadeMe 300ms linear forwards;
+  }
+  @keyframes menuAnim {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 312px;
+    }
+  }
+  @keyframes fadeMe {
+    0% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  

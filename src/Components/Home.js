@@ -75,8 +75,36 @@ export function Home() {
 	return (
 		<>
 			<Mui.Box id="home" data-aos="fade-in">
-				{" "}
+				<details>
+					<summary></summary>
+					<nav class="menu">
+						<a href="#link">Home</a>
+						<a href="#link">Work</a>
+						<a href="#link">Links</a>
+						<a href="#link">Contact</a>
+						<a href="#link">About</a>
+					</nav>
+				</details>
+				{/* <div id="homeMobile" className="mobileBox">
+					<p
+						style={{
+							color: "white",
+							fontWeight: "bold",
+							fontSize: "30px",
+						}}
+					>
+						Maíra Galvão
+					</p>
+					<p style={{ color: "white", fontWeight: "bold", fontSize: "30px" }}>
+						Web Developer
+					</p>
+				</div> */}
 			</Mui.Box>
+			{/* <div className="mobilePhrase" id="home">
+				{" "}
+				<h1>Full Stack Developer</h1>
+				<h2>Maíra Galvão</h2>
+			</div> */}
 			{/* <Mui.Button onClick={saveFile} id="btnDownload" class="fa fa-download">
 				Resume
 			</Mui.Button>{" "} */}

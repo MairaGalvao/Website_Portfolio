@@ -34,7 +34,7 @@ function App() {
 				{/* {isLoading && <LoadingAnimation />} */}
 
 				<>
-					<ResNavBar />
+					{/* <ResNavBar /> */}
 					<NavBar />
 					<Home />
 					<About />
