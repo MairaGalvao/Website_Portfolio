@@ -65,7 +65,7 @@ export default function NavBar() {
 							Home
 						</Link>
 
-						<Link
+						{/* <Link
 							className="itemsBtn"
 							to="about"
 							spy={true}
@@ -75,7 +75,7 @@ export default function NavBar() {
 							}}
 						>
 							About
-						</Link>
+						</Link> */}
 
 						<Link
 							className="itemsBtn"
@@ -86,7 +86,7 @@ export default function NavBar() {
 								history.push("/portfolio");
 							}}
 						>
-							Portfolio
+							Work
 						</Link>
 
 						<Link
@@ -98,7 +98,7 @@ export default function NavBar() {
 								history.push("/articles");
 							}}
 						>
-							Extras
+							Projects
 						</Link>
 
 						<Link

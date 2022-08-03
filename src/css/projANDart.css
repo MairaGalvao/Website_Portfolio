@@ -581,10 +581,23 @@ body {
 
 
 
+.title .subTitle{
+  font-size: 24px;
+    padding: 5px;
+    margin: 0 0px 5px 0px;
+    justify-content: space-evenly;
+    word-spacing: 4px;
+    font-size: 24px;
+    padding: 10px;
+}
+.subTitle{
+  padding-top: 5px;
+}
 
-
-
-
+.text{
+  font-size: 17px;
+  padding-bottom: 0;
+}
 
 
 

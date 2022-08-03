@@ -26,9 +26,9 @@ export function SmartPortfolio() {
 				data-aos-duration="2000"
 				id="portfolio"
 			>
-				<h1>Persistence, Determination, Willpower</h1>
-				<h1>A hands-on approach!</h1>
-				<p>
+				<h1 className="title">Determination & Willpower.</h1>
+				<h1 className="subTitle">A hands-on approach!</h1>
+				<p className="text">
 					A small galery of recent projects chosen by me. It is only a drop in
 					the ocean compared to entire list. Interested to see some more? Visit
 					my{" "}

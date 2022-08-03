@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import "../css/home.css";
 import * as Mui from "@material-ui/core";
 import { Link } from "react-scroll";
+import { useHistory } from "react-router-dom";
 
 export function Home() {
 	useEffect(() => {
@@ -71,18 +72,64 @@ export function Home() {
 			".experienceWithTypewrite > .experienceWithLoop { border-right: 0.08em solid #fff}";
 		document.body.appendChild(css);
 	}, []);
+	let history = useHistory();
 
 	return (
 		<>
 			<Mui.Box id="home" data-aos="fade-in">
-				<details>
+				<details class="navBarMobile">
 					<summary></summary>
 					<nav class="menu">
-						<a href="#link">Home</a>
-						<a href="#link">Work</a>
-						<a href="#link">Links</a>
-						<a href="#link">Contact</a>
-						<a href="#link">About</a>
+						<Link
+							to="home"
+							spy={true}
+							smooth={true}
+							onClick={() => {
+								history.push("/");
+							}}
+						>
+							Home
+						</Link>
+						{/* <Link
+							to="about"
+							spy={true}
+							smooth={true}
+							onClick={() => {
+								history.push("/about");
+							}}
+						>
+							About
+						</Link> */}
+						<Link
+							to="portfolio"
+							spy={true}
+							smooth={true}
+							onClick={() => {
+								history.push("/portfolio");
+							}}
+						>
+							Work
+						</Link>
+						<Link
+							to="articles"
+							spy={true}
+							smooth={true}
+							onClick={() => {
+								history.push("/articles");
+							}}
+						>
+							Projects
+						</Link>{" "}
+						<Link
+							to="contact"
+							spy={true}
+							smooth={true}
+							onClick={() => {
+								history.push("/contact");
+							}}
+						>
+							Contact
+						</Link>{" "}
 					</nav>
 				</details>
 				{/* <div id="homeMobile" className="mobileBox">
