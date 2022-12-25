@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import contactPic from "../images/contactPicLightBackground.jpg";
+import contactPic from "../images/contactPic.jpg";
 import { Box } from "@material-ui/core";
 import { send } from "emailjs-com";
 import { init } from "emailjs-com";
@@ -55,48 +55,76 @@ export function Contact() {
 	}, [Aos]);
 	return (
 		<>
-			<section class="contact">
-				<div class="form-box">
-					<h2 style={{ paddingBottom: "10px" }}>Keep in touch</h2>
-					<form action="">
-						<div class="form-item">
-							<label for="name">Your name:</label>
-							<input type="text" name="name" id="name" />
-						</div>
-						<div class="form-item">
-							<label for="email">Your email:</label>
-							<input type="email" name="email" id="email" />
-						</div>
-						<div class="form-item">
-							<label for="message">Your message:</label>
-							<textarea
-								name="message"
-								id="message"
-								cols="30"
-								rows="7"
-							></textarea>
-						</div>
-						<div class="form-item">
-							<input type="submit" value="Submit" id="submit" />
-							<button
-								onClick={saveFile}
-								id="btnDownload"
-								class="fa fa-download"
-							>
-								Resume
-							</button>{" "}
-						</div>
-					</form>
-				</div>
-			</section>
+			<div class="form-box" id="contact">
+				<h2 style={{ paddingBottom: "10px" }}>Keep in touch</h2>
+				<form action="#" method="post" id="contact_form" onSubmit={onSubmit}>
+					<div class="form-item">
+						<label for="name">Your name:</label>
+						<input
+							type="text"
+							name="from_name"
+							id="name_input"
+							style={{ fontFamily: "Fira Sans Condensed, sans-serif" }}
+							required
+							value={toSend.from_name}
+							onChange={handleChange}
+							placeholder="e.g. Maíra Galvão"
+						/>
+					</div>
+					<div class="form-item">
+						<label for="email">Your email:</label>
+						<input
+							id="email_input"
+							name="reply_to"
+							required
+							value={toSend.reply_to}
+							onChange={handleChange}
+							type="text"
+							placeholder="email@domain.com"
+						/>
+					</div>
+					<div class="form-item">
+						<label for="message">Your message:</label>
+						<textarea
+							cols="30"
+							rows="7"
+							name="message"
+							type="text"
+							placeholder="Your message"
+							id="message_input"
+							required
+							value={toSend.message}
+							onChange={handleChange}
+						></textarea>
+					</div>
+					<div
+						class="form-item"
+						style={{ display: "flex", justifyContent: "space-between" }}
+					>
+						<button onClick={saveFile} id="btnDownload" class="fa fa-download">
+							Resume
+						</button>{" "}
+						<button
+							type="submit"
+							value="Submit"
+							id="submit"
+							onClick={deliveryMsg}
+						>
+							{" "}
+							Submit
+						</button>
+					</div>
+				</form>
+			</div>
+
 			<Box className="picContact">
 				<img
 					id="picContact"
 					style={{
 						float: "right",
 						paddingTop: "100px",
-						paddingRight: "150px",
-						paddingBottom: "150px",
+						paddingRight: "0",
+						width: "60%",
 					}}
 					src={contactPic}
 				/>

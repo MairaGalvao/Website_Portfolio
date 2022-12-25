@@ -91,7 +91,7 @@ textarea:focus {
 
 /* new css form contact */
 
-.contact{
+.form-box{
   float: left;
   padding-top: 100px;
   padding-left: 150px;
@@ -114,6 +114,7 @@ textarea:focus {
 }
  .form-item {
 	 margin-bottom: 0.7rem;
+   
 }
  label, input, textarea {
 	 display: block;

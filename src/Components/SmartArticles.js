@@ -41,9 +41,11 @@ export function SmartArticles() {
 			</Box>
 
 			<Box className="header" data-aos="fade-down" data-aos-duration="2000">
-				<h1>Adaptable, Skillfull and Multilingual</h1>
-				<h1>People are the power!</h1>
-				<p>Here are a few side projects I've worked on recently.</p>
+				<h1 className="title">Adaptable & Multilingual</h1>
+				<h1 class="subTitle">People are the power!</h1>
+				<p className="text">
+					Here are a few side projects I've worked on recently.
+				</p>
 			</Box>
 
 			<Box
@@ -73,11 +75,15 @@ export function SmartArticles() {
 
 					<DummyArticles
 						topic={"Volunteer"}
-						title={"Anyway | Full Stack Developer"}
-						titleTip={
-							"An interactive map and information on Traffic accidents in israel."
+						title={
+							" The Public Knowledge Workshop  Anyway | Frontend Developer"
 						}
-						image={""}
+						titleTip={
+							"Our goal is moving towards Vision Zero - no fatalities or serious injuries involving road traffic."
+						}
+						image={
+							"https://media-exp1.licdn.com/dms/image/C4E0BAQGlZyYEvlhPZg/company-logo_200_200/0/1519913284124?e=1668038400&v=beta&t=OZNWSx5nJ2cCHZAsljWLVeRJ9rzzuatm-qsqElHLrok"
+						}
 						linkMedium={"https://www.hasadna.org.il/"}
 						description={"Read"}
 						date={"July 2022"}

@@ -106,18 +106,18 @@ export function SmartPortfolio() {
 							linkGitHub={"https://github.com/MairaGalvao/ivrit-sheli"}
 						/>
 
-						{/* 
-						{(isAllPicked || isJSPicked || isNodePicked) && (
-							<DummyPortfolio
-								title={"I Flash Geek "}
-								description={"A programming flash cards."}
-								descriptionApp={
-									"Serverless flashcards app that displays a quiz containing several questions on computer languages."
-								}
-								linkGitHub={"https://github.com/MairaGalvao/I_Flash_Geek"}
-								linkDemo={"https://iflashgeek.web.app/"}
-							/>
-						)} */}
+						<DummyPortfolio
+							linkPicture={
+								"url(https://images.unsplash.com/photo-1616628188502-413f2fe46e5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+							}
+							title={"I Flash Geek "}
+							description={"A programming flash cards."}
+							descriptionApp={
+								"Serverless flashcards app that displays a quiz containing several questions on computer languages."
+							}
+							linkGitHub={"https://github.com/MairaGalvao/I_Flash_Geek"}
+							linkDemo={"https://iflashgeek.web.app/"}
+						/>
 
 						{/* {(isAllPicked || isNodePicked || isJSPicked) && (
 							<DummyPortfolio

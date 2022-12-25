@@ -288,7 +288,7 @@ ul {
 }
 ul .booking-card{
   position: relative;
-  width: 300px;
+
   display: flex;
   flex: 0 0 300px ;
   flex-direction: column;
@@ -304,6 +304,7 @@ ul .booking-card{
   color: #0a4870;
   transition: 0.3s;
   height: 500px;
+  width: 300px;
 
 }
 ul .booking-card::before {
@@ -431,6 +432,7 @@ ul .booking-card:hover .informations-container .more-information {
   opacity: 1;
 }
 @media (max-width: 768px) {
+
   ul .booking-card::before {
     background: rgba(10, 72, 112, 0.6);
  }
@@ -446,14 +448,14 @@ ul .booking-card:hover .informations-container .more-information {
  }
 }
 
-#mainBoxProjects #articlesMainBox{
+ #mainBox{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;
 
 }
 
-#mainBoxProjects{
+#mainBoxProjects  {
      /* display: flex; */
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
@@ -461,7 +463,14 @@ ul .booking-card:hover .informations-container .more-information {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 50px;
 }
-@media screen and (max-width: 768px) {
+#articlesBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 60px
+
+}
+
+@media (max-width: 768px) {
   .selectTechBox {
 
     display: flex;
@@ -469,21 +478,33 @@ ul .booking-card:hover .informations-container .more-information {
     flex-direction: column;
 
   }
-  #mainBoxProjects #articlesMainBox{
+  
+  #mainBoxProjects  {
     display: grid;
-    grid-template-columns: auto;
-    gap: 10px;
-    width:     fit-content(4000px)
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+  }
+    #articlesBox{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+
+  }
+  .container{
+    justify-items: center;
   }
 
+#portFolioCards{
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+
 }
 
-#articlesBox {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 60px
-
 }
+
+
 
 /* 
 new side projects layout */
@@ -508,10 +529,11 @@ body {
   /* flex-wrap: wrap; */
   display: grid;
   grid-template-columns: 1fr ;
-  height: 700px;
+  height: 600px;
   width: 500px;
   
 }
+
 .card {
   margin: 20px;
   background-color: #fff;
@@ -601,7 +623,14 @@ body {
 
 
 
-
+.header{
+  display: flex;
+    /* align-content: space-around; */
+    /* flex-direction: column; */
+    /* justify-content: flex-end; */
+    margin: 20px;
+    flex-direction: column;
+}
 
 
 
