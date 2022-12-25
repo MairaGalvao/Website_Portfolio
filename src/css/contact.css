@@ -91,19 +91,14 @@ textarea:focus {
 
 /* new css form contact */
 
-.form-box{
-  float: left;
-  padding-top: 100px;
-  padding-left: 150px;
-
-}
-
  .form-box {
-	 width: 100%;
+
+  float: left;  width: 100%;
 	 max-width: 500px;
 	 margin: 0 auto;
-	 padding: 2rem;
-   height: 800px;
+	 padding-left: 100px;
+   padding-top: 150px;
+   height: 700px;
 
 }
  h2 {
@@ -115,6 +110,9 @@ textarea:focus {
  .form-item {
 	 margin-bottom: 0.7rem;
    
+}
+.picContact{
+  padding-right: 150px;
 }
  label, input, textarea {
 	 display: block;
@@ -130,6 +128,21 @@ textarea:focus {
 	 padding: 3px;
 	 border: 1px solid #007575;
 	 background-color: rgba(250, 250, 250, 0.85);
+}
+
+.formButtons{
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+
+}
+#resumeBtn {
+  cursor: pointer;
+  
+}
+
+#sendBtn {
+  cursor: pointer;
 }
  /* input[type=&#34;
 submit&#34;

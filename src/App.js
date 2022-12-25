@@ -13,47 +13,47 @@ import { Home } from "./Components/Home";
 import ResNavBar from "../src/responsiveness/ResNavBar";
 
 function App() {
-	// init loading as true
-	const [isLoading, setIsLoading] = useState(true);
-	const loadingTimeMS = 3000;
+  // init loading as true
+  const [isLoading, setIsLoading] = useState(true);
+  const loadingTimeMS = 3000;
 
-	useEffect(() => {
-		// this code runs once, when the component mounts
-		if (isLoading) {
-			setTimeout(() => {
-				// turn off loading
-				setIsLoading(false);
-			}, loadingTimeMS);
-		}
-	}, [isLoading, setIsLoading]);
+  useEffect(() => {
+    // this code runs once, when the component mounts
+    if (isLoading) {
+      setTimeout(() => {
+        // turn off loading
+        setIsLoading(false);
+      }, loadingTimeMS);
+    }
+  }, [isLoading, setIsLoading]);
 
-	return (
-		<>
-			<myTest />
-			<Router history={history}>
-				{/* {isLoading && <LoadingAnimation />} */}
+  return (
+    <>
+      <myTest />
+      <Router history={history}>
+        {/* {isLoading && <LoadingAnimation />} */}
 
-				<>
-					{/* <ResNavBar /> */}
-					<NavBar />
-					<Home />
-					<About />
-					<SmartPortfolio />
-					<SmartArticles />
-					<Contact />
-					<Footer />
-				</>
+        <>
+          {/* <ResNavBar /> */}
+          <NavBar />
+          <Home />
+          <About />
+          <SmartPortfolio />
+          <SmartArticles />
+          <Contact />
+          <Footer />
+        </>
 
-				<Switch>
-					<Route path={"/"} />
-					<Route path={"/about"} />
-					<Route path={"/portfolio"} />
-					<Route path={"/articles"} />
-					<Route path={"/contact"} />
-				</Switch>
-			</Router>
-		</>
-	);
+        <Switch>
+          <Route path={"/"} />
+          <Route path={"/about"} />
+          <Route path={"/portfolio"} />
+          <Route path={"/extras"} />
+          <Route path={"/contact"} />
+        </Switch>
+      </Router>
+    </>
+  );
 }
 
 export default App;
