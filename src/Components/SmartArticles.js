@@ -71,6 +71,8 @@ export function SmartArticles() {
 						date={"Dec 2020"}
 						location={"Online"}
 						projectPic={projectPic}
+						gitHubLink={""}
+
 					/>
 
 					<DummyArticles
@@ -90,9 +92,12 @@ export function SmartArticles() {
 						location={"Tel Aviv, Israel"}
 						ps={"** work in progress"}
 						projectPic={projectPic}
+						gitHubLink={""}
+
 					/>
 					<DummyArticles
 						topic={"Hackathon"}
+						gitHubLink={"https://github.com/MairaGalvao/Hackthon_Zurich"}
 						title={"HackZurich"}
 						titleTip={
 							"HackZurich is the largest and most prestigious hackathon in Europe."
