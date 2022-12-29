@@ -179,7 +179,7 @@
     padding-right: var(--bs-gutter-x,.75rem);
     padding-left: var(--bs-gutter-x,.75rem);
     margin-right: auto;
-    padding-left: 50px;
+    padding-left: 10px;
     padding-top: 300px;
         color:black;
 
@@ -218,4 +218,6 @@ font-weight: bolder;
 }
 #btn{
       cursor: pointer;
+      margin-left: 10px;
+      
 }

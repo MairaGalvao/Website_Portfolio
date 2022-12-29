@@ -19,7 +19,7 @@ export function Home() {
     <>
       <div className="phraseMain" id="home">
         <div id="phraseHomeContainer">
-          <h1 id="name">Maira Galvao</h1>
+          {/* <h1 id="name">Maira Galvao</h1> */}
           <h1 id="profession">I am a Full Stack Developer based in Tel Aviv</h1>
 
           <p id="phrase">
