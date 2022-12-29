@@ -7,156 +7,48 @@ import { Link } from "react-scroll";
 import { useHistory } from "react-router-dom";
 
 export function Home() {
-	useEffect(() => {
-		if (Aos) {
-			Aos.init({});
-		}
-	}, [Aos]);
+  useEffect(() => {
+    if (Aos) {
+      Aos.init({});
+    }
+  }, [Aos]);
 
-	var TxtType = function (el, toRotate, period) {
-		this.toRotate = toRotate;
-		this.el = el;
-		this.loopNum = 0;
-		this.period = parseInt(period, 10) || 2000;
-		this.txt = "";
-		this.tick();
-		this.isDeleting = false;
-	};
+  let history = useHistory();
 
-	TxtType.prototype.tick = function () {
-		var i = this.loopNum % this.toRotate.length;
-		var fullTxt = this.toRotate[i];
+  return (
+    <>
+      <div className="phraseMain" id="home">
+        <div id="phraseHomeContainer">
+          <h1 id="name">Maira Galvao</h1>
+          <h1 id="profession">I am a Full Stack Developer based in Tel Aviv</h1>
 
-		if (this.isDeleting) {
-			this.txt = fullTxt.substring(0, this.txt.length - 1);
-		} else {
-			this.txt = fullTxt.substring(0, this.txt.length + 1);
-		}
-
-		this.el.innerHTML =
-			'<span class="experienceWithLoop">' + this.txt + "</span>";
-
-		var that = this;
-		var delta = 200 - Math.random() * 100;
-
-		if (this.isDeleting) {
-			delta /= 2;
-		}
-
-		if (!this.isDeleting && this.txt === fullTxt) {
-			delta = this.period;
-			this.isDeleting = true;
-		} else if (this.isDeleting && this.txt === "") {
-			this.isDeleting = false;
-			this.loopNum++;
-			delta = 100;
-		}
-
-		setTimeout(function () {
-			that.tick();
-		}, delta);
-	};
-
-	useEffect(() => {
-		var elements = document.getElementsByClassName("experienceWithTypewrite");
-		for (var i = 0; i < elements.length; i++) {
-			var toRotate = elements[i].getAttribute("data-type");
-			var period = elements[i].getAttribute("data-period");
-			if (toRotate) {
-				new TxtType(elements[i], JSON.parse(toRotate), period);
-			}
-		}
-		var css = document.createElement("style");
-		css.type = "text/css";
-		css.innerHTML =
-			".experienceWithTypewrite > .experienceWithLoop { border-right: 0.08em solid #fff}";
-		document.body.appendChild(css);
-	}, []);
-	let history = useHistory();
-
-	return (
-		<>
-			<Mui.Box id="home" data-aos="fade-in">
-				<details class="navBarMobile">
-					<summary></summary>
-					<nav class="menu">
-						<Link
-							to="home"
-							spy={true}
-							smooth={true}
-							onClick={() => {
-								history.push("/");
-							}}
-						>
-							Home
-						</Link>
-						{/* <Link
-							to="about"
-							spy={true}
-							smooth={true}
-							onClick={() => {
-								history.push("/about");
-							}}
-						>
-							About
-						</Link> */}
-						<Link
-							to="portfolio"
-							spy={true}
-							smooth={true}
-							onClick={() => {
-								history.push("/portfolio");
-							}}
-						>
-							Work
-						</Link>
-						<Link
-							to="articles"
-							spy={true}
-							smooth={true}
-							onClick={() => {
-								history.push("/articles");
-							}}
-						>
-							Projects
-						</Link>{" "}
-						<Link
-							to="contact"
-							spy={true}
-							smooth={true}
-							onClick={() => {
-								history.push("/contact");
-							}}
-						>
-							Contact
-						</Link>{" "}
-					</nav>
-				</details>
-				{/* <div id="homeMobile" className="mobileBox">
-					<p
-						style={{
-							color: "white",
-							fontWeight: "bold",
-							fontSize: "30px",
-						}}
-					>
-						Maíra Galvão
-					</p>
-					<p style={{ color: "white", fontWeight: "bold", fontSize: "30px" }}>
-						Web Developer
-					</p>
-				</div> */}
-			</Mui.Box>
-			{/* <div className="mobilePhrase" id="home">
+          <p id="phrase">
+            I bring ideas to life with code. 
+          </p>
+          <div>
+            <Link className="contactHome" id="btn"
+			to="contact"
+			spy={true}
+			smooth={true}
+			onClick={() => {
+			  history.push("/contact");
+			}}
+			>
+              Contact me
+            </Link>
+          </div>
+        </div>
+      </div>
+      {/* <div className="mobilePhrase" id="home">
 				{" "}
 				<h1>Full Stack Developer</h1>
 				<h2>Maíra Galvão</h2>
 			</div> */}
-			{/* <Mui.Button onClick={saveFile} id="btnDownload" class="fa fa-download">
+      {/* <Mui.Button onClick={saveFile} id="btnDownload" class="fa fa-download">
 				Resume
 			</Mui.Button>{" "} */}
 
-			{/* <Mui.Box id="phraseCoverBox">
+      {/* <Mui.Box id="phraseCoverBox">
 				<Mui.Typography className="wordCarousel" data-aos="fade-in">
 					<Mui.Box className="divAbout"></Mui.Box>
 					<Mui.Box className="divAbout">
@@ -208,6 +100,6 @@ export function Home() {
 					</Mui.Typography>
 				</Mui.Box>
 			</Mui.Box> */}
-		</>
-	);
+    </>
+  );
 }

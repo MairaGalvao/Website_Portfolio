@@ -93,7 +93,7 @@ export function Contact() {
           id="picContact"
           style={{
             float: "right",
-            paddingTop: "100px",
+
             paddingRight: "0",
             width: "60%",
           }}
