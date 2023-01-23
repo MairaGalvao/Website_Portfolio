@@ -15,6 +15,7 @@ export function DummyArticles({
   ps,
   projectPic,
   gitHubLink,
+  moreAbout,
 }) {
   useEffect(() => {
     if (Aos) {
@@ -28,22 +29,28 @@ export function DummyArticles({
           <div class="card-header">
             <img src={image} />
           </div>
-          <div class="card-body">
-            <span class="tag tag-teal">{topic}</span>
-            <h4>{title}</h4>
+          <div class="card-body" id="content-card-article">
+            <a target="_blank" href={linkMedium}>
+              {" "}
+              {topic}
+            </a>
+
+            <h4 id="titleArticle">{title}</h4>
             <p>{titleTip}</p>
             <div class="user">
               <img src={projectPic} alt="user" />
               <div class="user-info">
-                <h5>
-                  <a href={linkMedium}>About</a>
-                </h5>
                 <h5>
                   <a href={gitHubLink}>GitHub</a>
                 </h5>
                 <small>{date}</small>
                 <h6>{location}</h6>
                 {ps && <p>{ps}</p>}
+                {moreAbout && (
+                  <a target="_blank" href={moreAbout}>
+                    ** Vision Zero
+                  </a>
+                )}
               </div>
             </div>
           </div>

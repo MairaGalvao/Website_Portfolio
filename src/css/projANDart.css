@@ -465,8 +465,12 @@ ul .booking-card:hover .informations-container .more-information {
 }
 #articlesBox {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 60px
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-column-gap: 60px; */
+  /* column-gap: 60px; */
+  /* padding-left: 177px; */
+  margin-left: 200px;
+  margin-right: 100px;
 
 }
 
@@ -555,7 +559,6 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
-  min-height: 150px;
   
 }
 
@@ -581,7 +584,7 @@ body {
 
 .card-body p {
   font-size: 13px;
-  margin: 0 0 40px;
+
 }
 .user {
   display: flex;
@@ -634,10 +637,20 @@ body {
 
 
 
+#titleArticle{
+  margin-bottom: 5px;
+  
+}
 
 
+#content-card-article{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-left: 0;
+  /* margin-right: -112px; */
 
-
+}
 
 
 
