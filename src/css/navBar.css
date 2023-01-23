@@ -153,11 +153,15 @@
 }
 
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 600px) {
+    .navContainer {
+      display: block;
+    }
+    #mobileNav{
+        display: block;
+    }
+    .logo{
+        display: none;
+    }
 
-
-	.navContainer{
-		display: none;
-	  }
-	
-}
+  }

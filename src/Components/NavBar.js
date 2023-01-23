@@ -2,12 +2,12 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-scroll";
 import { useState } from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
+
 import * as Mui from "@material-ui/core";
 import "../css/navBar.css";
 import * as React from "react";
-
-const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+import MenuIcon from "@material-ui/icons/Menu";
+import IconButton from "@mui/material/IconButton";
 
 export default function NavBar() {
   const [visible, setVisible] = useState(false);

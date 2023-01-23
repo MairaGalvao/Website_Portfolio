@@ -1,48 +1,63 @@
-import React from "react";
-import { Box } from "@material-ui/core";
 import "../css/footer.css";
 
+import React, { useState, useEffect } from "react";
+import BottomNavigation from "@mui/material/BottomNavigation";
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import { Link } from "react-router-dom";
+
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
+
 export function Footer() {
-	return (
-		<>
-			<div className="mainFooter">
-				<footer class="footer-distributed">
-					<div class="footer-center">
-						<div>
-							<i class="fa fa-envelope"></i>
-							<p>
-								<a href="mailto:mairagalvao01@gmail.com">
-									mairagalvao01@gmail.com
-								</a>
-							</p>
-						</div>
-					</div>
+  const [value, setValue] = React.useState("");
 
-					<div class="footer-right">
-						{/* <p class="footer-company-about">
-							<span>About the company</span>
-							Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
-							euismod convallis velit, eu auctor lacus vehicula sit amet.
-						</p> */}
+  const CustomBottomNavigation = (props) => {
+    return (
+      <BottomNavigation
+        showLabels
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+      >
+        {props.children}
+      </BottomNavigation>
+    );
+  };
 
-						<div class="footer-icons">
-							<a target="_blank" href="https://mairagalvao.medium.com/">
-								<i class="fa fa-medium"></i>
-							</a>
+  return (
+    <>
+      {" "}
+      <div id="footer">
+        <BottomNavigation
+          showLabels
+          value={value}
+          onChange={(e, newValue) => {
+            setValue(newValue);
+          }}
+        >
+          <BottomNavigationAction
+            target="_blank"
+            href="https://github.com/MairaGalvao"
+            label="GitHub"
+            icon={<GitHubIcon />}
+          />
 
-							<a
-								target="_blank"
-								href="https://www.linkedin.com/in/maira-galvao"
-							>
-								<i class="fa fa-linkedin"></i>
-							</a>
-							<a target="_blank" href="https://github.com/MairaGalvao">
-								<i class="fa fa-github"></i>
-							</a>
-						</div>
-					</div>
-				</footer>
-			</div>
-		</>
-	);
+          <BottomNavigationAction
+            target="_blank"
+            href="https://www.linkedin.com/in/maira-galvao/"
+            label="LinkedIn"
+            icon={<LinkedInIcon />}
+          />
+          <BottomNavigationAction
+            target="_blank"
+            href="https://mairagalvao.medium.com/"
+            label="Medium"
+            icon={<AutoStoriesIcon />}
+          />
+        </BottomNavigation>
+      </div>
+    </>
+  );
 }
