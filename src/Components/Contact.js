@@ -16,12 +16,7 @@ export function Contact() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    send(
-        "service_80iz61s",
-        "template_43w1rg5",
-        toSend,
-        "Au4ZJV5hRzPj2cSXG"
-      )
+    send("service_80iz61s", "template_43w1rg5", toSend, "Au4ZJV5hRzPj2cSXG")
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
       })
@@ -81,7 +76,7 @@ export function Contact() {
             <input
               onClick={saveFile}
               type="submit"
-              value="Resume"
+              value="Download CV"
               id="resumeBtn"
             />
           </div>

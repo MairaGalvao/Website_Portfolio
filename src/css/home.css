@@ -133,6 +133,7 @@
 #phraseHomeContainer{
   max-width: 540px;
   margin-left: 40px;
+  margin-top: 400px;
   
 }
 
@@ -188,7 +189,7 @@ font-weight: bolder;
 }
 #btn{
       cursor: pointer;
-      margin-left: 10px;
+ 
       
 }
 
