@@ -40,9 +40,11 @@ export function DummyArticles({
             <div class="user">
               <img src={projectPic} alt="user" />
               <div class="user-info">
-                <h5>
-                  <a href={gitHubLink}>GitHub</a>
-                </h5>
+                {gitHubLink && (
+                  <h5>
+                    <a target="_blank"  href={gitHubLink}>GitHub</a>
+                  </h5>
+                )}
                 <small>{date}</small>
                 <h6>{location}</h6>
                 {ps && <p>{ps}</p>}

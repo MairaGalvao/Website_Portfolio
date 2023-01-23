@@ -72,7 +72,7 @@ export function SmartArticles() {
             date={"Dec 2020"}
             location={""}
             projectPic={projectPic}
-            gitHubLink={""}
+            gitHubLink={"https://github.com/MairaGalvao/Steak_Risk_Data"}
             moreAbout={""}
           />
 
@@ -83,10 +83,10 @@ export function SmartArticles() {
             }
             title={"ANYWAY | Frontend Developer"}
             titleTip={
-              "Our goal is moving towards Vision Zero** - no fatalities or serious injuries involving road traffic."
+              "Our goal is moving towards Vision Zero** - 0 injuries involving road traffic."
             }
             image={logo}
-            linkMedium={"https://www.hasadna.org.il/"}
+            linkMedium={""}
             description={"Read"}
             date={"July 2022"}
             location={"Tel Aviv, Israel"}
