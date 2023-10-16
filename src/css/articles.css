@@ -1,0 +1,128 @@
+/* DummyArticles.module.css */
+#articlesBox{
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.container {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    gap: 50px; /* Add a gap between cards */
+    padding-top: 70px;
+  }
+  
+  .white-text {
+    color: white;
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    width: 15%;
+    border-radius: 50px; /* Add border radius to each card */
+    position: relative;
+    animation: card-slide 20s linear infinite;
+    animation-delay: calc(1s * var(--index, 0));
+  }
+  
+  .card .MuiCard-root {
+    position: relative;
+    overflow: visible;
+  }
+  
+  .card .MuiCardMedia-root {
+    position: relative;
+    height: 250px; /* Adjust the height as needed */
+    object-fit: cover;
+  }
+  
+  .card .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Transparent background for buttons and text */
+    border-radius: 70px; /* Add border radius to the content */
+  }
+  
+  .card .MuiButtonBase-root {
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px; /* Add a border to the buttons */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Add a transition for background color change */
+  }
+  
+  .card .MuiButtonBase-root:hover {
+    background-color: rgba(200, 200, 200, 0.7); /* Slightly transparent gray background on hover */
+  }
+  
+  .card .button-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card #buttons-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    bottom: auto;
+    padding-top: 180px;
+  }
+  
+  .white-text {
+    font-weight: 600;
+    line-height: 1;
+  }
+  
+  .card .text-container {
+    padding-top: 120px;
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @keyframes card-slide {
+    0% {
+      transform: translateX(120%);
+      z-index: 10; /* Increase the z-index for better layering */
+    }
+  
+    100% {
+      transform: translateX(-120%);
+      z-index: 1; /* Decrease the z-index for better layering */
+    }
+  }
+  
+  .button-container {
+    display: flex;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title .subTitle {
+    font-size: 24px;
+    padding: 5px;
+    margin: 0 0px 5px 0px;
+    justify-content: space-evenly;
+    word-spacing: 4px;
+    font-size: 24px;
+  }
+  
+  .subTitle {
+    padding-top: 5px;
+  }
+  
+  .text {
+    font-size: 17px;
+    padding-bottom: 0;
+  }
+  

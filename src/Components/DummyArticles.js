@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import "../css/projANDart.css";
+import { Box,Paper, Typography, Button, Grid, Link as ScrollLink } from "@material-ui/core";
+import { GitHub } from "@material-ui/icons";
+import "../css/articles.css";
 
 export function DummyArticles({
   linkMedium,
@@ -16,48 +18,93 @@ export function DummyArticles({
   projectPic,
   gitHubLink,
   moreAbout,
+  isSmartArticle = false,
 }) {
   useEffect(() => {
     if (Aos) {
       Aos.init({});
     }
   }, [Aos]);
-  return (
-    <>
-      <div class="container">
-        <div class="card">
-          <div class="card-header">
-            <img src={image} />
-          </div>
-          <div class="card-body" id="content-card-article">
-            <a target="_blank" href={linkMedium}>
-              {" "}
-              {topic}
-            </a>
 
-            <h4 id="titleArticle">{title}</h4>
-            <p>{titleTip}</p>
-            <div class="user">
-              <img src={projectPic} alt="user" />
-              <div class="user-info">
-                {gitHubLink && (
-                  <h5>
-                    <a target="_blank"  href={gitHubLink}>GitHub</a>
-                  </h5>
-                )}
-                <small>{date}</small>
-                <h6>{location}</h6>
-                {ps && <p>{ps}</p>}
-                {moreAbout && (
-                  <a target="_blank" href={moreAbout}>
-                    ** Vision Zero
-                  </a>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+  const cardStyle = {
+    backgroundImage: `url(${image})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "250px",
+    borderRadius: "10px",
+    position: "relative",
+    overflow: "hidden",
+    marginBottom: "20px",
+    cursor: "pointer",
+  };
+
+  const buttonStyle = {
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
+    color: "white",
+    cursor: "pointer",
+    transition: "background-color 0.3s",
+    fontWeight: 600,
+    fontFamily: "Mona Sans, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+  };
+
+  const container = {
+
+    display: 'flex',
+    flexWrap: 'wrap',
+    boxSizing: 'border-box',
+    paddingTop: '100px',
+
+  }
+
+  return (
+    <Grid item xs={6}>
+      <Paper style={cardStyle} elevation={3}>
+        <Grid container spacing={2} style={container}>
+          <Grid item xs={12}>
+            <Box className="card-body" id="content-card-article">
+              <ScrollLink to="linkMedium" spy={true} smooth={true}>
+                {topic}
+              </ScrollLink>
+              <Typography variant="h5" id="titleArticle" style={{ color: "white" }}>
+                {title}
+              </Typography>
+              <Typography variant="body1" style={{ color: "white" }}>
+                {titleTip}
+              </Typography>
+              <Box className="user">
+                <Box className="user-info">
+                  {linkMedium && (
+                     <a
+                     href={linkMedium}
+                     target="_blank" // Open in a new tab
+                     rel="noopener noreferrer" // Security best practice
+                   >
+                   
+                   <Button
+                      variant="contained"
+                      color="primary"
+                      startIcon={<GitHub />}
+                      component="a"
+                      href={gitHubLink}
+                      target="_blank"
+                      style={buttonStyle}
+                    >
+                      GitHub
+                    </Button>
+                    </a>
+                  )}
+                  <Typography variant="caption" style={{ color: "white" }}>
+                    {date}
+                  </Typography>
+                  <Typography variant="h6" style={{ color: "white" }}>
+                    {location}
+                  </Typography>
+                              </Box>
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
+      </Paper>
+    </Grid>
   );
 }

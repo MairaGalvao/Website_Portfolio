@@ -1,54 +1,44 @@
-import React, { useEffect, useState } from "react";
-import { Box } from "@material-ui/core";
-import { Button } from "@material-ui/core";
-import { DummyArticles } from "./DummyArticles";
-import Typography from "@material-ui/core/Typography";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import "../css/projANDart.css";
-import projectPic from "../images/projectPic.jpg";
-import hackathon from "../images/hackathon.jpg";
-import logo from "../images/logo.png";
+import React from "react";
+import { Container, Box, Typography } from "@material-ui/core";
+import { DummyArticles } from "./DummyArticles"; // Import the DummyArticles component
 
-export function SmartArticles() {
-  useEffect(() => {
-    if (Aos) {
-      Aos.init({});
-    }
-  }, [Aos]);
+const articleData = [
+  {
+    title: "Exploratory data analysis on a Steak Risk dataset",
+    titleTip: "Data Analysis",
+    image: "https://images.unsplash.com/photo-1588347818036-558601350947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+    linkMedium: "https://medium.com/swlh/practical-data-analysis-with-pandas-and-seaborn-matplotlib-d1820ab27fd8",
+  },
+  {
+    title: "HackZurich is the largest hackathon in Europe.",
+    titleTip: "Zürich, Switzerland",
+    image: "https://maira-galvao-portfolio.web.app/static/media/hackathon.73bb284b.jpg",
+    linkMedium: "https://github.com/MairaGalvao/Hackthon_Zurich",
+  },
+  // Add more objects for additional smart articles
+];
+
+export const SmartArticles = () => {
   return (
-    <>
-      <Box
-        className="articles"
-        style={{ padding: "10px" }}
-        id="articles"
-        data-aos="fade-right"
-        data
-      >
+    <Container style={{ padding: "20px" }}>
+      <Box id="articles" data-aos="fade-right">
         <Typography
           style={{
             fontSize: "100px",
             fontWeight: "bold",
             fontFamily: "monospace",
             color: "white",
-            display: "flex",
             marginBottom: "45px",
-            paddingLeft: "40px",
-            paddingRight: "40px",
-
-            fontFamily: "Poppins, sans-serif",
           }}
         ></Typography>
       </Box>
-
       <Box className="header" data-aos="fade-down" data-aos-duration="2000">
         <h1 className="title">Adaptable & Multilingual</h1>
-        <h1 class="subTitle">People are the power!</h1>
+        <h1 className="subTitle">People are the power!</h1>
         <p className="text">
           Here are a few side projects I've worked on recently.
         </p>
       </Box>
-
       <Box
         id="articlesMainBox"
         style={{
@@ -60,58 +50,19 @@ export function SmartArticles() {
         }}
       >
         <Box id="articlesBox">
-          <DummyArticles
-            topic={"Article"}
-            title={"Data Analysis"}
-            titleTip={"Exploratory data analysis on a Steak Risk dataset "}
-            image={
-              "https://miro.medium.com/max/525/1*gM-I1mhLZS7WN3bs_ZDk_g.png"
-            }
-            linkMedium={"https://mairagalvao.medium.com"}
-            description={"Read"}
-            date={"Dec 2020"}
-            location={""}
-            projectPic={projectPic}
-            gitHubLink={"https://github.com/MairaGalvao/Steak_Risk_Data"}
-            moreAbout={""}
-          />
-
-          <DummyArticles
-            topic={"Volunteer"}
-            moreAbout={
-              "https://visionzeronetwork.org/about/what-is-vision-zero/"
-            }
-            title={"ANYWAY | Frontend Developer"}
-            titleTip={
-              "Our goal is moving towards Vision Zero** - 0 injuries involving road traffic."
-            }
-            image={logo}
-            linkMedium={""}
-            description={"Read"}
-            date={"July 2022"}
-            location={"Tel Aviv, Israel"}
-            ps={""}
-            projectPic={projectPic}
-            gitHubLink={""}
-          />
-          <DummyArticles
-            moreAbout={""}
-            topic={"Hackathon"}
-            gitHubLink={"https://github.com/MairaGalvao/Hackthon_Zurich"}
-            title={"HackZurich"}
-            titleTip={
-              "HackZurich is the largest and most prestigious hackathon in Europe."
-            }
-            image={hackathon}
-            linkMedium={"https://hackzurich.com/"}
-            description={"About"}
-            date={"September 2022"}
-            location={"Zürich, Switzerland"}
-            ps={""}
-            projectPic={projectPic}
-          />
+          {articleData.map((article, index) => (
+            <DummyArticles
+              key={index}
+              topic={article.topic}
+              title={article.title}
+              titleTip={article.titleTip}
+              image={article.image}
+              linkMedium={article.linkMedium}
+              isSmartArticle={true}
+            />
+          ))}
         </Box>
       </Box>
-    </>
+    </Container>
   );
-}
+};

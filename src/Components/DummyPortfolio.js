@@ -1,88 +1,102 @@
-import React, { useEffect } from "react";
-import { Box } from "@material-ui/core";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Box,
+  Typography,
+  Button,
+  Stack,
+} from "@mui/material";
 import "../css/projANDart.css";
+
+const textStyle = {
+  fontWeight: 600,
+  fontFamily: "Mona Sans, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+};
+
+const textStyleButton = {
+  fontWeight: 600,
+  fontFamily: "Mona Sans, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+};
 
 export function DummyPortfolio({
   title,
   description,
-
+  description2,
   linkGitHub,
   linkDemo,
   idContainer,
-
-  idCard,
-  descriptionApp,
   linkPicture,
   linkArticle,
 }) {
-  useEffect(() => {
-    if (Aos) {
-      Aos.init({});
-    }
-  }, [Aos]);
-
   return (
+
+
     <>
-      <Box id={idContainer} class="mainBox">
-        <Box data-aos="fade-down" data-aos-duration="2000">
-          <Box
-            className="cardPortfolio"
-            id={idCard}
-            data-aos="fade-down"
-            data-aos-duration="2000"
-          >
-            <ul id="portFolioCards">
-              <li
-                class="booking-card"
-                style={{
-                  backgroundImage: linkPicture,
-                  height: "500px",
-                }}
-              >
-                <div class="book-container">
-                  <div class="content">
-                    {linkDemo && (
-                      <a href={linkDemo} class="btn" target="_blank">
-                        Demo
-                      </a>
-                    )}
+    
+ 
+    <div id={idContainer} className="card card1">
+      <div className="main-card">
+        <Card>
+          <CardMedia
+            component="img"
+            height="450px"
+            width="180px"
+            image={linkPicture}
+            alt={title}
+            style={{ borderRadius: "30px" }}
+          />
+          <CardContent id="txt-btn-card">
+            <div className="text-container">
+              <Typography className="white-text" style={textStyle}>
+                {description}
+              </Typography>
+              <Typography className="white-text" style={textStyle}>
+                {description2}
+              </Typography>
+            </div>
+            <Stack spacing={2} direction="row" className="button-container" id="buttons-main">
+  {linkDemo && (
+    <a
+      href={linkDemo}
+      target="_blank" // Open in a new tab
+      rel="noopener noreferrer" // Security best practice
+    >
+      <Button className="MuiButtonBase-root button-hover-effect" style={textStyleButton}>
+        Demo
+      </Button>
+    </a>
+  )}
+  {linkGitHub && (
+    <a
+      href={linkGitHub}
+      target="_blank" // Open in a new tab
+      rel="noopener noreferrer" // Security best practice
+    >
+      <Button className="MuiButtonBase-root button-hover-effect" style={textStyleButton}>
+        Code
+      </Button>
+    </a>
+  )}
+  {linkArticle && (
+    <a
+      href={linkArticle}
+      target="_blank" // Open in a new tab
+      rel="noopener noreferrer" // Security best practice
+    >
+      <Button className="MuiButtonBase-root button-hover-effect" style={textStyleButton}>
+        Article
+      </Button>
+    </a>
+  )}
+</Stack>
 
-                    {linkArticle && (
-                      <a target="_blank" href={linkArticle} class="btn">
-                        Article
-                      </a>
-                    )}
-                  </div>
-                </div>
-
-                <div class="informations-container">
-                  <h2 class="title"> {title}</h2>
-                  <p class="sub-title">{description}</p>
-
-                  <div class="more-information">
-                    <div class="info-and-date-container"></div>
-
-                    <p class="disclaimer">{descriptionApp}</p>
-
-                    {linkGitHub && (
-                      <a
-                        target="_blank"
-                        class="fab fa-github"
-                        style={{ fontWeight: "bold" }}
-                        href={linkGitHub}
-                      >
-                        {"< Code >"}
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </Box>
-        </Box>
-      </Box>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
     </>
+
   );
 }

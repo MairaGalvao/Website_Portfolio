@@ -1,26 +1,108 @@
-import React, { useEffect, useState } from "react";
-import { Box } from "@material-ui/core";
-import { DummyPortfolio } from "./DummyPortfolio";
-import Typography from "@material-ui/core/Typography";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import Select from "react-select";
-import makeAnimated from "react-select/animated";
-import { techOptions } from "../techOptions";
-import Button from "@mui/material/Button";
+import React from "react";
+import { Container, Box } from "@mui/material";
 import "../css/projANDart.css";
+import { DummyPortfolio } from "./DummyPortfolio"; // Import the DummyPortfolio component
 
-const animatedComponents = makeAnimated();
+const cardData = [
+  {
+    title: "The Real Bill",
+    buttonText1: "Demo",
+    buttonText2: "Code",
+    line1: "The Real Bill",
+    line2: "Cost worldwide",
+    icon: true,
+    numIcons: 3,
+    iconPadding: "10px",
+    linkGitHub: "https://github.com/MairaGalvao/TheRealBill_App",
+    linkDemo: "https://therealbill-6c919.web.app/",
+    imageUrls: "https://images.unsplash.com/photo-1502920514313-52581002a659?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2934&q=80",
+  },
+  {
+    title: "Geo Data Map",
+    buttonText1: "Code",
+    buttonText2: "",
+    line1: "Geo Data Map",
+    line2: "An interactive map",
+    icon: false,
+    linkGitHub: "https://github.com/MairaGalvao/Geo_Data",
+    linkDemo: "",
+    imageUrls: "https://images.unsplash.com/photo-1604351888999-9ea0a2851e61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2786&q=80",
+  },
 
-export function SmartPortfolio() {
-  useEffect(() => {
-    if (Aos) {
-      Aos.init({});
-    }
-  }, [Aos]);
+  {
+    title: "Data Analysis",
+    buttonText1: "Code",
+    buttonText2: "Article",
+    line1: "Data Analysis",
+    line2: "Steak data analysis",
+    icon: false,
+    linkGitHub: "https://github.com/MairaGalvao/Steak_Risk_Data",
+    linkDemo: "https://medium.com/swlh/practical-data-analysis-with-pandas-and-seaborn-matplotlib-d1820ab27fd8",
+    imageUrls:"https://images.unsplash.com/photo-1560781290-7dc94c0f8f4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2835&q=80",
+  },
+
+
+  {
+    title: "Transliteration",
+    buttonText1: "Code",
+    buttonText2: "Article",
+    line1: "Transliteration",
+    line2: "Hebrew into English.",
+    icon: false,
+    linkGitHub: "https://github.com/MairaGalvao/The-Hebrew-Lyric-Transliterate-Ivrit-Sheli-WIP",
+    linkDemo: "",
+    imageUrls:"https://images.unsplash.com/photo-1634128221889-82ed6efebfc3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+  },
+
+
+  {
+    title: "I Flash Geek",
+    buttonText1: "Code",
+    buttonText2: "Demo",
+    line1: "A flash cards.",
+    line2: "Programming game",
+    icon: false,
+    linkGitHub: "https://github.com/MairaGalvao/I_Flash_Geek",
+    linkDemo: "https://iflashgeek.web.app/",
+    imageUrls:"https://images.unsplash.com/photo-1616628188502-413f2fe46e5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2787&q=80",
+
+  },
+
+
+  {
+    title: "Location Map Weather",
+    buttonText1: "Code",
+    buttonText2: "",
+    line1: "Map Forecast",
+    line2: "xxxxxxx",
+    icon: false,
+    linkGitHub: "https://github.com/MairaGalvao/location-map-weather",
+    linkDemo: "",
+    imageUrls:"https://images.unsplash.com/photo-1630260667842-830a17d12ec9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+
+  },
+
+
+  {
+    title: "Interactive Map Tracker",
+    buttonText1: "Code",
+    buttonText2: "",
+    line1: "Map Tracker",
+    line2: "",
+    icon: false,
+    linkGitHub: "https://github.com/MairaGalvao/map-tracker",
+    linkDemo: "",
+    imageUrls:"https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+
+  },
+
+];
+
+export const SmartPortfolio = () => {
   return (
+
     <>
-      <Box
+       <Box
         className="header"
         data-aos="fade-down"
         data-aos-duration="2000"
@@ -42,132 +124,24 @@ export function SmartPortfolio() {
           page.
         </p>
       </Box>
-
-      <Box id="projectPhraseMainBox">
-        <Box>
-          <Box
-            id="mainBoxProjects"
-            // style={{
-            // 	display: "grid",
-            // 	gridTemplateColumns: "1fr 1fr 1fr 1fr",
-            // 	gridGap: "40px",
-            // 	margin: "0px 50px",
-            // }}
-          >
-            <DummyPortfolio
-              title={"The Real Bill"}
-              description={"The real cost of living worldwide"}
-              descriptionApp={
-                "App that provides information about the Living Index - theory based on the Purchasing Power Parity."
-              }
-              linkPicture={
-                "url(https://images.unsplash.com/photo-1502920514313-52581002a659?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y3VycmVuY3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60)"
-              }
-              linkGitHub={"https://github.com/MairaGalvao/TheRealBillApp"}
-              linkDemo={"https://therealbill-6c919.web.app"}
-            />
-
-            <DummyPortfolio
-              linkGitHub={"https://github.com/MairaGalvao/Geo_Data"}
-              title={"GEO Data"}
-              description={"An interactive map using Leaflet"}
-              descriptionApp={
-                "A map user interface in which all of GeoJson location features are displayed on an interactive map built with react leaflet."
-              }
-              linkPicture={
-                "url(https://media.istockphoto.com/photos/young-man-planning-a-road-trip-picture-id487081189?s=612x612)"
-              }
-            />
-
-            <DummyPortfolio
-              title={"Data analysis"}
-              description={"Doneness steak data analysis"}
-              descriptionApp={
-                "A data analysis based on correlations and comparisons among the samples with Python, Pandas, Numpy and Matplotlib"
-              }
-              linkPicture={
-                "url(https://images.unsplash.com/photo-1551809727-fa6cc87641a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80)"
-              }
-              linkGitHub={"https://github.com/MairaGalvao/Steak_Risk_Data"}
-              linkArticle={
-                "https://medium.com/swlh/practical-data-analysis-with-pandas-and-seaborn-matplotlib-d1820ab27fd8"
-              }
-            />
-
-            <DummyPortfolio
-              linkPicture={
-                "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAM4AAAD0CAMAAADkIOk9AAAAeFBMVEX///8AAAC0tLTw8PAVFRXExMROTk7k5OTo6OjZ2dnv7+9HR0diYmLQ0NAoKCj7+/u5ubmlpaWJiYmWlpZycnKtra0hISF+fn69vb2QkJD29vZpaWlCQkI8PDyfn5/JyckODg4eHh5dXV01NTV6enrU1NRWVlY2Nja//apMAAAGWElEQVR4nO2dZ1ccORBFBQ7YYBsnHHAaHNj//w+XaIahrlpSV5V2z3n3M1PSm1FLldSUIoQQQgghhBBCCCGEEEIIIYQQQgghhBBC/G/4vAd88h3nkTnIoe8gF3wlPaeuw9hyHrmOweNc8DRhGH855TXpeeM5Spqc8oL0PHMcJE9OITmvHMdIlPOH9Lz1GyNRTnlLev64DZEpp7wiPW4jpMp5RnK+eI2QKqe8IT1ezkGunPKU9Dg5B8lyTknOkY/9ZDnlCen57mI+W055T3oOPKynyymPQY6Lc5Av5zn9PB8djOfLKe9Iz8v1tifIKd9Iz3rTM+QckpwXq03PkFP2Sc/rtZanyOFQbu3Ac+RgKPd1pd1Jcl6SnpXOwSQ5HMqtcw5mycFQ7myV1WlyMJRb5RxMk8Oh3I8VRufJ4VDueNzmRDkYyv0ctzlRDody+8MmZ8rhUG64gjFVTtmAnG+jBufKwVDu3aDBuXI4lHs+Zm+yHAzlHo+Zmy0HQ7nfQ+Zmy+FQbsg5sL+dRDnlJ+kZcQ5sT9C3nFznmOScDxizt0r3OdfAUO6k39aP+XLKR9LTXwQ26+MfAuZc4wPI+dVt6btlxrd1YZkD+nk+91oyf+j3EXOugaFcr3NgxlCjHtM4RyBn02nHNLI6GdkNhnJ9C8V2Cgb9vzV8Ij1Peqz8F/bpa76Qnp4j3XTQPZtk2qFQrmebNR/BMWd2LRjKtXeI2f7SeOZhDYdnpKfZObAfQM8Gs2bw6OlwDsxUyiZuzsw5q2nvEDM/7FFB7gS9nBvaOsTsSHBNjngM7BP9S5MZO+8QPPeHYK3njpYOMXtrTN+msVC6TUOHmB2lOzQrdEHe5w6LzgGcWxkStvjVpma5Q8z+WnKDg2NsD33AgnMAPmxmEqfS7GpQLwLbn8kNRFtX2hVVzxgccpcmuVYad4FbKs4BLLUVdbx+mnbobXDTpfsnmT9Ow+m5C5mCRbu+A6sdzLVXgPlRUTIxNMBo7YJzO+bfg6QMxRaOVzWWwET73tUJg1U5o7aB2vPU1Da1q2iAqnIPO8TwZ05Mr+G3f7vgsSq32yGGvT2JmenKg3O7mnCnuL/5ouzMkhslobYnQafSvfIGqxkoDo3yGyextbXiZrEV/ONKGyrdDYLltvsLCf/sr3NQWbMruq56waW248RgVe5mrpjXTo1B8f71g+VOVblrz7KyO3aXucbB9f7wEMd81WWeFgv4bnebmqAmQ8uZN0udl5we8OaY+uCQS2KXl8l5qEaxmWEBTcTuyMOL9BW6ClwroYQnbUXLCdJdXG/YLwFXxXgrwqockBgV4FHxT+UjfWpyUzfw5NTCRrxIb+F227kJ8Fvqp15HTiEzOVDw6Fv4VHNuMfe3oW13qRa7VMy6Jbv2YR/ym8XPVeqmWyQ6atfYu3RDoIW3L7ZIr7ePV2CwZecOvxdstGJvUU1rpBLaXPEqsxn3BnuttaUq685BegNeoQ2q9WplTU1+w1qh/ak148LOwdGEhVboDG2eCzoH/q8ra8KcS8353IFKdf39vB7Y23RHZRmTDOnn5yUn5lR6MkjoHOSfOZT67DKBzkHQlGuYJY6+S27oHCS70peY8+hsNsOrmc5vfFzGfpB7/Ua8mpnb3UGBaHfHNmULMxOfl9jlp+4vFYsGPi91asZOkPfbwYR9ar+KXd0Yub1LzkHupSPTwx/ZYLF+mNqSax6BQylL273Yy+3JNU/RsecXe64TCyFmJW2svIxF4MR+LzOyHjzMsW0lr/puyhktxWAlPy2Uc5WDr+DriAbX4SsHnYOsUM5Xjvt7G3pxloMdYhuvCdfxloPOQU4K0VsOd4ilhHLucrjtIyOU85eDzkFGn6G/HHYOEloLAuRwh1h8KBchp5yBnPh7ySFysAgcHsqFyOEOseh2wxg5/K9WgkO5IDnYIRYcygXJ4Q6x2MJ8lBy+1BQayoXJwSLw8Cv4WoiTg+3jkXdG4+SwcxAYygXKwQ6xjY95i0g56BzEhXKRctg5CGtCDpXDd8+iQrlYOVgEjgrlYuVwh1hQKBcshzvEYu7CRstJ+T9sd4TLyfg/bHeEy+EOsYhQLl5Owv9huyNBDnaIBfTym+M4H9rYIeZflds3OPHeRK1BrgZyHkcIIYQQQgghhBBCCCGEEEIIIYQQQgghhBDt/Avw1D8n2q6JMwAAAABJRU5ErkJggg==)"
-              }
-              title={"Ivrit Sheli"}
-              description={"Transliteration Hebrew to English"}
-              descriptionApp={
-                "The Hebrew letters are transliterated into phonetic English. The Python-BeautifulSoup framework is used to scrape lyrics from the web. (WIP)"
-              }
-              linkGitHub={"https://github.com/MairaGalvao/ivrit-sheli"}
-            />
-
-            <DummyPortfolio
-              linkPicture={
-                "url(https://images.unsplash.com/photo-1616628188502-413f2fe46e5e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-              }
-              title={"I Flash Geek "}
-              description={"A programming flash cards."}
-              descriptionApp={
-                "Serverless flashcards app that displays a quiz containing several questions on computer languages."
-              }
-              linkGitHub={"https://github.com/MairaGalvao/I_Flash_Geek"}
-              linkDemo={"https://iflashgeek.web.app/"}
-            />
-
-            {/* {(isAllPicked || isNodePicked || isJSPicked) && (
-							<DummyPortfolio
-								title={"Health Care Analysis"}
-								description={"An analysis of health worldwide."}
-								descriptionApp={
-									"An app that provides measurements of health care around the world."
-								}
-								linkGitHub={
-									"https://github.com/MairaGalvao/International_Health_Care_Analysis"
-								}
-							/>
-						)} */}
-            {/* 
-						{(isAllPicked || isPythonPicked || isReactPicked || isJSPicked) && (
-							<DummyPortfolio
-								title={"Navigation bar & Dashboard"}
-								description={"Coming soon"}
-								descriptionApp={"Coming soon"}
-								linkGitHub={"https://github.com/MairaGalvao/Navbar_Dashboard"}
-							/>
-						)} */}
-            {/* 
-						{(isAllPicked || isReactPicked) && (
-							<DummyPortfolio
-								title={"Contact Manager"}
-								description={"Coming soon"}
-								descriptionApp={"Coming soon"}
-								linkGitHub={"https://github.com/MairaGalvao/Contact_Manager"}
-							/>
-						)} */}
-            {/* 
-						{isAllPicked && (
-							<DummyPortfolio
-								title={"SQL Queries"}
-								description={"Coming soon"}
-								descriptionApp={"Coming soon"}
-							/>
-						)} */}
-
-            {/* {(isAllPicked || isJSPicked) && (
-							<DummyPortfolio
-								title={"Chat Bot"}
-								description={"Javascript manual built chat bot"}
-								linkGitHub={"https://github.com/MairaGalvao/Chat_Bot"}
-							/>
-						)} */}
-          </Box>
-        </Box>
-      </Box>
-    </>
-  );
-}
+    <Container style={{ maxWidth: "100%", overflow: "hidden" }}>
+      <div className="card-container">
+        {cardData.map((card, index) => (
+          <DummyPortfolio
+            key={index}
+            title={card.title}
+            description={card.line1}
+            description2={card.line2}
+            numIcons={card.icon ? card.numIcons : 0}
+            iconPadding={card.icon ? card.iconPadding : "0px"}
+            linkGitHub={card.linkGitHub}
+            linkDemo={card.linkDemo}
+            linkPicture={card.imageUrls}
+            idContainer={`card${index + 1}`}
+            idCard={`card${index + 1}`}
+          />
+        ))}
+      </div>
+    </Container>
+</>  );
+};

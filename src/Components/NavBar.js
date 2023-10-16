@@ -1,13 +1,33 @@
-import { useHistory } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import { useState } from "react";
-import { FaArrowCircleUp } from "react-icons/fa";
-
-import * as Mui from "@material-ui/core";
+import { Box, IconButton } from "@mui/material";
+import { useHistory } from "react-router-dom";
 import "../css/navBar.css";
-import * as React from "react";
-import MenuIcon from "@material-ui/icons/Menu";
-import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+const navContainerStyle = {
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  backgroundColor: "transparent",
+  padding: "20px",
+  fontFamily: "Mona Sans, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+  fontWeight: 600,
+};
+
+const logoStyle = {
+  fontSize: "1.5rem",
+  color: "#333", // Use a slightly less gray shade of black
+  textDecoration: "none",
+  marginRight: "20px",
+};
+
+const itemsBtnStyle = {
+  margin: "0 10px",
+  fontSize: "1rem",
+  fontWeight: "bold",
+  color: "#333", // Use a slightly less gray shade of black
+  textDecoration: "none",
+};
 
 export default function NavBar() {
   const [visible, setVisible] = useState(false);
@@ -29,92 +49,73 @@ export default function NavBar() {
   window.addEventListener("scroll", toggleVisible);
   let history = useHistory();
 
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
-    <>
-      <Mui.Box className="navContainer" id="navBar">
-        <Mui.Box className="logo">Maíra Galvão</Mui.Box>
-        <Mui.Box className="navMenu">
-          <Mui.Box className="itemsNav">
-            <Link
-              className="itemsBtn"
-              to="home"
-              spy={true}
-              smooth={true}
-              onClick={() => {
-                history.push("/");
-              }}
-            >
-              Home
-            </Link>
-
-            {/* <Link
-							className="itemsBtn"
-							to="about"
-							spy={true}
-							smooth={true}
-							onClick={() => {
-								history.push("/about");
-							}}
-						>
-							About
-						</Link> */}
-
-            <Link
-              className="itemsBtn"
-              to="portfolio"
-              spy={true}
-              smooth={true}
-              onClick={() => {
-                history.push("/portfolio");
-              }}
-            >
-              Portfolio
-            </Link>
-
-            <Link
-              className="itemsBtn"
-              to="articles"
-              spy={true}
-              smooth={true}
-              onClick={() => {
-                history.push("/extras");
-              }}
-            >
-              Extras
-            </Link>
-
-            <Link
-              className="itemsBtn"
-              to="contact"
-              spy={true}
-              smooth={true}
-              onClick={() => {
-                history.push("/contact");
-              }}
-            >
-              Contact
-            </Link>
-          </Mui.Box>
-        </Mui.Box>
-      </Mui.Box>
-    </>
+    <Box className="navContainer" id="navBar" style={navContainerStyle}>
+      <Box className="logo">
+        <Link
+          to="home"
+          spy={true}
+          smooth={true}
+          style={logoStyle}
+          onClick={() => {
+            history.push("/");
+          }}
+        >
+          Maíra Galvão
+        </Link>
+      </Box>
+      <Box className="navMenu">
+        <Box className="itemsNav" style={itemsBtnStyle}>
+          <Link
+            className="itemsBtn"
+            to="home"
+            spy={true}
+            smooth={true}
+            style={itemsBtnStyle}
+            onClick={() => {
+              history.push("/");
+            }}
+          >
+            Home
+          </Link>
+          <Link
+            className="itemsBtn"
+            to="portfolio"
+            spy={true}
+            smooth={true}
+            style={itemsBtnStyle}
+            onClick={() => {
+              history.push("/portfolio");
+            }}
+          >
+            Portfolio
+          </Link>
+          <Link
+            className="itemsBtn"
+            to="articles"
+            spy={true}
+            smooth={true}
+            style={itemsBtnStyle}
+            onClick={() => {
+              history.push("/extras");
+            }}
+          >
+            Extras
+          </Link>
+          <Link
+            className="itemsBtn"
+            to="contact"
+            spy={true}
+            smooth={true}
+            style={itemsBtnStyle}
+            onClick={() => {
+              history.push("/contact");
+            }}
+          >
+            Contact
+          </Link>
+        </Box>
+      </Box>
+    </Box>
   );
 }
