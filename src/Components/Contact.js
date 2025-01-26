@@ -31,8 +31,9 @@ export function Contact() {
   });
   const saveFile = () => {
     saveAs(
-      "https://docs.google.com/document/d/1ck0C73eaAd1e96ikRyoA3c3Ma90nC4xqkMBPYhWUKEk/edit?usp=share_link",
-      "cv-maira.pdf"
+      "https://www.figma.com/design/b6SURXWqNx8cnaU3uJ3iF6/Maira-Galvao-Software-Engineer?node-id=0-1&t=7Fb3yz6yEYEw3ajU-1",
+      "Maira Galvao Software Engineer.pdf"
+      
     );
   };
   const handleChange = (e) => {
