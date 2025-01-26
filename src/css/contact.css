@@ -3,8 +3,8 @@ form {
   position: absolute;
   flex-direction: column;   
    display: flex;
-
- 
+   padding-top: 100px;
+    width: 300px
 
 }
 
@@ -91,15 +91,26 @@ textarea:focus {
 
 /* new css form contact */
 
+
+
+#contact{
+
+}
  .form-box {
-
-  float: left;  width: 100%;
-	 max-width: 500px;
-	 margin: 0 auto;
-	 padding-left: 100px;
-   padding-top: 150px;
-   height: 700px;
-
+    /* float: left; */
+    /* width: 100%; */
+    /* max-width: 500px; */
+    /* margin: 0 auto; */
+    /* padding-left: 100px; */
+    /* padding-top: 150px; */
+    /* height: 700px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 150px;
 }
  h2 {
 	 text-transform: uppercase;

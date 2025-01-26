@@ -74,7 +74,7 @@ const cardData = [
     buttonText1: "Code",
     buttonText2: "",
     line1: "Map Forecast",
-    line2: "xxxxxxx",
+    line2: "With MapBox & Leaflet",
     icon: false,
     linkGitHub: "https://github.com/MairaGalvao/location-map-weather",
     linkDemo: "",

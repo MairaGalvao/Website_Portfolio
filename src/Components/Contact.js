@@ -16,7 +16,7 @@ export function Contact() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    send("service_80iz61s", "template_43w1rg5", toSend, "Au4ZJV5hRzPj2cSXG")
+    send("service_3nir9cd", "template_43w1rg5", toSend, "Au4ZJV5hRzPj2cSXG")
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
       })
@@ -47,8 +47,9 @@ export function Contact() {
   return (
     <>
       <div class="form-box" id="contact">
-        <h2 style={{ paddingBottom: "10px" }}>Keep in touch</h2>
         <form id="contact_form" ref={form} onSubmit={onSubmit}>
+        <h2 style={{ paddingBottom: "10px" }}>Keep in touch</h2>
+
           <label>Name</label>
           <input
             type="text"
@@ -71,7 +72,7 @@ export function Contact() {
             value={toSend.message}
             onChange={handleChange}
           />
-          <div className="formButtons">
+          <div className="formButtons"id="sendBtn">
             <input type="submit" value="Send" id="sendBtn" />
             <input
               onClick={saveFile}
@@ -79,9 +80,11 @@ export function Contact() {
               value="Download CV"
               id="resumeBtn"
             />
+
+            
           </div>
         </form>
-      </div>
+      
 
       <Box className="picContact">
         <img
@@ -95,6 +98,7 @@ export function Contact() {
           src={contactPic}
         />
       </Box>
+      </div>
     </>
   );
 }

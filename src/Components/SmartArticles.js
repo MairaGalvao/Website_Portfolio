@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Box, Typography } from "@material-ui/core";
 import { DummyArticles } from "./DummyArticles"; // Import the DummyArticles component
+import hackathon from "../images/hackathon.jpg"
 
 const articleData = [
   {
@@ -12,7 +13,7 @@ const articleData = [
   {
     title: "HackZurich is the largest hackathon in Europe.",
     titleTip: "Zürich, Switzerland",
-    image: "https://maira-galvao-portfolio.web.app/static/media/hackathon.73bb284b.jpg",
+    image: hackathon,
     linkMedium: "https://github.com/MairaGalvao/Hackthon_Zurich",
   },
   // Add more objects for additional smart articles
@@ -56,6 +57,7 @@ export const SmartArticles = () => {
               topic={article.topic}
               title={article.title}
               titleTip={article.titleTip}
+     
               image={article.image}
               linkMedium={article.linkMedium}
               isSmartArticle={true}
