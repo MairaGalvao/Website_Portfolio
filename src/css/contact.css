@@ -88,14 +88,6 @@ textarea:focus {
 
 }
 
-
-/* new css form contact */
-
-
-
-#contact{
-
-}
  .form-box {
     /* float: left; */
     /* width: 100%; */
@@ -155,28 +147,7 @@ textarea:focus {
 #sendBtn {
   cursor: pointer;
 }
- /* input[type=&#34;
-submit&#34;
-] {
-	 background-color: #007575;
-	 padding: 7px;
-	 border: 0;
-	 color: snow;
-	 cursor: pointer;
-	 text-transform: uppercase;
-}
- input[type=&#34;
-submit&#34;
-]:hover {
-	 animation-name: submit-hover;
-	 animation-duration: 0.7s;
-}
- input[type=&#34;
-submit&#34;
-]:active {
-	 animation-name: submit-active;
-	 animation-duration: 0.3s;
-} */
+
  @keyframes submit-hover {
 	 0% {
 		 transform: scale(1);

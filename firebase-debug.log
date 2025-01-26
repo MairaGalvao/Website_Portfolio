@@ -1,0 +1,103 @@
+[debug] [2025-01-26T16:00:20.653Z] ----------------------------------------------------------------------
+[debug] [2025-01-26T16:00:20.655Z] Command:       /Users/mairagalvao/.nvm/versions/node/v18.20.4/bin/node /usr/local/bin/firebase deploy
+[debug] [2025-01-26T16:00:20.655Z] CLI Version:   12.7.0
+[debug] [2025-01-26T16:00:20.656Z] Platform:      darwin
+[debug] [2025-01-26T16:00:20.656Z] Node Version:  v18.20.4
+[debug] [2025-01-26T16:00:20.658Z] Time:          Sun Jan 26 2025 18:00:20 GMT+0200 (Israel Standard Time)
+[debug] [2025-01-26T16:00:20.658Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-01-26T16:00:20.752Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-01-26T16:00:20.753Z] > authorizing via signed-in user (mairagalvao01@gmail.com)
+[debug] [2025-01-26T16:00:20.753Z] [iam] checking project maira-galvao-portfolio for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-01-26T16:00:20.756Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/maira-galvao-portfolio:testIamPermissions [none]
+[debug] [2025-01-26T16:00:20.756Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/maira-galvao-portfolio:testIamPermissions x-goog-quota-user=projects/maira-galvao-portfolio
+[debug] [2025-01-26T16:00:20.756Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/maira-galvao-portfolio:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-01-26T16:00:21.835Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/maira-galvao-portfolio:testIamPermissions 200
+[debug] [2025-01-26T16:00:21.836Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/maira-galvao-portfolio:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-01-26T16:00:21.836Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/maira-galvao-portfolio [none]
+[debug] [2025-01-26T16:00:22.243Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/maira-galvao-portfolio 200
+[debug] [2025-01-26T16:00:22.243Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/maira-galvao-portfolio {"projectId":"maira-galvao-portfolio","projectNumber":"522640674983","displayName":"Maira Galvao Portfolio","name":"projects/maira-galvao-portfolio","resources":{"hostingSite":"maira-galvao-portfolio"},"state":"ACTIVE","etag":"1_687049a1-9dc7-40b0-b391-a533034f00dc"}
+[info] 
+[info] === Deploying to 'maira-galvao-portfolio'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-01-26T16:00:22.250Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/maira-galvao-portfolio/versions [none]
+[debug] [2025-01-26T16:00:22.250Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/maira-galvao-portfolio/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-01-26T16:00:23.681Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/maira-galvao-portfolio/versions 200
+[debug] [2025-01-26T16:00:23.681Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/maira-galvao-portfolio/versions {"name":"projects/522640674983/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[maira-galvao-portfolio]: beginning deploy... 
+[info] i  hosting[maira-galvao-portfolio]: found 22 files in build 
+[debug] [2025-01-26T16:00:23.698Z] [hosting] uploading with 200 concurrency
+[debug] [2025-01-26T16:00:23.845Z] [hosting] hash cache [YnVpbGQ] stored for 22 files
+[debug] [2025-01-26T16:00:23.845Z] [hosting][hash queue][FINAL] {"max":138,"min":12,"avg":19.772727272727273,"active":0,"complete":22,"success":22,"errored":0,"retried":0,"total":22,"elapsed":143}
+[debug] [2025-01-26T16:00:23.846Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/522640674983/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f:populateFiles [none]
+[debug] [2025-01-26T16:00:23.846Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/522640674983/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f:populateFiles {"files":{"/asset-manifest.json":"2b5a59a270571f49307f287b5797c024e29cb193f5e75a265bb381c0ef0718cd","/index.html":"9ec7e29e4da3914bfd5fe74e59b6d93078e661c52597dc39ca6c8bf1d983e420","/manifest.json":"7edf4fdb05d23bdae7b6c9db1b17616fd8d5fbbd0887cea8c65cef34a9fa70fe","/logo192.png":"f66564670b5bfe49f3f04a5b63107bae60f4a7736f1d3b83aa0115f7acf45150","/favicon.ico":"1463be9bedc82e16f9364eec7a1f5152cbe56229401381eed65c1496cb884407","/logo512.png":"2356e0b814e58a349935c8de17226873d615d088a867d591fef48a64c80c9a2f","/static/css/2.ec02d681.chunk.css":"a8c8a2616caf0872388af41c0edc40962139bec0484830fe6011386639653b19","/static/js/2.654a8fba.chunk.js.LICENSE.txt":"68d70242eb46fdf9130b4c2b4f4d62efd1c3b4c5a76fe587b320f0771ab141ee","/static/js/3.649563dd.chunk.js":"08ccc67e6c0e07a35c90ba721483e62879b638f8750b738160306067defab146","/static/css/2.ec02d681.chunk.css.map":"13316c497e517b192b3e320d4d12f81e6ce27eac1aa371436ae4b40652d28525","/static/css/main.164fafff.chunk.css":"e5a31cc8040beaa9793192756bbe1df0af0b13b7899db3253bdefbc3717ee04d","/static/js/3.649563dd.chunk.js.map":"4b6dc0993dfa6bea3119c0e5e89dc0f7d21bb527d1f4971f91fa14fd2c7ec36b","/static/js/main.564b9f91.chunk.js":"15931336e8e28f2b6c06850efd2f3b6b46fd02a0f8534b005481dc83e67a0938","/static/js/runtime-main.abd223d8.js":"4188b9472aa67c401a855d87250fa2298f3b8c5c332f05fed214568a6eabd63e","/static/js/main.564b9f91.chunk.js.map":"78e615c753eda795cca4bf7fa7a51280f1ed9a0de9d30fa6ff4e6d55b7ddce98","/static/js/runtime-main.abd223d8.js.map":"1e2a9381878a8cfaba1694085ef41ecc1659dbd5383775efe402186401860a2d","/static/media/hackathon.73bb284b.jpg":"213f72a6d031bdf1faf932f8c209cc4c611cb38d4447bd345348f38bcade9655","/static/css/main.164fafff.chunk.css.map":"556816220476c508d6d885f3b13459562dbcf93bbf652e8ba795a6e064af2e47","/static/media/contactPic.f7353836.jpg":"5424d728dd2b0a14580d410bb4f7db81d4da17b66ff4d4659bba497a0f22c600","/static/media/coverPic.ea22ae09.jpg":"b3ff128ff35c65bc0275064020292c5503466a69ecc40250e68da6351b02fd5d","/static/js/2.654a8fba.chunk.js":"010ce40f680a123df17eda612c5bc0b790417c105b7d9f92c4055bd3838fbfb3","/static/js/2.654a8fba.chunk.js.map":"de05a58b8d12f73c94f3cbb7751e8f5fdcdc22ee465210d82a35e7c9d916e985"}}
+[debug] [2025-01-26T16:00:24.999Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/522640674983/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f:populateFiles 200
+[debug] [2025-01-26T16:00:24.999Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/522640674983/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f:populateFiles {"uploadRequiredHashes":["78e615c753eda795cca4bf7fa7a51280f1ed9a0de9d30fa6ff4e6d55b7ddce98","010ce40f680a123df17eda612c5bc0b790417c105b7d9f92c4055bd3838fbfb3","e5a31cc8040beaa9793192756bbe1df0af0b13b7899db3253bdefbc3717ee04d","de05a58b8d12f73c94f3cbb7751e8f5fdcdc22ee465210d82a35e7c9d916e985","2b5a59a270571f49307f287b5797c024e29cb193f5e75a265bb381c0ef0718cd","15931336e8e28f2b6c06850efd2f3b6b46fd02a0f8534b005481dc83e67a0938","556816220476c508d6d885f3b13459562dbcf93bbf652e8ba795a6e064af2e47","9ec7e29e4da3914bfd5fe74e59b6d93078e661c52597dc39ca6c8bf1d983e420"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files"}
+[debug] [2025-01-26T16:00:25.001Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/78e615c753eda795cca4bf7fa7a51280f1ed9a0de9d30fa6ff4e6d55b7ddce98 [none]
+[debug] [2025-01-26T16:00:25.001Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/78e615c753eda795cca4bf7fa7a51280f1ed9a0de9d30fa6ff4e6d55b7ddce98 [stream]
+[debug] [2025-01-26T16:00:25.003Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/010ce40f680a123df17eda612c5bc0b790417c105b7d9f92c4055bd3838fbfb3 [none]
+[debug] [2025-01-26T16:00:25.003Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/010ce40f680a123df17eda612c5bc0b790417c105b7d9f92c4055bd3838fbfb3 [stream]
+[debug] [2025-01-26T16:00:25.005Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/e5a31cc8040beaa9793192756bbe1df0af0b13b7899db3253bdefbc3717ee04d [none]
+[debug] [2025-01-26T16:00:25.005Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/e5a31cc8040beaa9793192756bbe1df0af0b13b7899db3253bdefbc3717ee04d [stream]
+[debug] [2025-01-26T16:00:25.007Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/de05a58b8d12f73c94f3cbb7751e8f5fdcdc22ee465210d82a35e7c9d916e985 [none]
+[debug] [2025-01-26T16:00:25.007Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/de05a58b8d12f73c94f3cbb7751e8f5fdcdc22ee465210d82a35e7c9d916e985 [stream]
+[debug] [2025-01-26T16:00:25.008Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/2b5a59a270571f49307f287b5797c024e29cb193f5e75a265bb381c0ef0718cd [none]
+[debug] [2025-01-26T16:00:25.009Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/2b5a59a270571f49307f287b5797c024e29cb193f5e75a265bb381c0ef0718cd [stream]
+[debug] [2025-01-26T16:00:25.010Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/15931336e8e28f2b6c06850efd2f3b6b46fd02a0f8534b005481dc83e67a0938 [none]
+[debug] [2025-01-26T16:00:25.010Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/15931336e8e28f2b6c06850efd2f3b6b46fd02a0f8534b005481dc83e67a0938 [stream]
+[debug] [2025-01-26T16:00:25.011Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/556816220476c508d6d885f3b13459562dbcf93bbf652e8ba795a6e064af2e47 [none]
+[debug] [2025-01-26T16:00:25.011Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/556816220476c508d6d885f3b13459562dbcf93bbf652e8ba795a6e064af2e47 [stream]
+[debug] [2025-01-26T16:00:25.012Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/9ec7e29e4da3914bfd5fe74e59b6d93078e661c52597dc39ca6c8bf1d983e420 [none]
+[debug] [2025-01-26T16:00:25.012Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/9ec7e29e4da3914bfd5fe74e59b6d93078e661c52597dc39ca6c8bf1d983e420 [stream]
+[debug] [2025-01-26T16:00:25.014Z] [hosting][populate queue][FINAL] {"max":1157,"min":1157,"avg":1157,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1170}
+[debug] [2025-01-26T16:00:25.014Z] [hosting] uploads queued: 8
+[debug] [2025-01-26T16:00:26.025Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/78e615c753eda795cca4bf7fa7a51280f1ed9a0de9d30fa6ff4e6d55b7ddce98 200
+[debug] [2025-01-26T16:00:26.025Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/78e615c753eda795cca4bf7fa7a51280f1ed9a0de9d30fa6ff4e6d55b7ddce98 [stream]
+[debug] [2025-01-26T16:00:26.025Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/e5a31cc8040beaa9793192756bbe1df0af0b13b7899db3253bdefbc3717ee04d 200
+[debug] [2025-01-26T16:00:26.026Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/e5a31cc8040beaa9793192756bbe1df0af0b13b7899db3253bdefbc3717ee04d [stream]
+[debug] [2025-01-26T16:00:26.070Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/2b5a59a270571f49307f287b5797c024e29cb193f5e75a265bb381c0ef0718cd 200
+[debug] [2025-01-26T16:00:26.070Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/2b5a59a270571f49307f287b5797c024e29cb193f5e75a265bb381c0ef0718cd [stream]
+[debug] [2025-01-26T16:00:26.116Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/15931336e8e28f2b6c06850efd2f3b6b46fd02a0f8534b005481dc83e67a0938 200
+[debug] [2025-01-26T16:00:26.116Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/15931336e8e28f2b6c06850efd2f3b6b46fd02a0f8534b005481dc83e67a0938 [stream]
+[debug] [2025-01-26T16:00:26.291Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/556816220476c508d6d885f3b13459562dbcf93bbf652e8ba795a6e064af2e47 200
+[debug] [2025-01-26T16:00:26.292Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/556816220476c508d6d885f3b13459562dbcf93bbf652e8ba795a6e064af2e47 [stream]
+[debug] [2025-01-26T16:00:26.426Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/010ce40f680a123df17eda612c5bc0b790417c105b7d9f92c4055bd3838fbfb3 200
+[debug] [2025-01-26T16:00:26.426Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/010ce40f680a123df17eda612c5bc0b790417c105b7d9f92c4055bd3838fbfb3 [stream]
+[debug] [2025-01-26T16:00:26.435Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/9ec7e29e4da3914bfd5fe74e59b6d93078e661c52597dc39ca6c8bf1d983e420 200
+[debug] [2025-01-26T16:00:26.435Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/9ec7e29e4da3914bfd5fe74e59b6d93078e661c52597dc39ca6c8bf1d983e420 [stream]
+[debug] [2025-01-26T16:00:26.618Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/de05a58b8d12f73c94f3cbb7751e8f5fdcdc22ee465210d82a35e7c9d916e985 200
+[debug] [2025-01-26T16:00:26.618Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f/files/de05a58b8d12f73c94f3cbb7751e8f5fdcdc22ee465210d82a35e7c9d916e985 [stream]
+[debug] [2025-01-26T16:00:26.619Z] [hosting][upload queue][FINAL] {"max":1619,"min":1026,"avg":1250.75,"active":0,"complete":8,"success":8,"errored":0,"retried":0,"total":8,"elapsed":1620}
+[info] ✔  hosting[maira-galvao-portfolio]: file upload complete 
+[debug] [2025-01-26T16:00:26.620Z] [hosting] deploy completed after 2936ms
+[debug] [2025-01-26T16:00:26.620Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "maira-galvao-portfolio"
+    },
+    "version": "projects/522640674983/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f"
+  }
+]
+[info] i  hosting[maira-galvao-portfolio]: finalizing version... 
+[debug] [2025-01-26T16:00:26.624Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f updateMask=status%2Cconfig
+[debug] [2025-01-26T16:00:26.624Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2025-01-26T16:00:27.775Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f 200
+[debug] [2025-01-26T16:00:27.776Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f {"name":"projects/522640674983/sites/maira-galvao-portfolio/versions/e7ff06b47fc77f1f","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-01-26T16:00:23.536163Z","createUser":{"email":"mairagalvao01@gmail.com"},"finalizeTime":"2025-01-26T16:00:27.787542Z","finalizeUser":{"email":"mairagalvao01@gmail.com"}}
+[debug] [2025-01-26T16:00:27.776Z] [hosting] finalized version for maira-galvao-portfolio:[object Object]
+[info] ✔  hosting[maira-galvao-portfolio]: version finalized 
+[info] i  hosting[maira-galvao-portfolio]: releasing new version... 
+[debug] [2025-01-26T16:00:27.777Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/maira-galvao-portfolio/channels/live/releases versionName=projects%2F522640674983%2Fsites%2Fmaira-galvao-portfolio%2Fversions%2Fe7ff06b47fc77f1f
+[debug] [2025-01-26T16:00:27.777Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/maira-galvao-portfolio/channels/live/releases {}

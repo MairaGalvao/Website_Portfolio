@@ -11,8 +11,7 @@ const containerStyle = {
   alignItems: "center",
   justifyContent: "flex-start",
   height: "90vh",
- // Updated to add 30px of padding from the left
-  paddingBottom: "10px",
+    paddingBottom: "10px",
   backgroundColor: "none",
   position:'absolute'
 };
@@ -52,18 +51,7 @@ export function Home() {
             <Typography style={nameStyle}>- Maíra Galvão -</Typography>
           </Paper>
         </Container>
-        {/* <Link
-          className="contactHome"
-          id="btn"
-          to="contact"
-          spy={true}
-          smooth={true}
-          onClick={() => {
-            history.push("/contact");
-          }}
-        >
-          Contact me
-        </Link> */}
+
       </div>
     </>
   );

@@ -23,14 +23,7 @@
   align-items: center;
   position: relative;
 }
-.card0 {
-  background: url(../images/mairaPic.jpg) center center no-repeat;
-  background-size: 400px;
-}
-.card0:hover {
-  background: url(../images/mairaPic.jpg) left center no-repeat;
-  background-size: 450px;
-}
+
 .card0:hover .myName {
   opacity: 1;
 }

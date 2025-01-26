@@ -10,7 +10,29 @@
 
 }
 
- 
+
+
+@media (max-width: 800px) {
+  .phraseMain {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 801px) {
+  .phraseMain {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
 
   summary {
     writing-mode: vertical-lr;
@@ -96,7 +118,6 @@
     filter: brightness(200%);
   }
   details::before {
-    /* content: "← Click This Button"; */
     color: var(--secoColor);
     position: absolute;
     margin-left: 80px;

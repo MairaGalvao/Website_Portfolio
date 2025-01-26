@@ -10,7 +10,6 @@ import "./css/App.css";
 import { useHistory as history } from "react-router-dom";
 import { Home } from "./Components/Home";
 
-import ResNavBar from "../src/responsiveness/ResNavBar";
 
 function App() {
   // init loading as true
@@ -31,10 +30,8 @@ function App() {
     <>
       <myTest />
       <Router history={history}>
-        {/* {isLoading && <LoadingAnimation />} */}
-
+      
         <>
-          {/* <ResNavBar /> */}
           <NavBar />
           <Home />
           <About />
