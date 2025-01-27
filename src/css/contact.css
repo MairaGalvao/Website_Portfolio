@@ -10,8 +10,8 @@ form {
   cursor: pointer;
 }
 
-input[type="text"],
-[type="email"],
+input[type='text'],
+[type='email'],
 select,
 textarea {
   background: none;
@@ -37,8 +37,8 @@ textarea {
   transition: all 0.3s;
 }
 
-input[type="text"]:focus,
-[type="email"]:focus,
+input[type='text']:focus,
+[type='email']:focus,
 textarea:focus {
   outline: none;
   padding: 0 0 0.875em 0;
@@ -50,7 +50,7 @@ textarea:focus {
   color: #474544;
   cursor: pointer;
   display: inline-block;
-  font-family: "Helvetica", Arial, sans-serif;
+  font-family: 'Helvetica', Arial, sans-serif;
   font-size: 0.875em;
   font-weight: bold;
   outline: none;
