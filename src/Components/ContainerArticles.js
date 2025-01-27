@@ -5,7 +5,7 @@ import { Box,Paper, Typography, Button, Grid, Link as ScrollLink } from "@materi
 import { GitHub } from "@material-ui/icons";
 import "../css/articles.css";
 
-export function DummyArticles({
+export function ContainerArticles({
   linkMedium,
   title,
   description,

@@ -20,7 +20,7 @@ const textStyleButton = {
   fontFamily: "Mona Sans, 'Helvetica Neue', Helvetica, Arial, sans-serif",
 };
 
-export function DummyPortfolio({
+export function ContainerPortfolio({
   title,
   description,
   description2,

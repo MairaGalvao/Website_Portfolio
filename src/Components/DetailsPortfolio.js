@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Box } from "@mui/material";
 import "../css/projANDart.css";
-import { DummyPortfolio } from "./DummyPortfolio"; // Import the DummyPortfolio component
+import { ContainerPortfolio } from "./ContainerPortfolio"; // Import the DummyPortfolio component
 
 const cardData = [
   {
@@ -98,7 +98,7 @@ const cardData = [
 
 ];
 
-export const SmartPortfolio = () => {
+export const DetailsPortfolio = () => {
   return (
 
     <>
@@ -127,7 +127,7 @@ export const SmartPortfolio = () => {
     <Container style={{ maxWidth: "100%", overflow: "hidden" }}>
       <div className="card-container">
         {cardData.map((card, index) => (
-          <DummyPortfolio
+          <ContainerPortfolio
             key={index}
             title={card.title}
             description={card.line1}

@@ -4,8 +4,8 @@ import { Contact } from "./Components/Contact";
 import { Footer } from "./Components/Footer";
 import NavBar from "./Components/NavBar";
 import { About } from "./Components/About";
-import { SmartArticles } from "./Components/SmartArticles";
-import { SmartPortfolio } from "./Components/SmartPortfolio";
+import { DetailsArticles } from "./Components/DetailsArticles";
+import { DetailsPortfolio } from "./Components/DetailsPortfolio";
 import "./css/App.css";
 import { useHistory as history } from "react-router-dom";
 import { Home } from "./Components/Home";
@@ -35,8 +35,8 @@ function App() {
           <NavBar />
           <Home />
           <About />
-          <SmartPortfolio />
-          <SmartArticles />
+          <DetailsPortfolio />
+          <DetailsArticles />
           <Contact />
           <Footer />
         </>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Box, Typography } from "@material-ui/core";
-import { DummyArticles } from "./DummyArticles"; // Import the DummyArticles component
+import { ContainerArticles } from "./ContainerArticles"; // Import the DummyArticles component
 import hackathon from "../images/hackathon.jpg"
 
 const articleData = [
@@ -19,7 +19,7 @@ const articleData = [
   // Add more objects for additional smart articles
 ];
 
-export const SmartArticles = () => {
+export const DetailsArticles = () => {
   return (
     <Container style={{ padding: "20px" }}>
       <Box id="articles" data-aos="fade-right">
@@ -52,7 +52,7 @@ export const SmartArticles = () => {
       >
         <Box id="articlesBox">
           {articleData.map((article, index) => (
-            <DummyArticles
+            <ContainerArticles
               key={index}
               topic={article.topic}
               title={article.title}
