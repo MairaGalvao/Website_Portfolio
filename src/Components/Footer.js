@@ -1,14 +1,14 @@
-import "../css/footer.css";
+import '../css/footer.css';
 
-import React from "react";
-import BottomNavigation from "@mui/material/BottomNavigation";
-import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import AutoStoriesIcon from "@mui/icons-material/AutoStories";
+import React from 'react';
+import BottomNavigation from '@mui/material/BottomNavigation';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 
 export function Footer() {
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = React.useState('');
 
   const CustomBottomNavigation = (props) => {
     return (
@@ -26,7 +26,7 @@ export function Footer() {
 
   return (
     <>
-      {" "}
+      {' '}
       <div id="footer">
         <BottomNavigation
           showLabels

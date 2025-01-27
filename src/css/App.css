@@ -2,13 +2,11 @@ body {
   margin: 0 !important;
   height: 100%;
   width: 100%;
-
-
 }
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .technologies #appTxt {
@@ -101,7 +99,7 @@ a {
 h2 {
   font-weight: 600;
   font-style: italic;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: 'Fira Sans Condensed', sans-serif;
 }
 header {
   height: 2em;
@@ -154,7 +152,6 @@ h2 {
 
 h1 {
   font-size: 24px;
- 
 }
 
 h2 {
@@ -474,13 +471,13 @@ p {
 /* 
 minamilistm dividers css */
 
-@import url("https://fonts.googleapis.com/css?family=Oswald:200&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Oswald:200&display=swap');
 
 .blue {
   background-color: #cad5e4;
 }
 #txtPortfolio {
-  content: "aloaaaaaaaaaaaaaaa";
+  content: 'aloaaaaaaaaaaaaaaa';
 }
 
 .section-title-about .section-title-portfolio {
@@ -494,7 +491,7 @@ minamilistm dividers css */
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 /* 
 a {
@@ -526,7 +523,7 @@ a {
 }
 
 .btn-shine {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: absolute;
@@ -620,8 +617,6 @@ h1:last-of-type {
   }
 }
 
-
-
 .header p {
   margin: 0 auto;
   line-height: 2;
@@ -638,10 +633,6 @@ h1:last-of-type {
   padding: 30px;
   margin: 20px;
 }
-
-
-
-
 
 @media (max-width: 950px) and (min-width: 450px) {
   .box {
@@ -759,7 +750,7 @@ h2 {
   margin-top: -10px;
   font-size: 35px;
   line-height: 76px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Tooltip container */
@@ -802,7 +793,7 @@ h2 {
 
 #loaderHome::before,
 #loaderHome::after {
-  content: "";
+  content: '';
   width: 0;
   height: 0;
   position: absolute;
@@ -817,7 +808,7 @@ h2 {
   position: absolute;
   bottom: 15px;
   left: -50%;
-  font-family: "Abel", sans-serif;
+  font-family: 'Abel', sans-serif;
   font-size: 35px;
   letter-spacing: 2px;
   color: #6f86d6;
@@ -860,24 +851,24 @@ h2 {
 }
 #loaderHome #boxHome:nth-child(1)::before {
   font-size: 55px;
-  content: "\f13b";
+  content: '\f13b';
 
   animation: a 2s linear infinite;
 }
 #loaderHome #boxHome:nth-child(1)::after {
   font-size: 50px;
-  content: "\f41b";
+  content: '\f41b';
   animation: b 2.4s linear infinite;
 }
 #loaderHome #boxHome:nth-child(2)::before {
   font-size: 45px;
-  content: "\f3d3";
+  content: '\f3d3';
 
   animation: c 2.5s linear infinite;
 }
 #loaderHome #boxHome:nth-child(2)::after {
   font-size: 40px;
-  content: "\f3e2 ";
+  content: '\f3e2 ';
   animation: d 1.8s linear infinite;
 }
 
@@ -961,6 +952,3 @@ h2 {
     -webkit-transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-
-
-

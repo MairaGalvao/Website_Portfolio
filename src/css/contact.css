@@ -1,20 +1,17 @@
 form {
-
   position: absolute;
-  flex-direction: column;   
-   display: flex;
-   padding-top: 100px;
-    width: 300px
-
+  flex-direction: column;
+  display: flex;
+  padding-top: 100px;
+  width: 300px;
 }
 
-
-#submit{
+#submit {
   cursor: pointer;
 }
 
-input[type="text"],
-[type="email"],
+input[type='text'],
+[type='email'],
 select,
 textarea {
   background: none;
@@ -40,8 +37,8 @@ textarea {
   transition: all 0.3s;
 }
 
-input[type="text"]:focus,
-[type="email"]:focus,
+input[type='text']:focus,
+[type='email']:focus,
 textarea:focus {
   outline: none;
   padding: 0 0 0.875em 0;
@@ -53,7 +50,7 @@ textarea:focus {
   color: #474544;
   cursor: pointer;
   display: inline-block;
-  font-family: "Helvetica", Arial, sans-serif;
+  font-family: 'Helvetica', Arial, sans-serif;
   font-size: 0.875em;
   font-weight: bold;
   outline: none;
@@ -72,99 +69,95 @@ textarea:focus {
   color: #f2f3eb;
 }
 
-
 @media screen and (max-width: 768px) {
   .picContact {
     display: none;
   }
-  .headerContact{
+  .headerContact {
     display: flex;
     justify-content: flex-end;
   }
-  #contact_form{
-    left:50px
+  #contact_form {
+    left: 50px;
   }
-
-
 }
 
- .form-box {
-    /* float: left; */
-    /* width: 100%; */
-    /* max-width: 500px; */
-    /* margin: 0 auto; */
-    /* padding-left: 100px; */
-    /* padding-top: 150px; */
-    /* height: 700px; */
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-bottom: 150px;
+.form-box {
+  /* float: left; */
+  /* width: 100%; */
+  /* max-width: 500px; */
+  /* margin: 0 auto; */
+  /* padding-left: 100px; */
+  /* padding-top: 150px; */
+  /* height: 700px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 150px;
 }
- h2 {
-	 text-transform: uppercase;
-	 margin-bottom: 0.7rem;
-	 font-size: 2rem;
-	 font-weight: 300;
+h2 {
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+  font-size: 2rem;
+  font-weight: 300;
 }
- .form-item {
-	 margin-bottom: 0.7rem;
-   
+.form-item {
+  margin-bottom: 0.7rem;
 }
-.picContact{
+.picContact {
   padding-top: 90px;
 }
- label, input, textarea {
-	 display: block;
-	 width: 100%;
-	 font-size: 1.2rem;
-	 line-height: 1.4;
-	 outline-color: #007575;
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  outline-color: #007575;
 }
- label {
-	 margin-bottom: 3px;
+label {
+  margin-bottom: 3px;
 }
- input, textarea {
-	 padding: 3px;
-	 border: 1px solid #007575;
-	 background-color: rgba(250, 250, 250, 0.85);
+input,
+textarea {
+  padding: 3px;
+  border: 1px solid #007575;
+  background-color: rgba(250, 250, 250, 0.85);
 }
 
-.formButtons{
+.formButtons {
   display: flex;
   /* flex-direction: row; */
   justify-content: space-between;
-
 }
 #resumeBtn {
   cursor: pointer;
-  
 }
 
 #sendBtn {
   cursor: pointer;
 }
 
- @keyframes submit-hover {
-	 0% {
-		 transform: scale(1);
-	}
-	 50% {
-		 transform: scale(1.02);
-	}
-	 100% {
-		 transform: scale(1);
-	}
+@keyframes submit-hover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
- @keyframes submit-active {
-	 0% {
-		 transform: scale(1);
-	}
-	 100% {
-		 transform: scale(0.98);
-	}
+@keyframes submit-active {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.98);
+  }
 }
-

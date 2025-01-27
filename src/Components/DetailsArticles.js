@@ -1,34 +1,36 @@
-import React from "react";
-import { Container, Box, Typography } from "@material-ui/core";
-import { ContainerArticles } from "./ContainerArticles"; 
-import hackathon from "../images/hackathon.jpg"
+import React from 'react';
+import { Container, Box, Typography } from '@material-ui/core';
+import { ContainerArticles } from './ContainerArticles';
+import hackathon from '../images/hackathon.jpg';
 
 const articleData = [
   {
-    title: "Exploratory data analysis on a Steak Risk dataset",
-    titleTip: "Data Analysis",
-    image: "https://images.unsplash.com/photo-1588347818036-558601350947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
-    linkMedium: "https://medium.com/swlh/practical-data-analysis-with-pandas-and-seaborn-matplotlib-d1820ab27fd8",
+    title: 'Exploratory data analysis on a Steak Risk dataset',
+    titleTip: 'Data Analysis',
+    image:
+      'https://images.unsplash.com/photo-1588347818036-558601350947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80',
+    linkMedium:
+      'https://medium.com/swlh/practical-data-analysis-with-pandas-and-seaborn-matplotlib-d1820ab27fd8',
   },
   {
-    title: "HackZurich is the largest hackathon in Europe.",
-    titleTip: "Zürich, Switzerland",
+    title: 'HackZurich is the largest hackathon in Europe.',
+    titleTip: 'Zürich, Switzerland',
     image: hackathon,
-    linkMedium: "https://github.com/MairaGalvao/Hackthon_Zurich",
+    linkMedium: 'https://github.com/MairaGalvao/Hackthon_Zurich',
   },
 ];
 
 export const DetailsArticles = () => {
   return (
-    <Container style={{ padding: "20px" }}>
+    <Container style={{ padding: '20px' }}>
       <Box id="articles" data-aos="fade-right">
         <Typography
           style={{
-            fontSize: "100px",
-            fontWeight: "bold",
-            fontFamily: "monospace",
-            color: "white",
-            marginBottom: "45px",
+            fontSize: '100px',
+            fontWeight: 'bold',
+            fontFamily: 'monospace',
+            color: 'white',
+            marginBottom: '45px',
           }}
         ></Typography>
       </Box>
@@ -42,11 +44,11 @@ export const DetailsArticles = () => {
       <Box
         id="articlesMainBox"
         style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-around",
-          paddingTop: "100px",
-          padding: "10px",
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+          paddingTop: '100px',
+          padding: '10px',
         }}
       >
         <Box id="articlesBox">
@@ -56,7 +58,6 @@ export const DetailsArticles = () => {
               topic={article.topic}
               title={article.title}
               titleTip={article.titleTip}
-     
               image={article.image}
               linkMedium={article.linkMedium}
               isSmartArticle={true}
