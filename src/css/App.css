@@ -2,8 +2,6 @@ body {
   margin: 0 !important;
   height: 100%;
   width: 100%;
-
-
 }
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
@@ -154,7 +152,6 @@ h2 {
 
 h1 {
   font-size: 24px;
- 
 }
 
 h2 {
@@ -620,8 +617,6 @@ h1:last-of-type {
   }
 }
 
-
-
 .header p {
   margin: 0 auto;
   line-height: 2;
@@ -638,10 +633,6 @@ h1:last-of-type {
   padding: 30px;
   margin: 20px;
 }
-
-
-
-
 
 @media (max-width: 950px) and (min-width: 450px) {
   .box {
@@ -961,6 +952,3 @@ h2 {
     -webkit-transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-
-
-

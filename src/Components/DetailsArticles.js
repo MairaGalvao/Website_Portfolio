@@ -1,14 +1,16 @@
 import React from "react";
 import { Container, Box, Typography } from "@material-ui/core";
-import { ContainerArticles } from "./ContainerArticles"; 
-import hackathon from "../images/hackathon.jpg"
+import { ContainerArticles } from "./ContainerArticles";
+import hackathon from "../images/hackathon.jpg";
 
 const articleData = [
   {
     title: "Exploratory data analysis on a Steak Risk dataset",
     titleTip: "Data Analysis",
-    image: "https://images.unsplash.com/photo-1588347818036-558601350947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
-    linkMedium: "https://medium.com/swlh/practical-data-analysis-with-pandas-and-seaborn-matplotlib-d1820ab27fd8",
+    image:
+      "https://images.unsplash.com/photo-1588347818036-558601350947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80",
+    linkMedium:
+      "https://medium.com/swlh/practical-data-analysis-with-pandas-and-seaborn-matplotlib-d1820ab27fd8",
   },
   {
     title: "HackZurich is the largest hackathon in Europe.",
@@ -56,7 +58,6 @@ export const DetailsArticles = () => {
               topic={article.topic}
               title={article.title}
               titleTip={article.titleTip}
-     
               image={article.image}
               linkMedium={article.linkMedium}
               isSmartArticle={true}

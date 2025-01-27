@@ -9,14 +9,10 @@ import "./css/App.css";
 import { useHistory as history } from "react-router-dom";
 import { Home } from "./Components/Home";
 
-
 function App() {
-
   return (
     <>
-    
       <Router history={history}>
-      
         <>
           <NavBar />
           <Home />

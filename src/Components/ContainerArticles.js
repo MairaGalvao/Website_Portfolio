@@ -1,7 +1,14 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { Box,Paper, Typography, Button, Grid, Link as ScrollLink } from "@material-ui/core";
+import {
+  Box,
+  Paper,
+  Typography,
+  Button,
+  Grid,
+  Link as ScrollLink,
+} from "@material-ui/core";
 import { GitHub } from "@material-ui/icons";
 import "../css/articles.css";
 
@@ -43,13 +50,11 @@ export function ContainerArticles({
   };
 
   const container = {
-
-    display: 'flex',
-    flexWrap: 'wrap',
-    boxSizing: 'border-box',
-    paddingTop: '100px',
-
-  }
+    display: "flex",
+    flexWrap: "wrap",
+    boxSizing: "border-box",
+    paddingTop: "100px",
+  };
 
   return (
     <Grid item xs={6}>
@@ -60,7 +65,11 @@ export function ContainerArticles({
               <ScrollLink to="linkMedium" spy={true} smooth={true}>
                 {topic}
               </ScrollLink>
-              <Typography variant="h5" id="titleArticle" style={{ color: "white" }}>
+              <Typography
+                variant="h5"
+                id="titleArticle"
+                style={{ color: "white" }}
+              >
                 {title}
               </Typography>
               <Typography variant="body1" style={{ color: "white" }}>
@@ -69,23 +78,22 @@ export function ContainerArticles({
               <Box className="user">
                 <Box className="user-info">
                   {linkMedium && (
-                     <a
-                     href={linkMedium}
-                     target="_blank" 
-                     rel="noopener noreferrer"
-                   >
-                   
-                   <Button
-                      variant="contained"
-                      color="primary"
-                      startIcon={<GitHub />}
-                      component="a"
-                      href={gitHubLink}
+                    <a
+                      href={linkMedium}
                       target="_blank"
-                      style={buttonStyle}
+                      rel="noopener noreferrer"
                     >
-                      GitHub
-                    </Button>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        startIcon={<GitHub />}
+                        component="a"
+                        href={gitHubLink}
+                        target="_blank"
+                        style={buttonStyle}
+                      >
+                        GitHub
+                      </Button>
                     </a>
                   )}
                   <Typography variant="caption" style={{ color: "white" }}>
@@ -94,7 +102,7 @@ export function ContainerArticles({
                   <Typography variant="h6" style={{ color: "white" }}>
                     {location}
                   </Typography>
-                              </Box>
+                </Box>
               </Box>
             </Box>
           </Grid>

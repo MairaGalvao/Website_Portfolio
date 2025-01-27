@@ -10,9 +10,9 @@ const containerStyle = {
   alignItems: "center",
   justifyContent: "flex-start",
   height: "90vh",
-    paddingBottom: "10px",
+  paddingBottom: "10px",
   backgroundColor: "none",
-  position:'absolute'
+  position: "absolute",
 };
 
 const paperStyle = {
@@ -43,14 +43,13 @@ export function Home() {
 
   return (
     <>
-      <div className="phraseMain" id="home" >
+      <div className="phraseMain" id="home">
         <Container style={containerStyle}>
           <Paper elevation={5} style={paperStyle}>
             <Typography style={textStyle}>Web & Product Developer</Typography>
             <Typography style={nameStyle}>- Maíra Galvão -</Typography>
           </Paper>
         </Container>
-
       </div>
     </>
   );

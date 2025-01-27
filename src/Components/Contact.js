@@ -32,7 +32,6 @@ export function Contact() {
     saveAs(
       "https://www.figma.com/design/b6SURXWqNx8cnaU3uJ3iF6/Maira-Galvao-Software-Engineer?node-id=0-1&t=7Fb3yz6yEYEw3ajU-1",
       "Maira Galvao Software Engineer.pdf"
-      
     );
   };
   const handleChange = (e) => {
@@ -48,7 +47,7 @@ export function Contact() {
     <>
       <div class="form-box" id="contact">
         <form id="contact_form" ref={form} onSubmit={onSubmit}>
-        <h2 style={{ paddingBottom: "10px" }}>Keep in touch</h2>
+          <h2 style={{ paddingBottom: "10px" }}>Keep in touch</h2>
 
           <label>Name</label>
           <input
@@ -72,7 +71,7 @@ export function Contact() {
             value={toSend.message}
             onChange={handleChange}
           />
-          <div className="formButtons"id="sendBtn">
+          <div className="formButtons" id="sendBtn">
             <input type="submit" value="Send" id="sendBtn" />
             <input
               onClick={saveFile}
@@ -80,24 +79,21 @@ export function Contact() {
               value="Download CV"
               id="resumeBtn"
             />
-
-            
           </div>
         </form>
-      
 
-      <Box className="picContact">
-        <img
-          id="picContact"
-          style={{
-            float: "right",
+        <Box className="picContact">
+          <img
+            id="picContact"
+            style={{
+              float: "right",
 
-            paddingRight: "0",
-            width: "60%",
-          }}
-          src={contactPic}
-        />
-      </Box>
+              paddingRight: "0",
+              width: "60%",
+            }}
+            src={contactPic}
+          />
+        </Box>
       </div>
     </>
   );

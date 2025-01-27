@@ -4,7 +4,6 @@ import { Box } from "@mui/material";
 import { useHistory } from "react-router-dom";
 import "../css/navBar.css";
 
-
 const navContainerStyle = {
   display: "flex",
   justifyContent: "space-between",
@@ -17,7 +16,7 @@ const navContainerStyle = {
 
 const logoStyle = {
   fontSize: "1.5rem",
-  color: "#333", 
+  color: "#333",
   textDecoration: "none",
   marginRight: "20px",
 };
@@ -26,7 +25,7 @@ const itemsBtnStyle = {
   margin: "0 10px",
   fontSize: "1rem",
   fontWeight: "bold",
-  color: "#333", 
+  color: "#333",
   textDecoration: "none",
 };
 
