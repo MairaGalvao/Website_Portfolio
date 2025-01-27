@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Box } from '@mui/material';
 import '../css/projANDart.css';
 import { ContainerPortfolio } from './ContainerPortfolio';
+import '../css/about.css';
 
 const cardData = [
   {
