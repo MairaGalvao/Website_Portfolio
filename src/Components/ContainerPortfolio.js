@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Card,
   CardContent,
@@ -6,8 +6,8 @@ import {
   Typography,
   Button,
   Stack,
-} from "@mui/material";
-import "../css/projANDart.css";
+} from '@mui/material';
+import '../css/projANDart.css';
 
 const textStyle = {
   fontWeight: 600,
@@ -40,7 +40,7 @@ export function ContainerPortfolio({
               width="180px"
               image={linkPicture}
               alt={title}
-              style={{ borderRadius: "30px" }}
+              style={{ borderRadius: '30px' }}
             />
             <CardContent id="txt-btn-card">
               <div className="text-container">

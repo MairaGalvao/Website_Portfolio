@@ -1,32 +1,32 @@
-import React, { useState } from "react";
-import { Link } from "react-scroll";
-import { Box } from "@mui/material";
-import { useHistory } from "react-router-dom";
-import "../css/navBar.css";
+import React, { useState } from 'react';
+import { Link } from 'react-scroll';
+import { Box } from '@mui/material';
+import { useHistory } from 'react-router-dom';
+import '../css/navBar.css';
 
 const navContainerStyle = {
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  backgroundColor: "transparent",
-  padding: "20px",
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  backgroundColor: 'transparent',
+  padding: '20px',
   fontFamily: "Mona Sans, 'Helvetica Neue', Helvetica, Arial, sans-serif",
   fontWeight: 600,
 };
 
 const logoStyle = {
-  fontSize: "1.5rem",
-  color: "#333",
-  textDecoration: "none",
-  marginRight: "20px",
+  fontSize: '1.5rem',
+  color: '#333',
+  textDecoration: 'none',
+  marginRight: '20px',
 };
 
 const itemsBtnStyle = {
-  margin: "0 10px",
-  fontSize: "1rem",
-  fontWeight: "bold",
-  color: "#333",
-  textDecoration: "none",
+  margin: '0 10px',
+  fontSize: '1rem',
+  fontWeight: 'bold',
+  color: '#333',
+  textDecoration: 'none',
 };
 
 export default function NavBar() {
@@ -40,13 +40,13 @@ export default function NavBar() {
     }
   };
   const scrollToTop = () => {
-    history.push("/");
+    history.push('/');
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
-  window.addEventListener("scroll", toggleVisible);
+  window.addEventListener('scroll', toggleVisible);
   let history = useHistory();
 
   return (
@@ -58,7 +58,7 @@ export default function NavBar() {
           smooth={true}
           style={logoStyle}
           onClick={() => {
-            history.push("/");
+            history.push('/');
           }}
         >
           Maíra Galvão
@@ -73,7 +73,7 @@ export default function NavBar() {
             smooth={true}
             style={itemsBtnStyle}
             onClick={() => {
-              history.push("/");
+              history.push('/');
             }}
           >
             Home
@@ -85,7 +85,7 @@ export default function NavBar() {
             smooth={true}
             style={itemsBtnStyle}
             onClick={() => {
-              history.push("/portfolio");
+              history.push('/portfolio');
             }}
           >
             Portfolio
@@ -97,7 +97,7 @@ export default function NavBar() {
             smooth={true}
             style={itemsBtnStyle}
             onClick={() => {
-              history.push("/extras");
+              history.push('/extras');
             }}
           >
             Extras
@@ -109,7 +109,7 @@ export default function NavBar() {
             smooth={true}
             style={itemsBtnStyle}
             onClick={() => {
-              history.push("/contact");
+              history.push('/contact');
             }}
           >
             Contact

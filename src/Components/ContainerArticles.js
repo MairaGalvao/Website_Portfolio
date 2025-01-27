@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 import {
   Box,
   Paper,
@@ -8,9 +8,9 @@ import {
   Button,
   Grid,
   Link as ScrollLink,
-} from "@material-ui/core";
-import { GitHub } from "@material-ui/icons";
-import "../css/articles.css";
+} from '@material-ui/core';
+import { GitHub } from '@material-ui/icons';
+import '../css/articles.css';
 
 export function ContainerArticles({
   linkMedium,
@@ -30,30 +30,30 @@ export function ContainerArticles({
 
   const cardStyle = {
     backgroundImage: `url(${image})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    height: "250px",
-    borderRadius: "10px",
-    position: "relative",
-    overflow: "hidden",
-    marginBottom: "20px",
-    cursor: "pointer",
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '250px',
+    borderRadius: '10px',
+    position: 'relative',
+    overflow: 'hidden',
+    marginBottom: '20px',
+    cursor: 'pointer',
   };
 
   const buttonStyle = {
-    backgroundColor: "rgba(0, 0, 0, 0.5)",
-    color: "white",
-    cursor: "pointer",
-    transition: "background-color 0.3s",
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    color: 'white',
+    cursor: 'pointer',
+    transition: 'background-color 0.3s',
     fontWeight: 600,
     fontFamily: "Mona Sans, 'Helvetica Neue', Helvetica, Arial, sans-serif",
   };
 
   const container = {
-    display: "flex",
-    flexWrap: "wrap",
-    boxSizing: "border-box",
-    paddingTop: "100px",
+    display: 'flex',
+    flexWrap: 'wrap',
+    boxSizing: 'border-box',
+    paddingTop: '100px',
   };
 
   return (
@@ -68,11 +68,11 @@ export function ContainerArticles({
               <Typography
                 variant="h5"
                 id="titleArticle"
-                style={{ color: "white" }}
+                style={{ color: 'white' }}
               >
                 {title}
               </Typography>
-              <Typography variant="body1" style={{ color: "white" }}>
+              <Typography variant="body1" style={{ color: 'white' }}>
                 {titleTip}
               </Typography>
               <Box className="user">
@@ -96,10 +96,10 @@ export function ContainerArticles({
                       </Button>
                     </a>
                   )}
-                  <Typography variant="caption" style={{ color: "white" }}>
+                  <Typography variant="caption" style={{ color: 'white' }}>
                     {date}
                   </Typography>
-                  <Typography variant="h6" style={{ color: "white" }}>
+                  <Typography variant="h6" style={{ color: 'white' }}>
                     {location}
                   </Typography>
                 </Box>
