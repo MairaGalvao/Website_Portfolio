@@ -8,17 +8,12 @@ import "../css/articles.css";
 export function ContainerArticles({
   linkMedium,
   title,
-  description,
   image,
   titleTip,
   topic,
   date,
   location,
-  ps,
-  projectPic,
   gitHubLink,
-  moreAbout,
-  isSmartArticle = false,
 }) {
   useEffect(() => {
     if (Aos) {
@@ -76,8 +71,8 @@ export function ContainerArticles({
                   {linkMedium && (
                      <a
                      href={linkMedium}
-                     target="_blank" // Open in a new tab
-                     rel="noopener noreferrer" // Security best practice
+                     target="_blank" 
+                     rel="noopener noreferrer"
                    >
                    
                    <Button

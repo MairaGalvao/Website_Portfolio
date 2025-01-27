@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Box } from "@mui/material";
 import "../css/projANDart.css";
-import { ContainerPortfolio } from "./ContainerPortfolio"; // Import the DummyPortfolio component
+import { ContainerPortfolio } from "./ContainerPortfolio"; 
 
 const cardData = [
   {

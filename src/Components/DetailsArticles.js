@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Box, Typography } from "@material-ui/core";
-import { ContainerArticles } from "./ContainerArticles"; // Import the DummyArticles component
+import { ContainerArticles } from "./ContainerArticles"; 
 import hackathon from "../images/hackathon.jpg"
 
 const articleData = [
@@ -16,7 +16,6 @@ const articleData = [
     image: hackathon,
     linkMedium: "https://github.com/MairaGalvao/Hackthon_Zurich",
   },
-  // Add more objects for additional smart articles
 ];
 
 export const DetailsArticles = () => {

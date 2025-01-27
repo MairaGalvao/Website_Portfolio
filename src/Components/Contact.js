@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import emailjs from "@emailjs/browser";
 import contactPic from "../images/contactPic.jpg";
 import { Box } from "@material-ui/core";
 import { send } from "emailjs-com";

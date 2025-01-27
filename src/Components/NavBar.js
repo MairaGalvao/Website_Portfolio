@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { Box, IconButton } from "@mui/material";
+import { Box } from "@mui/material";
 import { useHistory } from "react-router-dom";
 import "../css/navBar.css";
-import MenuIcon from "@mui/icons-material/Menu";
+
+
 const navContainerStyle = {
   display: "flex",
   justifyContent: "space-between",
@@ -16,7 +17,7 @@ const navContainerStyle = {
 
 const logoStyle = {
   fontSize: "1.5rem",
-  color: "#333", // Use a slightly less gray shade of black
+  color: "#333", 
   textDecoration: "none",
   marginRight: "20px",
 };
@@ -25,7 +26,7 @@ const itemsBtnStyle = {
   margin: "0 10px",
   fontSize: "1rem",
   fontWeight: "bold",
-  color: "#333", // Use a slightly less gray shade of black
+  color: "#333", 
   textDecoration: "none",
 };
 

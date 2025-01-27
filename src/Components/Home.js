@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "../css/home.css";
-import { Link } from "react-scroll";
 import { useHistory } from "react-router-dom";
 import { Container, Typography, Paper } from "@mui/material";
 
@@ -44,7 +43,7 @@ export function Home() {
 
   return (
     <>
-      <div className="phraseMain" id="home">
+      <div className="phraseMain" id="home" >
         <Container style={containerStyle}>
           <Paper elevation={5} style={paperStyle}>
             <Typography style={textStyle}>Web & Product Developer</Typography>

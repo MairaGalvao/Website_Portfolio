@@ -3,7 +3,6 @@ import {
   Card,
   CardContent,
   CardMedia,
-  Box,
   Typography,
   Button,
   Stack,
@@ -60,8 +59,8 @@ export function ContainerPortfolio({
   {linkDemo && (
     <a
       href={linkDemo}
-      target="_blank" // Open in a new tab
-      rel="noopener noreferrer" // Security best practice
+      target="_blank" 
+      rel="noopener noreferrer" 
     >
       <Button className="MuiButtonBase-root button-hover-effect" style={textStyleButton}>
         Demo
@@ -71,8 +70,8 @@ export function ContainerPortfolio({
   {linkGitHub && (
     <a
       href={linkGitHub}
-      target="_blank" // Open in a new tab
-      rel="noopener noreferrer" // Security best practice
+      target="_blank" 
+      rel="noopener noreferrer" 
     >
       <Button className="MuiButtonBase-root button-hover-effect" style={textStyleButton}>
         Code
@@ -82,8 +81,8 @@ export function ContainerPortfolio({
   {linkArticle && (
     <a
       href={linkArticle}
-      target="_blank" // Open in a new tab
-      rel="noopener noreferrer" // Security best practice
+      target="_blank" 
+      rel="noopener noreferrer" 
     >
       <Button className="MuiButtonBase-root button-hover-effect" style={textStyleButton}>
         Article
