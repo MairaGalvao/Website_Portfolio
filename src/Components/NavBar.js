@@ -1,23 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { Box } from '@mui/material';
 import { useHistory } from 'react-router-dom';
 import '../css/navBar.css';
 
 const navContainerStyle = {
+  position: 'fixed',
+  left: 0,
+  width: '100%',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  backgroundColor: 'transparent',
+  backgroundColor: 'rgba(255,255,255,0.95)',
   padding: '20px',
   fontFamily: "Mona Sans, 'Helvetica Neue', Helvetica, Arial, sans-serif",
   fontWeight: 600,
+  boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+  zIndex: 10000, // make sure it’s on top
+  transition: 'background-color 0.3s ease',
 };
 
 const logoStyle = {
   fontSize: '1.5rem',
   color: '#333',
   textDecoration: 'none',
+  cursor: 'pointer',
   marginRight: '20px',
 };
 
@@ -27,54 +34,51 @@ const itemsBtnStyle = {
   fontWeight: 'bold',
   color: '#333',
   textDecoration: 'none',
+  cursor: 'pointer',
 };
 
 export default function NavBar() {
   const [visible, setVisible] = useState(false);
-  const toggleVisible = () => {
-    const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 300) {
-      setVisible(true);
-    } else if (scrolled <= 300) {
-      setVisible(false);
-    }
+  const history = useHistory();
+
+  useEffect(() => {
+    const toggleVisible = () => {
+      const scrolled = window.scrollY;
+      if (scrolled > 300) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisible);
+    return () => {
+      window.removeEventListener('scroll', toggleVisible);
+    };
+  }, []);
+
+  const handleClick = (path) => {
+    history.push(path);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  const scrollToTop = () => {
-    history.push('/');
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-  window.addEventListener('scroll', toggleVisible);
-  let history = useHistory();
 
   return (
     <Box className="navContainer" id="navBar" style={navContainerStyle}>
-      <Box className="logo">
-        <Link
-          to="home"
-          spy={true}
-          smooth={true}
-          style={logoStyle}
-          onClick={() => {
-            history.push('/');
-          }}
-        >
-          Maíra Galvão
-        </Link>
+      <Box className="logo" onClick={() => handleClick('/')} style={logoStyle}>
+        Maíra Galvão
       </Box>
-      <Box className="navMenu">
-        <Box className="itemsNav" style={itemsBtnStyle}>
+      <Box className="navMenu" style={{ display: 'flex' }}>
+        <Box
+          className="itemsNav"
+          style={{ display: 'flex', alignItems: 'center' }}
+        >
           <Link
             className="itemsBtn"
             to="home"
             spy={true}
             smooth={true}
             style={itemsBtnStyle}
-            onClick={() => {
-              history.push('/');
-            }}
+            onClick={() => handleClick('/')}
           >
             Home
           </Link>
@@ -84,9 +88,7 @@ export default function NavBar() {
             spy={true}
             smooth={true}
             style={itemsBtnStyle}
-            onClick={() => {
-              history.push('/portfolio');
-            }}
+            onClick={() => handleClick('/portfolio')}
           >
             Portfolio
           </Link>
@@ -96,9 +98,7 @@ export default function NavBar() {
             spy={true}
             smooth={true}
             style={itemsBtnStyle}
-            onClick={() => {
-              history.push('/extras');
-            }}
+            onClick={() => handleClick('/extras')}
           >
             Extras
           </Link>
@@ -108,9 +108,7 @@ export default function NavBar() {
             spy={true}
             smooth={true}
             style={itemsBtnStyle}
-            onClick={() => {
-              history.push('/contact');
-            }}
+            onClick={() => handleClick('/contact')}
           >
             Contact
           </Link>
