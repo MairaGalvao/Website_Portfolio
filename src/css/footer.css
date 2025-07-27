@@ -1,8 +1,10 @@
 #footer {
   position: fixed;
-  left: 0;
   bottom: 0;
+  left: 0;
   width: 100%;
-  background-color: red;
-  text-align: center;
+  background-color: white; /* or your footer background */
+  z-index: 1000;
+  height: 60px; /* your footer height */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
