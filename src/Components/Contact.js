@@ -29,11 +29,9 @@ export function Contact() {
     reply_to: '',
   });
   const saveFile = () => {
-    saveAs(
-      'https://www.figma.com/design/b6SURXWqNx8cnaU3uJ3iF6/Maira-Galvao-Software-Engineer?node-id=0-1&t=7Fb3yz6yEYEw3ajU-1',
-      'Maira Galvao Software Engineer.pdf'
-    );
+    saveAs('/MairaDevCV.pdf', 'Maira Galvao - Full Stack Developer.pdf');
   };
+
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
